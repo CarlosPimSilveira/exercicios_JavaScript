@@ -1,12 +1,12 @@
 var n1 = Number.parseFloat(window.prompt('Digite um numero: '))
 var n2 = Number.parseFloat(window.prompt('Digite outro numero: '))
-// widonw.prompt retorna um string
+// window.prompt retorna um string
 // com o Number.parseInt fazemos a conversão de string para inteiro no window.prompt
 // no caso agora trocamos para parseFloat para converter o prompt
 // podemos tambem digitar apenas parseInt(n) ou parseFloat(n)
 // tambem poderiamos usar o Number(n) nesse caso o js recebe o valor e escolhe o tipo recebido
 
-// de numero para stringp odemos fazer o string(n)
+// de numero para string podemos fazer o string(n)
 // ou n.toString() n seria o valor ai nesse caso jogariamos uma string
 // Exemplo de como usar n.toString()
 var numero = 123;
