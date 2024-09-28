@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Operações</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+        }
+        input {
+            margin: 5px;
+            padding: 5px;
+            font-size: 18px;
+        }
+        #res {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type="number" name="txtn1" id="txtn1" placeholder="Digite o primeiro número">
+    <input type="number" name="txtn2" id="txtn2" placeholder="Digite o segundo número">
+
+    <br>
+
+    <input type="button" value="+" id="somar" onclick="setOperacao('+')">
+    <input type="button" value="-" id="subtrair" onclick="setOperacao('-')">
+    <input type="button" value="*" id="multiplicar" onclick="setOperacao('*')">
+    <input type="button" value="/" id="dividir" onclick="setOperacao('/')">
+
+    <br>
+
+    <input type="button" value="Calcular" onclick="calcular()">
+    
+    <div id="res">
+        Resultado:
+    </div>
+
+    <script src="CodJS.js"></script>
+</body>
+</html>
