@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(102, 168, 221);
+}
+
+section {
+    margin: 15px;
+}
+
+.votar {
+    width: 460px;
+    margin: auto;
+    padding: 10px;
+}
+
+.urna {
+    background-color: white;
+    border-radius: 5px;
+    padding: 8px;
+    display: flex;
+}
+
+.teclado {
+    background-color: white;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.teclado > .corr {
+    background-color: Red;
+    color: white;
+}
+
+.teclado > .conf {
+    background-color: green;
+    color: white;
+}
+
+.teclado > input {
+    width: 60px;
+    height: 40px;
+    padding: 1px;
+    margin: 1px;
+}
+
+.cand {
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    border-radius: 5px;
+    color: black;
+    width: 350px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+td:nth-child(2) {
+    text-align: left;
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 60%;
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 25%;
+}

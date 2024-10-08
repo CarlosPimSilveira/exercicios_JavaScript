@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eleição</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="votar">
+        <div class="urna">
+            <div class="foto">
+                <img src="SemFoto.png" alt="Usuario sem foto">
+            </div>
+            <div class="teclado">
+                <input type="button" value="1">
+                <input type="button" value="2">
+                <input type="button" value="3">
+                <input type="button" value="4">
+                <input type="button" value="5">
+                <input type="button" value="6">
+                <input type="button" value="7">
+                <input type="button" value="8">
+                <input type="button" value="9">
+                <input type="button" value="0">
+                <input type="button" value="Corrigir" class="corr">
+                <input type="button" value="Confirmar" class="conf" onclick="confirmar()">
+            </div>
+        </div>
+    </section>
+    <section class="cand">
+        <div>
+            <table>
+                <thead>
+                    <th>Número</th>
+                    <th>Nome</th>
+                    <th>Votos</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>Inválido</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>111</td>
+                        <td>João Pereira</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>222</td>
+                        <td>Maria Silva</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>333</td>
+                        <td>Pedro Couto</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>444</td>
+                        <td>Ana maria</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>555</td>
+                        <td>Carlos Marques</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
