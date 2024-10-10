@@ -14,7 +14,7 @@ section {
 }
 
 .votar {
-    width: 550px;
+    max-width: 490px;
     margin: auto;
     padding: 10px;
 }
@@ -26,11 +26,11 @@ section {
 }
 
 .foto {
-    padding: 20px;
+    padding: 1px;
 }
 
 .teclado {
-    background-color: white;
+    background-color: white; 
     margin: auto;
     padding: 10px;
     border-radius: 5px;

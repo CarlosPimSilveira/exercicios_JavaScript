@@ -61,7 +61,6 @@ function confirmar() {
             }
         }
     }
-
     document.getElementById('idisplay').value = '';  
 }
 
