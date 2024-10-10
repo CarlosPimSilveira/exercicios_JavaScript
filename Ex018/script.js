@@ -14,7 +14,7 @@ function confirmar() {
     if (numero === "0") {
         let res0 = document.getElementById('res0');
         res0.innerText = parseInt(res0.innerText) + 1;
-        img.src = '../Ex018/candidatos/SemFoto.png'
+        img.src = '../Ex018/candidatos/Sem título.png'
         //img.style.padding = '25px'; 
         window.alert(`Voto concluído! 1 voto para o candidato(a) numero: ${numero} - nome: ${nom0.innerText}`)
     } else {
@@ -55,7 +55,8 @@ function confirmar() {
                 break; 
             }
             default: {
-                window.alert('Número inválido!');  
+                window.alert('Número inválido!');
+                img.src = '../Ex018/candidatos/Sem título.png'  
                 break;
             }
         }
