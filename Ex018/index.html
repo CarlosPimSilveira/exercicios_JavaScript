@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,20 +11,22 @@
     <section class="votar">
         <div class="urna">
             <div class="foto">
-                <img src="SemFoto.png" alt="Usuario sem foto">
+                <img id="imagem" src="../Ex018/candidatos/SemFoto.png" alt="Usuario sem foto">
             </div>
             <div class="teclado">
-                <input type="button" value="1">
-                <input type="button" value="2">
-                <input type="button" value="3">
-                <input type="button" value="4">
-                <input type="button" value="5">
-                <input type="button" value="6">
-                <input type="button" value="7">
-                <input type="button" value="8">
-                <input type="button" value="9">
-                <input type="button" value="0">
-                <input type="button" value="Corrigir" class="corr">
+                <input type="text" name="display" id="idisplay" class="display" readonly>
+
+                <input type="button" value="1" onclick="nume(1)">
+                <input type="button" value="2" onclick="nume(2)">
+                <input type="button" value="3" onclick="nume(3)">
+                <input type="button" value="4" onclick="nume(4)">
+                <input type="button" value="5" onclick="nume(5)">
+                <input type="button" value="6" onclick="nume(6)">
+                <input type="button" value="7" onclick="nume(7)">
+                <input type="button" value="8" onclick="nume(8)">
+                <input type="button" value="9" onclick="nume(9)">
+                <input type="button" value="0" onclick="nume(0)">
+                <input type="button" value="Corrigir" class="corr" onclick="corrigir()">
                 <input type="button" value="Confirmar" class="conf" onclick="confirmar()">
             </div>
         </div>
@@ -40,33 +42,33 @@
                 <tbody>
                     <tr>
                         <td>0</td>
-                        <td>Inválido</td>
-                        <td>0</td>
+                        <td id="nom0">Inválido</td>
+                        <td id="res0">0</td>
                     </tr>
                     <tr>
                         <td>111</td>
-                        <td>João Pereira</td>
-                        <td>0</td>
+                        <td id="nom1">João Pereira</td>
+                        <td id="res1">0</td>
                     </tr>
                     <tr>
                         <td>222</td>
-                        <td>Maria Silva</td>
-                        <td>0</td>
+                        <td id="nom2">Maria Silva</td>
+                        <td id="res2">0</td>
                     </tr>
                     <tr>
                         <td>333</td>
-                        <td>Pedro Couto</td>
-                        <td>0</td>
+                        <td id="nom3">Pedro Couto</td>
+                        <td id="res3">0</td>
                     </tr>
                     <tr>
                         <td>444</td>
-                        <td>Ana maria</td>
-                        <td>0</td>
+                        <td id="nom4">Ana maria</td>
+                        <td id="res4">0</td>
                     </tr>
                     <tr>
                         <td>555</td>
-                        <td>Carlos Marques</td>
-                        <td>0</td>
+                        <td id="nom5">Carlos Marques</td>
+                        <td id="res5">0</td>
                     </tr>
                 </tbody>
             </table>
