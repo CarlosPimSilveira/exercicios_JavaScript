@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Modelo de exercício</title>
+    <title>Analisador de Números</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
-        <h1></h1>
+        <h1>Analisador de Números</h1>
     </header>
     <section>
         <div>
-a
+            Número (entre 1 e 100):
+            <input type="number" name="fnum" id="fnum">
+            <input type="button" value="Adicionar" onclick="adicionar()">
+            <br>
+            <select name="flista" id="flista" size="6"></select>
+            <br>
+            <input type="button" value="Finalizar" onclick="finalizar()">
         </div>
-        <div>
+        <div id="res">
 
         </div>
     </section>
