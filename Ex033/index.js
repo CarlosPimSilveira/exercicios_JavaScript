@@ -12,12 +12,12 @@ const nome02 = 'Maria'
 const sobrenome02 = 'Oliveira'
 const idade02 = 55
 
-const pessoa1 = { //criando um objeto [] -> array | {} -> objeto
+const pessoa1 = { //criando [] -> array | {} -> objeto
     nome: 'Luiz',
     sobrenome: 'Miranda',
     idade: 25
 }
-const pessoa2 = { //criando um objeto [] -> array | {} -> objeto
+const pessoa2 = { //criando [] -> array | {} -> objeto
     nome: 'Maria',
     sobrenome: 'Oliveira',
     idade: 55
