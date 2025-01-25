@@ -6,7 +6,6 @@ function nume(valor) {
     res.value += valor
 }
 
-
 function confirmar() {
     let numero = document.getElementById('idisplay').value
     let img = document.getElementById('imagem')
