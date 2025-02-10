@@ -14,4 +14,5 @@ const pessoa = {
 //const { nome, sobrenome, idade, endereco } = pessoa // Atribuição via desestruturação 
 const { endereco: { rua: r, numero }, endereco, ...resto } = pessoa
 //usando a propriedade rest para pegar o que resta do objeto que nao pegamos.
-console.log(r, numero, endereco, resto)
+
+console.log(r, numero, endereco, resto)    
