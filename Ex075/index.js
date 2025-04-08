@@ -1,5 +1,5 @@
 //Revisão do basico em ARRAYS
-//                 1         2        3
+//                 0         1        2
 const nomes = ['Eduardo', 'Maria', 'Joana']
 //strings, objetos, funções, numeros
 nomes[2] = 'João'

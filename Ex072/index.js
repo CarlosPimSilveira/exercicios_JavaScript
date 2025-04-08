@@ -1,4 +1,4 @@
-//Funções contrutoras (constructor functions)
+//Funções construtoras (constructor functions)
 //Funções construtora -> objetos
 //funções fabrica -> objetos
 //construtora -> pessoa (new) construtora começa com maiuscula
