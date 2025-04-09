@@ -18,3 +18,8 @@ for (const pessoa of pessoas) {
 }
 
 console.log(novasPessoas)
+console.log(novasPessoas.get(2))
+
+for (const [identifier, { id, nome }] of novasPessoas) {
+    console.log(identifier, id, nome)
+}
