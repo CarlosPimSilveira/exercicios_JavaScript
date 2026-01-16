@@ -48,3 +48,36 @@ switch (operador) {
 if (resultado !== null) {
     alert("Resultado: " + resultado);
 }
+
+// ordem de precedencia
+
+let a = 5 + 3         // 8
+let b = a % 5         // 3
+let c = 5 * b ** 2    // 45
+let d = 10 - a / 2    // 6
+let e = 6 * 2 / d     // 2
+let f = b % e + 4 / e // 3
+
+let n = 3  
+n = n + 4  // 7
+n = n - 5  // 2
+n = n * 4  // 8
+n = n / 2  // 4
+n = n ** 2 // 16
+n = n % 5  //1
+
+//  Simplificando
+
+let N = 3
+N += 4  // 7  
+N -= 5  // 2
+N *= 4  // 8
+N /= 2  // 4
+N **= 2 // 16
+N %= 5  // 1
+
+// incremento
+
+let x = 5
+x++ 
+x-- 
