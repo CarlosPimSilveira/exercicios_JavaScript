@@ -81,3 +81,29 @@ N %= 5  // 1
 let x = 5
 x++ 
 x-- 
+
+//  relacionais
+/*
+    >
+    <
+    >=
+    <=
+    ==
+    !=
+*/
+let m1 = 8
+let m2 = 9
+
+m1 > m2
+m1 < m2
+m1 >= m2
+m1 <= m2
+m1 == m2 
+m1 != m2
+
+let media = 7;
+
+let res = media > 7 ? 'Aprovado' : 'Reprovado';
+
+console.log(res);
+
