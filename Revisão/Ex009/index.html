@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt Arial;
+            background-color: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" -->
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+    /*
+        let dv = window.document.querySelector('div#area')
+        dv.addEventListener('mouseenter', function(){
+            dv.style.background = 'blue'
+        })
+        dv.addEventListener('mouseleave', function(){
+            dv.style.background = 'rgb(42, 139, 42)';
+        })
+    */
+        let area = window.document.getElementById('area')
+        // agora em vez de chamar pelo html temos os "ouvidores" pelo proprio js
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+
+        function clicar() {
+            //let area = window.document.getElementById('area')
+            area.innerText = 'Clicou!'
+        }
+
+        function entrar() {
+            //let area = window.document.getElementById('area')
+            area.style.backgroundColor = 'black'
+        }
+
+        function sair() {
+            //let area = window.document.getElementById('area')
+            area.style.backgroundColor = 'rgb(42, 139, 42)'
+        }
+
+    </script>
+</body>
+</html>
