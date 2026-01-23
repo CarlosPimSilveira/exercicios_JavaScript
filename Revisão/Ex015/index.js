@@ -17,3 +17,16 @@ console.log(`O primeiro valor do vetor é ${num[0]}`)
 for(n = 0; n < num.length; n++) {
     console.log(num[n])
 }
+
+console.log('For in')
+
+for(let n in num) {
+    console.log(num[n])
+}
+
+let pos = num.indexOf(4)
+if (pos == -1) {
+    console.log(`O valor não foi encontrado!`)
+} else {
+    console.log(`O valor 8 está na posição ${pos}`)
+}
