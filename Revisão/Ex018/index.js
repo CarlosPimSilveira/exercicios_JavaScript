@@ -32,6 +32,20 @@ function contarVogais(p) {
         }
     }
     console.log(`Total de vogais: ${cont}`)
+    tabuada(5)
+}
+
+function tabuada(n) {
+    for(let c = 0; c <= 10; c++) {
+        console.log(`${n} X ${c} = ` + n*c)
+    }
+    inverter('carlos')
+}
+
+function inverter(p){
+    for(let c = p.length-1; c >= 0; c--) {
+        console.log(p[c])
+    }
 }
 
 console.log(contar(10))
