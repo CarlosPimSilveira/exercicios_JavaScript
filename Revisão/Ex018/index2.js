@@ -35,6 +35,25 @@ function contarConsoantes(p) {
 } contarConsoantes('Carlos teste teste')
 
 let n = [3, 10, 7, 22, 1] //nao pode usar math.max
+//       0  1   2  3   4
 function maiorNumero(n) {
+    let m = n[0]
+    for (let c = 0; c < n.length; c++) {
+        if (n[c] > m) {
+            m = n[c]
+        }
+    }
+    return m
+} console.log(maiorNumero(n))
 
-} maiorNumero(n)
+function contarLetra(p1, p2) {
+    p1 = p1.toLowerCase()
+    p2 = p2.toLowerCase()
+    let cont = 0
+    for (let c = 0; c < p1.length; c++) {
+        if (p1[c] == p2) {
+            cont++
+        }
+    }
+    return cont
+} console.log(contarLetra('Banana', 'a'))
