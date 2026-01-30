@@ -78,3 +78,35 @@ function palindromo(t) {
         return false
     }
 } console.log(palindromo('arara'))
+
+let pessoa = {
+    nome: 'Carlos',  
+    idade: 27,
+    fazerAniversario() {
+        this.idade += 1
+    }
+}
+pessoa.fazerAniversario()
+console.log(pessoa.idade)
+
+let aluno = {
+    nome: 'Carlos',
+    notas: [5, 7, 9, 10],
+
+    media() {
+        let soma = 0
+
+        for (let c = 0; c < this.notas.length; c++) {
+            soma += this.notas[c]
+        }
+
+        return soma / this.notas.length
+    },
+
+    situacao() {
+        let med = this.media()
+        return med >= 7 ? 'Aprovado!' : 'Reprovado!'
+    }
+}
+console.log("Média:", aluno.media())
+console.log("Situação:", aluno.situacao())
