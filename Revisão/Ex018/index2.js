@@ -57,3 +57,24 @@ function contarLetra(p1, p2) {
     }
     return cont
 } console.log(contarLetra('Banana', 'a'))
+
+function inverterTexto(p) {
+    let pn = ''
+    for (let c = p.length-1; c >= 0; c--) {
+        pn += p[c]
+    }
+    return pn
+} console.log(inverterTexto('informatica'))
+
+function palindromo(t) {
+    let pn = ''
+    t = t.toLowerCase()
+    for (let c = t.length-1; c >= 0; c--) {
+        pn += t[c]
+    }
+    if (pn === t){
+        return true
+    } else {
+        return false
+    }
+} console.log(palindromo('arara'))
