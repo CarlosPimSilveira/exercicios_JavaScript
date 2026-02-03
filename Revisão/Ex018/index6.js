@@ -13,3 +13,5 @@ console.log(Math.pow(2, 10)) // elevado
 let num2 = 9
 console.log(num2 ** (1/2)) // raiz quadrada
 console.log(num2 ** 0.5) // raiz quadrada
+
+console.log(100 / 0) 
