@@ -3,12 +3,14 @@ let num = Number(window.prompt('Digite um número: '))
 let h1Num = window.document.getElementById('h1Num')
 h1Num.innerText += ' ' + num
 
-function criaP(num) {
+function criaP() {
     for (let cont = 1; cont <= 6; cont++) {
 
         var p = document.createElement('p')
         p.setAttribute("id", "p" + cont)
         document.body.appendChild(p)
+
+        /*
 
         switch (cont) {
 
@@ -35,11 +37,21 @@ function criaP(num) {
             case 6:
                 p.innerText = `Com duas casas decimais: ${num.toFixed(2)}`
                 break
-        }
-    }
+        }*/
+    } 
 }
 
-criaP(num)
+function mostrarResultados(num) {
+    document.getElementById("p1").innerText = `Raiz quadrada: ${Math.sqrt(num)}`
+    document.getElementById("p2").innerText = `${num} é inteiro? ${Number.isInteger(num)}`
+    document.getElementById("p3").innerText = `É NaN? ${Number.isNaN(num)}`
+    document.getElementById("p4").innerText = `Arredondando para baixo: ${Math.floor(num)}`
+    document.getElementById("p5").innerText = `Arredondando para cima: ${Math.ceil(num)}`
+    document.getElementById("p6").innerText = `Com duas casas decimais: ${num.toFixed(2)}`
+}
+
+criaP()
+mostrarResultados(num)
 
 
 /*
