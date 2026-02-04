@@ -1,17 +1,48 @@
-function criaP() {
-    for (let cont = 1; cont <= 6; cont++) {
-        var p = document.createElement('p')
-        p.setAttribute("id", "p" + cont)
-        document.body.appendChild(p)
-    }
-}
+let num = Number(window.prompt('Digite um número: '))
 
-criaP()
-
-let num = Number(window.prompt('Disite um número: '))
 let h1Num = window.document.getElementById('h1Num')
 h1Num.innerText += ' ' + num
 
+function criaP(num) {
+    for (let cont = 1; cont <= 6; cont++) {
+
+        var p = document.createElement('p')
+        p.setAttribute("id", "p" + cont)
+        document.body.appendChild(p)
+
+        switch (cont) {
+
+            case 1:
+                p.innerText = 'Raiz quadrada: ' + (num ** 0.5)
+                break
+
+            case 2:
+                p.innerText = `${num} é inteiro? ${Number.isInteger(num)}`
+                break
+
+            case 3:
+                p.innerText = `É NaN: ${Number.isNaN(num)}`
+                break
+
+            case 4:
+                p.innerText = `Arredondando para baixo: ${Math.floor(num)}`
+                break
+
+            case 5:
+                p.innerText = `Arredondando para cima: ${Math.ceil(num)}`
+                break
+
+            case 6:
+                p.innerText = `Com duas casas decimais: ${num.toFixed(2)}`
+                break
+        }
+    }
+}
+
+criaP(num)
+
+
+/*
 // Raiz quadrada
 var p1 = document.getElementById('p1')
 p1.innerText = 'Raiz quadrada: ' + (num ** 0.5)
