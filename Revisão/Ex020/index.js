@@ -2,6 +2,7 @@ const alunos = ['Luiz', 'Maria', 'João', 'Carlos']
 //               0       1        2       3
 
 console.log(alunos.slice(0, 3)) // fiz um fatiamento o que nao puxa o carlos 
+console.log(alunos instanceof Array) // retorna se é array
 
 const removido = alunos.pop() //Remove o ultimo do array
 console.log(removido)
