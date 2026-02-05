@@ -1,6 +1,8 @@
 const alunos = ['Luiz', 'Maria', 'João', 'Carlos']
 //               0       1        2       3
 
+console.log(alunos.slice(0, 3)) // fiz um fatiamento o que nao puxa o carlos 
+
 const removido = alunos.pop() //Remove o ultimo do array
 console.log(removido)
 alunos.shift() //Remove o primeiro  item do array
