@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+body > h1 {
+    text-align: center;
+    border: 1px solid white;
+    margin: auto;
+    padding: 10px;
+    max-width: 300px;
+}
+
+body {
+    background-color: rgb(0, 0, 80);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.corpo_color {
+    margin: auto; 
+    margin-top: 50px; 
+    max-width: 300px; 
+    height: 200px; 
+    background-color: red; 
+    border-radius: 50px 0px 50px 0px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
