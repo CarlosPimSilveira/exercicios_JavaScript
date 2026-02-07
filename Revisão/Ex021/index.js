@@ -2,7 +2,8 @@ let corpo = document.getElementById('corpo')
 let divCor = corpo.querySelector('.corpo_color')
 let posX = 0
 let velX = 2
-
+let posY = 0
+let velY = 2
 
 divCor.addEventListener('mouseenter', function() {
     divCor.style.backgroundColor = 'black'
@@ -15,6 +16,7 @@ divCor.addEventListener('mouseleave', function() {
 }) 
 
 function animar() {
+    // X
     posX += velX
     if (posX >= 60) {
         posX = 60
@@ -24,19 +26,20 @@ function animar() {
         posX = 0
         velX = 2
     }
-    divCor.style.transform = `translateX(${posX}px)`
+
+    // Y
+    posY += velY
+    if (posY >= 60) {
+        posY = 60
+        velY = -2
+    }
+    if (posY <= 0) {
+        posY = 0
+        velY = 2
+    }
+
+    divCor.style.transform = `translate(${posX}px, ${posY}px)`
     requestAnimationFrame(animar)
 }
+
 animar()
-
-
-
-    /*
-    posicao += velocidade;
-    if (posicao > 60) {
-        velocidade = -velocidade
-        divCor.style.transform = `translateX(${posicao}px)`
-    } else {
-        divCor.style.transform = `translateX(${posicao}px)`
-    }
-    */
