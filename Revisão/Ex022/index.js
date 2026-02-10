@@ -1,3 +1,6 @@
 function saudacao(nome) {
-    console.log('Bom dia! ' + nome)
-} saudacao('luiz')
+    return `Bom dia ${nome}`
+} 
+
+const variavel = saudacao('luiz')
+console.log(variavel)
