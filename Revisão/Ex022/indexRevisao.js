@@ -26,3 +26,13 @@ const pessoa5 = criaPessoa('Jean', 'Otávio', 39)
 console.log(pessoa2)
 console.log(pessoa3)
 console.log(pessoa4)
+
+function inverterArray() {
+    let ArrayInverter = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    let ArrayInvertido = []
+    for (C = 0; C < ArrayInverter.length; C++) {
+        ArrayInvertido.push(ArrayInverter[ArrayInverter.length - 1 - C])
+    }    
+    return ArrayInvertido
+} console.log(inverterArray())
+
