@@ -11,3 +11,18 @@ let Objeto1 = {
 }
 let ObjetoNovo = {...Objeto1}
 // Agora copiamos um objeto podemos então editar sem afetar o original!
+
+// Fabrica de objeto
+function criaPessoa(nome, sobrenome, idade) {
+    return {
+        nome, sobrenome, idade
+    }
+}
+
+const pessoa2 = criaPessoa('Carlos', 'Pim', 27)
+const pessoa3 = criaPessoa('Maria', 'Oliveira', 32)
+const pessoa4 = criaPessoa('João', 'Moreira', 55)
+const pessoa5 = criaPessoa('Jean', 'Otávio', 39)
+console.log(pessoa2)
+console.log(pessoa3)
+console.log(pessoa4)

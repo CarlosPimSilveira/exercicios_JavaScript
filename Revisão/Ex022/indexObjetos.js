@@ -23,7 +23,6 @@ pessoa1.incrementaIdade()//27
 pessoa1.incrementaIdade()//28
 pessoa1.fala()
 
-
 // Fabrica de objeto
 function criaPessoa(nome, sobrenome, idade) {
     return {
