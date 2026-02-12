@@ -30,9 +30,21 @@ console.log(pessoa4)
 function inverterArray() {
     let ArrayInverter = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     let ArrayInvertido = []
-    for (C = 0; C < ArrayInverter.length; C++) {
-        ArrayInvertido.push(ArrayInverter[ArrayInverter.length - 1 - C])
-    }    
-    return ArrayInvertido
-} console.log(inverterArray())
+    let ArrayDesinvertido = []
+    
+    for (let C = 0; C < ArrayInverter.length; C++) {
+        ArrayInvertido.push(
+            ArrayInverter[ArrayInverter.length - 1 - C]
+        )
+    }
+    // agora inverter o invertido
+    for (let C = 0; C < ArrayInvertido.length; C++) {
+        ArrayDesinvertido.push(
+            ArrayInvertido[ArrayInvertido.length - 1 - C]
+        )
+    }
+    return [ArrayInvertido, ArrayDesinvertido]
+}
+console.log(inverterArray())
+
 
