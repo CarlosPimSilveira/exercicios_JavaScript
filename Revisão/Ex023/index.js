@@ -1,11 +1,12 @@
 function Enviar() {
-    let txtNome = window.document.getElementById('NomeTXT').value
-    let txtSobrenome = window.document.getElementById('SobrenomeTXT').value
-    let txtPeso = window.document.getElementById('PesoTXT').value
-    let txtAltura = window.document.getElementById('AlturaTXT').value
+    const campos = ['NomeTXT', 'SobrenomeTXT', 'PesoTXT', 'AlturaTXT']
 
-    var p = document.createElement('p')
-    p.setAttribute("id", "p")
+    let valores = campos.map(id => document.getElementById(id).value)
+
+    let p = document.createElement('p')
+    p.innerText = valores.join(' ')
     document.body.appendChild(p)
-    p.innerText = txtNome + ' ' + txtSobrenome + ' ' + txtPeso + ' ' + txtAltura;
+
+    // limpa todos
+    campos.forEach(id => document.getElementById(id).value = '')
 }
