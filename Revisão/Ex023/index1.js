@@ -1,3 +1,4 @@
 /*
-    
+    Operadores Lógicos
+    && -> AND -> E
 */
