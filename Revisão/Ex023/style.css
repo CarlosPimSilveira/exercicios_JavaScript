@@ -17,6 +17,11 @@ p {
     padding: 10px;
 }
 
+.p_div:hover {
+    background-color: rgb(53, 52, 52);
+    transform: scale(1.01);
+}
+
 .div_form {
     background-color: rgb(53, 52, 52);
     max-width: 490px;
