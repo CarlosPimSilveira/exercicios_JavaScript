@@ -19,7 +19,14 @@ p {
 
 .div_form {
     background-color: rgb(53, 52, 52);
-    border-radius: 20px;
+    max-width: 490px;
+    border-radius: 20px;    
+    transition: 0.3s;
+}
+
+.div_form:hover {
+    background-color: rgb(53, 52, 52);
+    transform: scale(1.05);
 }
 
 .btn-enviar {
