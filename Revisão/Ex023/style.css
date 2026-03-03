@@ -27,6 +27,8 @@ p {
     max-width: 490px;
     border-radius: 20px;    
     transition: 0.3s;
+    margin: 10px;
+    padding: 5px;
 }
 
 .div_form:hover {
