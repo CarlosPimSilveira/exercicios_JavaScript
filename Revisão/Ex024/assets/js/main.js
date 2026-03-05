@@ -18,13 +18,25 @@ form.addEventListener('submit', function (e) {
         setResultado('Altura inválido!', false)
         return
     }
+
+    const imc = getImc(peso, altura)
+
+    
 })
+
+
+function getImc(peso, altura) {
+    const imc = peso / altura ** 2
+    return imc.toFixed(2)
+}
 
 function setResultado(msg, isValid) {
     const resultado = document.querySelector('#resultado')
     resultado.innerHTML = ''
 
     const p = criaP()
+    p.innerHTML = msg
+    resultado.appendChild(p)
 
     // Adicione esse filho ao resultado
     // resultado.appendChild(p)
