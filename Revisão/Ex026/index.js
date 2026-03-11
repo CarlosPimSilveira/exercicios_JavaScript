@@ -1,3 +1,3 @@
-const data = new Date()
+const data = new Date(0)
 
 console.log(data.toString())
