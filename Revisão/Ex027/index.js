@@ -1,4 +1,10 @@
 const data = new Date()
 const diaSemana = data.getDay()
+let diaSemanatexto
 
-console.log(diaSemana)
+if (diaSemana === 1) {
+    diaSemanatexto = 'Segunda'
+}
+
+
+console.log(diaSemanatexto)
