@@ -11,3 +11,18 @@ console.log('Min', data.getMinutes())
 console.log('Seg', data.getSeconds())
 console.log('ms', data.getMilliseconds())
 console.log('Dia semana', data.getDay())
+
+
+function formatadaData(data) {
+    const dia = data.getDate()
+    const mes = data.getMonth() + 1
+    const ano = data.getUTCFullYear()
+    const hora = data.getHours()
+    const min = data.getMinutes()
+    const seg = data.getSeconds()
+    return `${dia}/${mes}/${ano}  ${hora}:${min}:${seg}`
+}
+
+const data1 = new Date()
+const dataBrasil = formatadaData(data)
+console.log(dataBrasil)
