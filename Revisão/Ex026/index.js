@@ -12,17 +12,21 @@ console.log('Seg', data.getSeconds())
 console.log('ms', data.getMilliseconds())
 console.log('Dia semana', data.getDay())
 
+function zeroAEsquerda(num) {
+    return num >= 10? num : `0${num}`
+}
 
-function formatadaData(data) {
-    const dia = data.getDate()
-    const mes = data.getMonth() + 1
-    const ano = data.getUTCFullYear()
-    const hora = data.getHours()
-    const min = data.getMinutes()
-    const seg = data.getSeconds()
+function formatadaData(data1) {
+    const dia = zeroAEsquerda(data1.getDate())
+    const mes = zeroAEsquerda(data1.getMonth() + 1)
+    const ano = zeroAEsquerda(data1.getUTCFullYear())
+    const hora = zeroAEsquerda(data1.getHours())
+    const min = zeroAEsquerda(data1.getMinutes())
+    const seg = zeroAEsquerda(data1.getSeconds())
+
     return `${dia}/${mes}/${ano}  ${hora}:${min}:${seg}`
 }
 
 const data1 = new Date()
-const dataBrasil = formatadaData(data)
+const dataBrasil = formatadaData(data1)
 console.log(dataBrasil)
