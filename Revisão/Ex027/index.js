@@ -24,6 +24,8 @@ switch (diaSemana) {
     case 6: 
         diaSemanatexto = 'Sabado'
         break
+    default:
+        diaSemana = ''
 }
 
 console.log(diaSemanatexto)
