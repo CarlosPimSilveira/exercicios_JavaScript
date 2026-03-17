@@ -73,3 +73,24 @@ function resultado() {
 }
 
 resultado()
+
+/*
+
+const data = new Date()
+
+function resultado() {
+    const container = document.querySelector('.container')
+    const p = document.createElement('p')
+    p.classList.add('paragrafo-resultado')
+
+    p.innerHTML = data.toLocaleString('pt-BR', {
+        dateStyle: 'full',
+        timeStyle: 'short'
+    })
+
+    container.appendChild(p)
+}
+
+resultado()
+
+*/
