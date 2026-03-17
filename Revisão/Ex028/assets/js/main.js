@@ -57,6 +57,10 @@ function MesNum(mes) {
     }
 }
 
+function zeroAEsquerda(num) {
+    return num >= 10? num : `0${num}`
+}
+
 function resultado() {
     const resultado = document.querySelector('.container')
     const p = criaP()
@@ -64,7 +68,7 @@ function resultado() {
     const diaSemana = DiasemanaNum(data.getDay())
     const mes = MesNum(data.getMonth())
 
-    p.innerHTML = `${diaSemana}, ${data.getDate()} de ${mes} de ${data.getFullYear()} ${data.getHours()}:${data.getMinutes()}`
+    p.innerHTML = `${diaSemana}, ${data.getDate()} de ${mes} de ${data.getFullYear()} ${zeroAEsquerda(data.getHours())}:${zeroAEsquerda(data.getMinutes())}`
     resultado.appendChild(p)
 }
 
