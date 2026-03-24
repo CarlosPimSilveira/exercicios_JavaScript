@@ -12,3 +12,15 @@ h1 {
 p {
     font-size: 1.2em;
 }
+
+.btn-toggle {
+    padding: 10px 20px;
+    background: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#dark-btn:checked + .btn-toggle {
+    background: #333;
+    color: #fff;
+}
