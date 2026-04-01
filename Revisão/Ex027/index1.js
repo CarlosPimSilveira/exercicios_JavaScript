@@ -1,5 +1,6 @@
 const verdadeira = true
 let nome = 'Luiz'
+var nome2 = 'otavio'
 
 if (verdadeira) {
     // trocamos o valor de nome dentro apenas do if ou seja fora ele ainda é luiz
@@ -16,6 +17,12 @@ if (verdadeira) {
 }
 console.log(nome, nome2)
 
-var nome2 = 'Luiz'
+if (verdadeira) {
+    var nome2 = 'Carlos'
+    console.log(nome, nome2)
 
-
+    if (verdadeira) {
+        var nome2 = 'Outra coisa'
+        console.log(nome, nome2)
+    }
+}
