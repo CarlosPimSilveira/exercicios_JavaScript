@@ -26,4 +26,4 @@ if (verdadeira) {
         console.log(nome, nome2)
     }
 }
-console.log(nome, nome2)
+console.log(nome, nome2) // nome2 foi trocado mesmo dentro do bloco ele ainda é trocado
