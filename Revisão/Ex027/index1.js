@@ -34,6 +34,12 @@ function falaOi() {
     var nome3 = 'Carlos'
     console.log('Oi', nome3, sobrenome)
     // Mas aqui ela tem acesso ao sobrenome pois ela ve coisas fora do bloco
+
+    if (verdadeira) {
+        let nome4 = 'Pim'
+        console.log(nome4)
+    }
+    //console.log(nome4) // o bloco nao deixa a let aparecer fora mesmo tudo dentro da function
 }
 //console.log(nome3) não vai funcionar pq nome3 so existe dentro da function
 falaOi()
