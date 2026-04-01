@@ -26,3 +26,4 @@ if (verdadeira) {
         console.log(nome, nome2)
     }
 }
+console.log(nome, nome2)
