@@ -1,7 +1,5 @@
 const verdadeira = true
-
 let nome = 'Luiz'
-var nome2 = 'Luiz'
 
 if (verdadeira) {
     // trocamos o valor de nome dentro apenas do if ou seja fora ele ainda é luiz
@@ -11,8 +9,13 @@ if (verdadeira) {
     console.log(nome, nome2)
 
     if (verdadeira) {
-        console.log('OK')
+        let nome = 'Outra coisa' // Criando mais uma vez outra variavel nome com escopo dentro
+        // Caso nao tivesse esse let ele ia buscar no bloco de fora ai caso nao ache ia buscar fora do bloco 
+        console.log('OK', nome)
     }
 }
-
 console.log(nome, nome2)
+
+var nome2 = 'Luiz'
+
+
