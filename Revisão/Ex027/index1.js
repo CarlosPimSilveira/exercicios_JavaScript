@@ -44,7 +44,9 @@ function falaOi() {
 //console.log(nome3) não vai funcionar pq nome3 so existe dentro da function
 falaOi()
 
-console.log(sobrenome1)
+console.log(sobrenome1, sobrenome2)
 var sobrenome1 = 'Silva'
 // Isso ocorre com todas as variaveis var ele eleva a declaração 
+let sobrenome2 = 'Edu'
+// Isso nao ocorre com let
 
