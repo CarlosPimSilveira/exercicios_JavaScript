@@ -27,3 +27,13 @@ if (verdadeira) {
     }
 }
 console.log(nome, nome2) // nome2 foi trocado mesmo dentro do bloco ele ainda é trocado
+
+var sobrenome = 'Miranda'
+
+function falaOi() {
+    var nome3 = 'Carlos'
+    console.log('Oi', nome3, sobrenome)
+    // Mas aqui ela tem acesso ao sobrenome pois ela ve coisas fora do bloco
+}
+//console.log(nome3) não vai funcionar pq nome3 so existe dentro da function
+falaOi()
