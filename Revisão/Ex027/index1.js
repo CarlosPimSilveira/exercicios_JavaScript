@@ -1,4 +1,8 @@
+const verdadeira = true
+
 let nome = 'Luiz'
 var nome2 = 'Luiz'
 
-var nome2 = 'Carlos'
+if (verdadeira) {
+    console.log(nome, nome2)
+}
