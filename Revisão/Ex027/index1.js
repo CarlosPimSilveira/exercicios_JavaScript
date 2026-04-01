@@ -43,3 +43,8 @@ function falaOi() {
 }
 //console.log(nome3) não vai funcionar pq nome3 so existe dentro da function
 falaOi()
+
+console.log(sobrenome1)
+var sobrenome1 = 'Silva'
+// Isso ocorre com todas as variaveis var ele eleva a declaração 
+
