@@ -4,7 +4,7 @@ let a = 'A' // B
 let b = 'B' // C
 let c = 'C' // A
 
-const numeros = [1, 2, 3];
-[a, b, c] = numeros; 
+const letras = [b, c, a]; // invertemos
+[a, b, c] = letras; 
 
 console.log(a, b, c)
