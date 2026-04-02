@@ -17,3 +17,14 @@ const [um, , tres, , cinco, , sete] = numeros
 console.log(primeiroNumero, segundoNumero, terceiroNumero)
 console.log(resto) // rest ou spread
 console.log(um, tres, cinco, sete)
+
+//                0          1          2  
+//             0  1  2    0  1  2    0  1  2         
+const num = [ [1, 2, 3], [4, 5, 6], [7, 8, 9] ]
+console.log(num[1][2])
+const [ , [ , , seis]] = num         // mais complicado mas funciona
+const [lista1, lista2, lista3] = num // mais facil
+
+console.log(seis)
+console.log(lista3[2])
+
