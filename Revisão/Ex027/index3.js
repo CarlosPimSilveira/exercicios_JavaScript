@@ -11,8 +11,8 @@ const pessoa = {
 }
 //console.log(pessoa.nome)
 //const nome = pessoa.nome
-const { nome: n = 'Não existe', sobrenome, idade, endereço: {rua, numero}, endereço } = pessoa
+const { nome: n = 'Não existe', sobrenome, idade, endereço: {rua: r, numero}, endereço } = pessoa
 
 console.log(n, sobrenome, idade)
-console.log(rua, numero)
+console.log(r, numero)
 console.log(endereço)
