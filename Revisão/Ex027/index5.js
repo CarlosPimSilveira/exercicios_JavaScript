@@ -9,3 +9,7 @@ for (let i = 0; i <= 10; i++) {
 
 const frutas = ['Maçã', 'Pêra', 'Uva']
 console.log(frutas.length)
+
+for (let p = 0; p < frutas.length; p++) {
+    console.log(frutas[p])
+}
