@@ -4,3 +4,16 @@ const elementos = [
     {tag: 'footer', texto: 'Frase 3'},
     {tag: 'section', texto: 'Frase 4'}
 ]
+
+const corpo = document.querySelector('.container')
+
+function criaElemento() {
+    for (let c = 0; c < elementos.length; c++) {
+        let tg = document.createElement(elementos[c].tag)
+        tg.innerText = elementos[c].texto
+        tg.createElement(elementos[c])
+        corpo.appendChild(tg)
+    }
+}
+
+criaElemento()
