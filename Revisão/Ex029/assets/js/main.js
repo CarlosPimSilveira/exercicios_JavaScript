@@ -15,7 +15,7 @@ function criaElemento() {
         div.appendChild(tg)*/
         let { tag, texto } = elementos[c]
         let tagCriada = document.createElement(tag)
-        tagCriada.innerHTML = texto
+        tagCriada.innerText = texto
         div.appendChild(tagCriada)
     }
 }
