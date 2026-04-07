@@ -14,11 +14,12 @@ function criaElemento() {
         tg.innerText = elementos[c].texto
         div.appendChild(tg)*/
         let { tag, texto } = elementos[c]
-        let tagCriada = document.createElement[tag]
+        let tagCriada = document.createElement(tag)
         tagCriada.innerHTML = texto
+        div.appendChild(tagCriada)
     }
 }
 
-//corpo.appendChild(div)
+corpo.appendChild(div)
 
 criaElemento()
