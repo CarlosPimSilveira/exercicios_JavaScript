@@ -6,6 +6,7 @@ const elementos = [
 ]
 
 const corpo = document.querySelector('.container')
+const div = document.createElement('div')
 
 function criaElemento() {
     for (let c = 0; c < elementos.length; c++) {
