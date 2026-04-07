@@ -10,10 +10,15 @@ const div = document.createElement('div')
 
 function criaElemento() {
     for (let c = 0; c < elementos.length; c++) {
-        let tg = document.createElement(elementos[c].tag)
+        /*let tg = document.createElement(elementos[c].tag)
         tg.innerText = elementos[c].texto
-        corpo.appendChild(tg)
+        div.appendChild(tg)*/
+        let { tag, texto } = elementos[c]
+        let tagCriada = document.createElement[tag]
+        tagCriada.innerHTML = texto
     }
 }
+
+//corpo.appendChild(div)
 
 criaElemento()
