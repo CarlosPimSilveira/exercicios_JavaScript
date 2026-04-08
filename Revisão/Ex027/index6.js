@@ -16,6 +16,6 @@ const pessoa = {
     idade: 27
 }
 
-for (let i in pessoa) {
-    console.log(pessoa[i])
+for (let chaves in pessoa) {
+    console.log(pessoa[chaves])
 }
