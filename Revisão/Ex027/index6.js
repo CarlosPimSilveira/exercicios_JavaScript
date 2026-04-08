@@ -17,7 +17,7 @@ const pessoa = {
 }
 
 for (let chaves in pessoa) {
-    console.log(pessoa[chaves])
+    console.log(chaves, pessoa[chaves])
 }
 
 const chave = 'nome'
