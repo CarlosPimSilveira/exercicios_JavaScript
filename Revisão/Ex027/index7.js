@@ -1,10 +1,20 @@
 //            012345
-const nome = 'Luiz Otávio'
+const nomes = ['Luiz', 'Otávi', 'Henrique' ];
 
-for (let i = 0; i < nome.length; i++) {
-    console.log(nome[i])
+for (let i = 0; i < nomes.length; i++) {
+    console.log(nomes[i])
 }
 
-for (let i in nome) {
-    console.log(nome[i])
+console.log('####')
+
+for (let i in nomes) {
+    console.log(nomes[i])
+}
+
+console.log('####')
+
+// for...in → percorre as chaves (índices ou propriedades)
+// for...of → percorre os valores
+for (let valor of nomes) {
+    console.log(valor)
 }
