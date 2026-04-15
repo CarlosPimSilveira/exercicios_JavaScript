@@ -35,3 +35,12 @@ while (rand !== 10) {
     console.log(rand)
 }
 
+// faça primeiro e verifique depois
+// do while
+console.log('####')
+
+do {
+    rand = random(min, max)
+    console.log(rand)
+} while (rand !== 10)
+
