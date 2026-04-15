@@ -1,5 +1,5 @@
 const paragrafos = document.querySelector('.paragrafos')
-paragrafos.querySelectorAll('p')
+const ps = paragrafos.querySelectorAll('p')
 
 
 
