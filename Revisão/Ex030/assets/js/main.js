@@ -7,6 +7,7 @@ const backgoundColorBody = estilosBody.backgroundColor
 
 for (let p of ps) {
     p.style.backgroundColor = backgoundColorBody
+    p.style.color = 'white'
 }
 
 
