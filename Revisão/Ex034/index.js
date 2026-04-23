@@ -24,3 +24,14 @@ const funcaoArrow = () => {
 }
 funcaoArrow()
 
+// Dentro de um objeto
+const obj = {
+    falar: function () {
+        console.log('Estou falando...')
+    },
+    fala() {
+        console.log('Estou falando... nova versão!')
+    }
+}
+obj.falar()
+obj.fala()
