@@ -17,3 +17,10 @@ function executaFuncao(funcao) {
     funcao()
 }
 executaFuncao(souUmDado)
+
+// Arrow function
+const funcaoArrow = () => {
+    console.log('Sou uma arrow function')
+}
+funcaoArrow()
+
