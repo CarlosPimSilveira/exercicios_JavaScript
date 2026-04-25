@@ -1,5 +1,7 @@
 function funcao() {
     console.log('Oie')
+    console.log(arguments)
 }
 // enviando argumento! mesmo a funcao nao esperando ele nao retorna erro!
-funcao('valor')
+// quando defino uma function com a palavra function dentro dela tem a arguments que sustenta tudo que for enviado 
+funcao('valor', 1, 2, 3, 4, 5, 6, 7, 8, 9)
