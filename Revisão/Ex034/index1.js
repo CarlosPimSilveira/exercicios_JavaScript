@@ -2,4 +2,4 @@ function funcao() {
     console.log('Oie')
 }
 
-funcao()
+funcao('valor')
