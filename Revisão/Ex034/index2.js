@@ -1,4 +1,4 @@
-function funcao(a, b, c, d, e, f) {
-    console.log(a, b, c, d, e, f)
+function funcao(a, b = 0) {
+    console.log(a + b)
 }
-funcao(1, 2, 3)
+funcao(2)
