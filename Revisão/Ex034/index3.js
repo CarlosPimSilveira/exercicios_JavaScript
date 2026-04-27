@@ -10,8 +10,11 @@ funcao1(['Luiz otávio', 'miranda', 30])
 
 function conta(operador, acumulador, ...numeros) {
     for(let numero of numeros) {
-        acumulador += numero
+        if (operador === '+') acumulador += numero
+        if (operador === '-') acumulador -= numero
+        if (operador === '/') acumulador /= numero
+        if (operador === '*') acumulador *= numero
     }
     console.log(acumulador)
 }
-conta('+', 0, 20, 30, 40, 50)
+conta('+', 1, 20, 30, 40, 50)
