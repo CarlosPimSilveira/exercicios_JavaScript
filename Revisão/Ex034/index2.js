@@ -1,5 +1,5 @@
-function funcao(a, b = 0, c = 4) {
+function funcao(a, b = 2, c = 4) {
     // b = b || 0;
     console.log(a + b + c)
 }
-funcao(2, 10)
+funcao(2, , 20)
