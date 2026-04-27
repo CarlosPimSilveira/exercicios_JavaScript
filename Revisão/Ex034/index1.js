@@ -1,3 +1,4 @@
+// argumentos que sustenta todos os argumentos enviados!
 function funcao() {
     console.log('Oie')
     console.log(arguments)
