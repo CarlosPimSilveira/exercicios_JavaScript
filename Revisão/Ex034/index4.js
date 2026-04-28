@@ -9,9 +9,9 @@ function soma2(a, b) {
     console.log(a + b)
 } soma2(5, 2)
 
-//document.addEventListener('click', function() {
-//    document.body.style.backgroundColor = 'red'
-//})
+document.addEventListener('click', function() {
+    document.body.style.backgroundColor = 'red'
+})
 
 function criaPessoa(nome, sobrenome) {
     return { nome, sobrenome }
@@ -22,7 +22,6 @@ const p2 = {
     nome: 'João',
     sobrenome: 'Oliveira'
 }
-
 console.log(typeof p1)
 console.log(typeof p2)
 
