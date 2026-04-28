@@ -1,10 +1,11 @@
 // Closures
-function returnaFuncao() {
-    const nome = 'Luiz'
+function returnaFuncao(nome) {
     return function () {
         return nome
     }
 }
 
-const funcao = returnaFuncao()
+const funcao = returnaFuncao('Luiz')
+const funcao2 = returnaFuncao('João')
 console.log(funcao)
+console.log(funcao2)
