@@ -2,5 +2,12 @@
 const nome = 'Luiz'
 
 function falaNome() {
+    const nome = 'Otávio'
     console.log(nome)
-} falaNome()
+} 
+
+function usaFalaNome() {
+    falaNome()
+}
+
+usaFalaNome()
