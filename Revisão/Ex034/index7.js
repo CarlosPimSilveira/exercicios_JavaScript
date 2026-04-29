@@ -8,19 +8,19 @@ function rand(min = 1000, max = 3000) {
 function f1() {
     setTimeout(function() {
         console.log('f1')
-    }, 500)
+    }, rand())
 }
 
 function f2() {
     setTimeout(function() {
         console.log('f2')
-    }, 1000)
+    }, rand())
 }
 
 function f3() {
     setTimeout(function() {
         console.log('f3')
-    }, 800)
+    }, rand())
 }
 
 f1()
