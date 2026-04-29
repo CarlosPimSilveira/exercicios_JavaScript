@@ -3,7 +3,7 @@
 function f1() {
     setTimeout(function() {
         console.log('f1')
-    }, 1000)
+    }, 500)
 }
 
 function f2() {
@@ -15,7 +15,7 @@ function f2() {
 function f3() {
     setTimeout(function() {
         console.log('f3')
-    }, 1000)
+    }, 800)
 }
 
 f1()
