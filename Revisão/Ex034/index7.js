@@ -25,11 +25,17 @@ function f3(callback) {
         if (callback) callback()
     }, rand())
 }
+// Fizemos uma corrente que obriga acontecer na ordem
+f1(f1CallBack)
 
-f1(function() {
-    f2(function() {
-        f3(function() {
-            console.log('Olá mundo!')
-        })
-    })
-})
+function f1CallBack() {
+    f2(f2CallBack)
+}
+
+function f2CallBack() {
+    f3(f3CallBack)
+}
+
+function f3CallBack() {
+    console.log('Olá mundo!')
+}
