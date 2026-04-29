@@ -26,7 +26,10 @@ function f3(callback) {
     }, rand())
 }
 
-f1()
-f2()
-f3()
-console.log('Olá mundo!')
+f1(function() {
+    f2(function() {
+        f3(function() {
+            console.log('Olá mundo!')
+        })
+    })
+})
