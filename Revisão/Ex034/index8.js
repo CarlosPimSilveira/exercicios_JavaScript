@@ -20,6 +20,9 @@ qualquerCoisa();
 
     function falaNome() {
         console.log(nome + ' ' + sobrenome)
+        function falaApenasSobrenome() {
+            console.log(sobrenome)
+        } falaApenasSobrenome()
     } falaNome()
 })();
 
