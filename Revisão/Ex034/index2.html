@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+</head>
+<body>
+        <input id="input" placeholder="Chute um numero de 1 a 10">
+    <h1 id="texto"></h1>
+    <button onclick="botao()">Chutar</button>
+
+    <script>
+        let numero = Math.ceil(Math.random() * (10 - 1) + 1);
+        let tentativas = 0
+        console.log(`Se você olhou aqui, parabéns, a resposta é: ${numero}`)
+
+        function botao() {
+            let texto = document.getElementById("texto");
+            let input = document.getElementById("input")
+            let palpite = Number(input.value);
+            tentativas++;
+            input.value = "";
+
+            if (isNaN(palpite) || palpite < 1 || palpite > 10) {
+                texto.textContent = "Digite um numero valido!"
+                return;
+            }
+
+            if (palpite > numero) {
+                texto.textContent = ("Chute um numero mais baixo!");
+            } else if (palpite < numero) {
+                texto.textContent = ("Chute um numero mais alto");
+            } else {
+                texto.textContent = (`Acertou! o numero realmente é ${numero} e você acertou em ${tentativas} tentativas`);
+            }
+
+        }        
+    </script>
+</body>
+</html>

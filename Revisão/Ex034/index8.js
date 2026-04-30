@@ -1,0 +1,1 @@
+// Funções imediatas (IIFE)
