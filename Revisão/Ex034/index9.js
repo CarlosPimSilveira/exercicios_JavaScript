@@ -11,4 +11,4 @@ function criaPessoa(nome, sobrenome) {
 }
 
 const p1 = criaPessoa('Luiz', 'Otavio')
-console.log(p1)
+console.log(p1.fala('falando sobre JS'))
