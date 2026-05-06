@@ -18,6 +18,8 @@ function criaPessoa(nome, sobrenome, altura, peso) {
 
 const p1 = criaPessoa('Luiz', 'Otavio', 1.8, 80)
 const p2 = criaPessoa('Maria', 'Eduarda', 1.6, 52)
+console.log(p1.nome)
+console.log(p1.altura)
 console.log(p1.imc())
 // Mesma coisa - this é quem chama! nesse caso! o objeto se refere a quem esta chamando!
 console.log(p1.fala('falando sobre JS'))
