@@ -11,6 +11,7 @@ function criaPessoa(nome, sobrenome, altura, peso) {
         // Setter
         set nomeCompleto(valor) {
             valor = valor.split(' ')
+            this.nome = valor.shift()
             console.log(valor)
         },
         fala(assunto) {
