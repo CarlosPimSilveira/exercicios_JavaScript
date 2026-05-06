@@ -7,8 +7,9 @@ function criaPessoa(nome, sobrenome) {
         fala(assunto) {
             return `${this.nome} está falando ${assunto}`
         }, 
-        peso: 80
-    }
+        latura,
+        peso
+    };
 }
 
 const p1 = criaPessoa('Luiz', 'Otavio')
