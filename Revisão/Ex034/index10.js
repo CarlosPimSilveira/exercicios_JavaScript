@@ -1,19 +1,22 @@
 function adivinharNum() {
     let txtNum = document.querySelector('.txtNum')
-    let numAleatorio = rand()
+    let numReal = Number(txtNum.value)
+    let numAleatorio = 6//rand()
+    let respostas = document.querySelector('.respostas')
 
-    if (isNaN(Number(txtNum.value))) {
+    if (isNaN(numReal)) {
         window.alert('Digite um numero!'); 
         return
     }
 
-    if (true) {
+    if (numReal === numAleatorio) {
         const p = document.createElement('p')
         p.innerText = 'Certo!'
-        p.appendChild;
+        respostas.appendChild(p);
     }
-    txtNum === numAleatorio
+    console.log(numAleatorio)
     txtNum.value = ''
+    txtNum.focus()
 }
 
 function rand(min = 1, max = 10) {
