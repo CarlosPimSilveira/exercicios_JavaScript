@@ -8,20 +8,26 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    flex-direction: column;
+    margin: 0;
 }
 
-.container {
-    text-align: center;
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.label {
+    margin: 0 0 5px 0;
 }
 
 .linha {
     display: flex;
-    justify-content: center;
-    gap: 10px; /* espaço entre input e botão */
-    margin-top: 10px;
+    gap: 10px;
 }
 
-.txtNum {
+.respostas {
+    margin-top: 10px;
+    width: 100%;
     text-align: center;
 }
