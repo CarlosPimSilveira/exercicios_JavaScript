@@ -34,10 +34,3 @@ function rand(min = 1, max = 11) {
     const num = Math.random() * (max - min) + min
     return Math.floor(num)
 }
-
-/*
-    if (numReal === numAleatorio) {
-        const p = document.createElement('p')
-        p.innerText = 'Certo!'
-        respostas.appendChild(p);
-    }*/
