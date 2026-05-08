@@ -30,7 +30,7 @@ function adivinharNum() {
     txtNum.focus()
 }
 
-function rand(min = 1, max = 10) {
+function rand(min = 1, max = 11) {
     const num = Math.random() * (max - min) + min
     return Math.floor(num)
 }
