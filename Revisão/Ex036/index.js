@@ -1,16 +1,19 @@
+let contador = 1
+
 function criaElemento() {
     let divTarefa = document.querySelector('.tarefaDiv')
-    
+
     if (!divTarefa) {
         divTarefa = criaDivTarefas()
     }
 
     let lista = document.querySelector('.olTarefa')
+
     if (!lista) {
         lista = criaLista(divTarefa)
     }
 
-    criaTarefa()
+    criaTarefa(lista)
 }
 
 function criaDivTarefas() {
@@ -27,6 +30,11 @@ function criaLista(divTarefa) {
     return lista
 }
 
-function criaTarefa(){
-    //const  
+function criaTarefa(lista) {
+    const itemLista = document.createElement('li')
+    itemLista.classList.add('liTarefa')
+    itemLista.classList.add(`liTarefa${contador}`)
+    itemLista.innerText = `Tarefa ${contador}`
+    lista.appendChild(itemLista)
+    contador++
 }
