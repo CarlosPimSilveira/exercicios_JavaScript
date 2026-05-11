@@ -23,6 +23,13 @@ function criaDivTarefas() {
     return div
 }
 
+function criaLista(divTarefa) {
+    const lista = document.createElement('ol')
+    lista.classList.add('olTarefa')
+    divTarefa.appendChild(lista)
+    return lista
+}
+
 function criaTarefa(lista) {
     const itemLista = document.createElement('li')
     itemLista.classList.add(`liTarefa${contador}`)
