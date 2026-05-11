@@ -32,9 +32,15 @@ function criaLista(divTarefa) {
 
 function criaTarefa(lista) {
     const itemLista = document.createElement('li')
-    itemLista.classList.add('liTarefa')
     itemLista.classList.add(`liTarefa${contador}`)
-    itemLista.innerText = `Tarefa ${contador}`
+
+    const input = document.createElement('input')
+    input.type = 'text'
+
+    input.classList.add(`pLiTarefa${contador}`)
+    itemLista.appendChild(input)
     lista.appendChild(itemLista)
+    input.focus()
+
     contador++
 }
