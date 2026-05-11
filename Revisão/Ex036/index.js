@@ -59,13 +59,17 @@ function criaTarefa(lista) {
             criaElemento()
         }
     })
+    
     input.addEventListener('blur', function () {
         const valor = input.value.trim()
 
         if (valor === '') {
             itemLista.remove()
+            btnAdicionar.disabled = false
+        } else {
+            input.disabled = true
+            btnAdicionar.disabled = false
         }
-        btnAdicionar.disabled = false
     })
 
     contador++
