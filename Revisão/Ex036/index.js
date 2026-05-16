@@ -37,7 +37,6 @@ function criaTarefa(lista) {
     itemLista.addEventListener('dblclick', function () {
         input.disabled = false
         input.focus()
-        console.log('teste')
     })
 
     const input = document.createElement('input')
@@ -79,4 +78,12 @@ function criaTarefa(lista) {
     })
 
     contador++
+}
+
+function editaElementos() {
+    const todoLi = document.querySelectorAll('li')
+
+    for (let c = 0; c < todoLi.length; c++) {
+        console.log(todoLi[c])
+    }
 }
