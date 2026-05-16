@@ -81,9 +81,9 @@ function criaTarefa(lista) {
 }
 
 function editaElementos() {
-    const todoLi = document.querySelectorAll('li')
+    const todoLi = document.querySelectorAll('input')
 
     for (let c = 0; c < todoLi.length; c++) {
-        console.log(todoLi[c])
+        todoLi[c].disabled = false
     }
 }
