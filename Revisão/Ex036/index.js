@@ -34,6 +34,12 @@ function criaTarefa(lista) {
     const itemLista = document.createElement('li')
     itemLista.classList.add(`liTarefa${contador}`)
 
+    itemLista.addEventListener('dblclick', function () {
+        input.disabled = false
+        input.focus()
+        console.log('teste')
+    })
+
     const input = document.createElement('input')
     input.type = 'text'
 
