@@ -89,6 +89,15 @@ function editaElementos() {
     }
 
     for (let c = 0; c < inputEditar.length; c++) {
+        const li = inputEditar[c].parentElement
+        const inputDelet = document.createElement('button')
+
+        inputDelet.innerText = 'X'
+        inputDelet.addEventListener('click', function () {
+            li.remove()
+        })
+
+        li.appendChild(inputDelet)
         inputEditar[c].disabled = false
     }
 }
@@ -97,13 +106,6 @@ function salvarElementos() {
     const inputEditar = document.querySelectorAll('.inputTarefa')
 
     for (let c = 0; c < inputEditar.length; c++) {
-
-        const inputDelet = document.createElement('button')
-        input.type = 'button'
-        const ol = document.querySelectorAll(`.liTarefa${c}`)
-        inputDelet.innerText = ('TESTE')
-        ol[c].appendChild(inputDelet)
-
         inputEditar[c].disabled = true
     }
 }
