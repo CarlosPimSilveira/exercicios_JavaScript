@@ -81,9 +81,14 @@ function criaTarefa(lista) {
 }
 
 function editaElementos() {
-    const todoLi = document.querySelectorAll('input')
+    const inputEditar = document.querySelectorAll('input')
 
-    for (let c = 0; c < todoLi.length; c++) {
-        todoLi[c].disabled = false
+    if (inputEditar.length = 0) {
+        window.alert('Nenhum campo feito para ser editado!'); 
+        return
+    }
+
+    for (let c = 0; c < inputEditar.length; c++) {
+        inputEditar[c].disabled = false
     }
 }
