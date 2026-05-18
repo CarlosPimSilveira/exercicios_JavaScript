@@ -42,7 +42,7 @@ function criaTarefa(lista) {
     const input = document.createElement('input')
     input.type = 'text'
 
-    input.classList.add(`pLiTarefa${contador}`)
+    input.classList.add(`pLiTarefa${contador}`, 'inputTarefa')
     itemLista.appendChild(input)
     lista.appendChild(itemLista)
 
@@ -81,14 +81,22 @@ function criaTarefa(lista) {
 }
 
 function editaElementos() {
-    const inputEditar = document.querySelectorAll('input')
+    const inputEditar = document.querySelectorAll('.inputTarefa')
 
-    if (inputEditar.length = 0) {
-        window.alert('Nenhum campo feito para ser editado!'); 
+    if (inputEditar.length === 0) {
+        window.alert('Nenhum campo feito para ser editado!')
         return
     }
 
     for (let c = 0; c < inputEditar.length; c++) {
         inputEditar[c].disabled = false
+    }
+}
+
+function salvarElementos() {
+    const inputEditar = document.querySelectorAll('.inputTarefa')
+
+    for (let c = 0; c < inputEditar.length; c++) {
+        inputEditar[c].disabled = true
     }
 }
