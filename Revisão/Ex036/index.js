@@ -91,6 +91,7 @@ function editaElementos() {
     for (let c = 0; c < inputEditar.length; c++) {
         const li = inputEditar[c].parentElement
         const inputDelet = document.createElement('button')
+        inputDelet.classList.add('btnDel')
 
         inputDelet.innerText = 'X'
         inputDelet.addEventListener('click', function () {
@@ -106,6 +107,14 @@ function salvarElementos() {
     const inputEditar = document.querySelectorAll('.inputTarefa')
 
     for (let c = 0; c < inputEditar.length; c++) {
+
+        const li = inputEditar[c].parentElement
+        const btnDel = li.querySelector('.btnDel')
+
+        if (btnDel) {
+            btnDel.remove()
+        }
+
         inputEditar[c].disabled = true
     }
 }
