@@ -34,51 +34,58 @@ function criaTarefa(lista) {
     const itemLista = document.createElement('li')
     itemLista.classList.add(`liTarefa${contador}`)
 
-    itemLista.addEventListener('dblclick', function () {
-        input.disabled = false
-        input.focus()
-    })
-
-    const btnEditar = document.querySelector('.btnEditar')
-    btnEditar.disabled = true
-
     const input = document.createElement('input')
     input.type = 'text'
 
     input.classList.add(`pLiTarefa${contador}`, 'inputTarefa')
+
     itemLista.appendChild(input)
     lista.appendChild(itemLista)
 
     const btnAdicionar = document.querySelector('.btnAdicionar')
+    const btnEditar = document.querySelector('.btnEditar')
+
     btnAdicionar.disabled = true
+    btnEditar.disabled = true
+
     input.focus()
 
     input.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') {
             const valor = input.value.trim()
+
             if (valor === '') {
                 itemLista.remove()
+
                 btnAdicionar.disabled = false
+                btnEditar.disabled = false
+
                 return
             }
 
             input.disabled = true
             btnAdicionar.disabled = false
+            btnEditar.disabled = false
+
             criaElemento()
         }
     })
-    
     input.addEventListener('blur', function () {
+        finalizarCriacao()
+    })
+
+    function finalizarCriacao() {
         const valor = input.value.trim()
 
         if (valor === '') {
             itemLista.remove()
-            btnAdicionar.disabled = false
         } else {
             input.disabled = true
-            btnAdicionar.disabled = false
         }
-    })
+
+        btnAdicionar.disabled = false
+        btnEditar.disabled = false
+    }
 
     contador++
 }
@@ -91,23 +98,35 @@ function editaElementos() {
         return
     }
 
+    const btnAdicionar = document.querySelector('.btnAdicionar')
+    const btnEditar = document.querySelector('.btnEditar')
+
+    btnAdicionar.disabled = true
+    btnEditar.disabled = true
+
     for (let c = 0; c < inputEditar.length; c++) {
         const li = inputEditar[c].parentElement
-        const inputDelet = document.createElement('button')
-        inputDelet.classList.add('btnDel')
+        if (!li.querySelector('.btnDel')) {
+            const inputDelet = document.createElement('button')
 
-        inputDelet.innerText = 'X'
-        inputDelet.addEventListener('click', function () {
-            li.remove()
-        })
+            inputDelet.classList.add('btnDel')
+            inputDelet.innerText = 'X'
 
-        li.appendChild(inputDelet)
+            inputDelet.addEventListener('click', function () {
+                li.remove()
+            })
+
+            li.appendChild(inputDelet)
+        }
+
         inputEditar[c].disabled = false
     }
 }
 
 function salvarElementos() {
     const inputEditar = document.querySelectorAll('.inputTarefa')
+    const btnAdicionar = document.querySelector('.btnAdicionar')
+    const btnEditar = document.querySelector('.btnEditar')
 
     for (let c = 0; c < inputEditar.length; c++) {
 
@@ -120,4 +139,6 @@ function salvarElementos() {
 
         inputEditar[c].disabled = true
     }
+    btnAdicionar.disabled = false
+    btnEditar.disabled = false
 }
