@@ -39,6 +39,9 @@ function criaTarefa(lista) {
         input.focus()
     })
 
+    const btnEditar = document.querySelector('.btnEditar')
+    btnEditar.disabled = true
+
     const input = document.createElement('input')
     input.type = 'text'
 
