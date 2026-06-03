@@ -1,7 +1,12 @@
-function Calculadora() {
-    this.display = document.querySelector('.display')
+function criaCalculadora() {
+    return {
+        inicia() {
+            alert('Oi, iniciei')
+        },
 
+
+    };
 }
 
-const calculadora = new Calculadora()
+const calculadora = criaCalculadora()
 calculadora.inicia()
