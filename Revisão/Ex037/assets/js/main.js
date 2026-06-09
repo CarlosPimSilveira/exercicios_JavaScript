@@ -3,7 +3,7 @@ function criaCalculadora() {
         display: document.querySelector('.display'),
 
         inicia() {
-            alert('Oi, iniciei')
+            this.cliqueBotoes();
         },
 
         cliqueBotoes() {
@@ -11,7 +11,7 @@ function criaCalculadora() {
                 const el = e.target
 
                 if(el.classList.contains('btn-num')) {
-                    this.btnParaDisplay()
+                    this.btnParaDisplay();
                 }
             });
         },
