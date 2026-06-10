@@ -18,8 +18,6 @@ function abc() {
     for (let c = 0; c < Dig; c++) {
         arrayABC.push(alfabeto[c])
     }
-    resposta.innerText = arrayABC
+    resposta.innerText = arrayABC.toString()
     document.body.appendChild(resposta)
-    console.log(arrayABC)
-    console.log(typeof arrayABC)
 }
