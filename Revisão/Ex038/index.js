@@ -10,22 +10,16 @@ let alfabeto = [
     'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 ]
 
-let antDig = ''
+const resposta = document.createElement('h1')
 
 function abc() {
     let Dig = document.querySelector('.abc').value
-    if (Dig === antDig) {
-        return
-    } else { 
-        const resposta = document.createElement('h1')    
-        let arrayABC = []
-        for (let c = 0; c < Dig; c++) {
-            arrayABC.push(alfabeto[c]) 
-        }
-        resposta.innerText = arrayABC
-        document.body.appendChild(resposta)
-        antDig = Dig
-        console.log(arrayABC)
-        console.log(typeof arrayABC)
+    let arrayABC = []
+    for (let c = 0; c < Dig; c++) {
+        arrayABC.push(alfabeto[c])
     }
+    resposta.innerText = arrayABC
+    document.body.appendChild(resposta)
+    console.log(arrayABC)
+    console.log(typeof arrayABC)
 }
