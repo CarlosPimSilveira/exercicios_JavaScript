@@ -3,7 +3,18 @@
     20 - A, B, C, D, E, F, G, H e por ai vai ate o numero 20 do abc
 */
 
+let alfabeto = [
+    'A', 'B', 'C', 'D', 'E', 'F', 'G',
+    'H', 'I', 'J', 'K', 'L', 'M',
+    'N', 'O', 'P', 'Q', 'R', 'S',
+    'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+]
+
 function abc() {
-    let Dig = document.querySelector('.abc')
-    console.log(Dig)
+    let Dig = document.querySelector('.abc').value
+    let arrayABC = []
+    for (let c = 0; c <= Dig; c++) {
+        arrayABC += alfabeto[c]
+    }
+    console.log(arrayABC)
 }
