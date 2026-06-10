@@ -12,9 +12,11 @@ let alfabeto = [
 
 function abc() {
     let Dig = document.querySelector('.abc').value
-    let arrayABC = []
-    for (let c = 0; c <= Dig; c++) {
-        arrayABC += alfabeto[c]
+    let arrayABC = ''
+    for (let c = 0; c < Dig; c++) {
+        arrayABC += alfabeto[c] + ', '
     }
-    console.log(arrayABC)
+    const resposta = document.createElement('h1')
+    resposta.innerText = arrayABC
+    document.body.appendChild(resposta)
 }
