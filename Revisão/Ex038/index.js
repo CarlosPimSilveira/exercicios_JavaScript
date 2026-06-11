@@ -19,7 +19,7 @@ function abc() {
         arrayABC.push(alfabeto[c])
     }
     resposta.innerText = arrayABC.toString()
-    document.body.appendChild(resposta)
+    document.querySelector('.divCent').appendChild(resposta)
 
     let campoFocus = document.querySelector('.abc')
     campoFocus.value = ''
