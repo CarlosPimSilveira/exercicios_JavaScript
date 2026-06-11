@@ -20,8 +20,8 @@ function abc() {
     }
     resposta.innerText = arrayABC.toString()
     document.body.appendChild(resposta)
-    
+
     let campoFocus = document.querySelector('.abc')
-    campoFocus.innerText = ''
+    campoFocus.value = ''
     campoFocus.focus()
 }
