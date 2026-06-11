@@ -20,4 +20,5 @@ function abc() {
     }
     resposta.innerText = arrayABC.toString()
     document.body.appendChild(resposta)
+    focus(Dig)
 }
