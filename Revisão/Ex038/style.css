@@ -6,3 +6,18 @@
     background-color: black;
     color: white;
 }
+
+.abc {
+    background-color: white;
+    color: black;
+}
+
+.btn_enviar {
+    background-color: gray;
+    color: black;
+}
+
+.btn_enviar:hover {
+    background-color: darkgray;
+    cursor: pointer;
+}
