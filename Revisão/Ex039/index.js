@@ -7,3 +7,6 @@ function Pessoa(nome, sobrenome) {
     this.nome = nome
     this.sobrenome = sobrenome
 } // Pessoa.nome = 
+
+const p1 = new Pessoa('Carlos', 'Pim')
+const p2 = new Pessoa('Maria', 'Oliveira')
