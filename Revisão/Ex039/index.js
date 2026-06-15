@@ -6,7 +6,18 @@
 function Pessoa(nome, sobrenome) {
     this.nome = nome
     this.sobrenome = sobrenome
+
+    this.metodo = function() {
+        console.log('Sou um método!')
+    }
 } // Pessoa.nome = 
 
 const p1 = new Pessoa('Carlos', 'Pim')
 const p2 = new Pessoa('Maria', 'Oliveira')
+
+p1.metodo()
+
+console.log(p1.nome)
+console.log(typeof(p1.nome))
+console.log(p2.nome)
+console.log(typeof(p2.nome))
