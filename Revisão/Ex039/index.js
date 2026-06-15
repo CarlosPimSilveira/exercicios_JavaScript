@@ -1,0 +1,2 @@
+// Funções construtoras (constructor functions)
+
