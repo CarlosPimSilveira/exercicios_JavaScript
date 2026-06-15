@@ -4,7 +4,7 @@
 // construtora -> deve sempre iniciar com letra maiuscula (new)
 
 function Pessoa(nome, sobrenome) {
-    // Privadas!
+    // Atriubutos ou métodos privadas!
     const ID = 123456;
     const metodoInterno = function() {
 
