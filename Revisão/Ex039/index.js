@@ -8,7 +8,7 @@ function Pessoa(nome, sobrenome) {
     this.sobrenome = sobrenome
 
     this.metodo = function() {
-        console.log('Sou um método!')
+        console.log( this.nome + ' Sou um método!')
     }
 } // Pessoa.nome = 
 
