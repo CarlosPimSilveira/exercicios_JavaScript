@@ -15,6 +15,11 @@ const resposta = document.createElement('h1')
 function abc() {
     let Dig = document.querySelector('.abc').value
     let arrayABC = []
+
+    if (Dig >= 27) {
+        window.alert('Valor invalido o codigo aceita apenas 1 - 26')
+        return
+    }
     for (let c = 0; c < Dig; c++) {
         arrayABC.push(alfabeto[c])
     }
