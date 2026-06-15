@@ -4,6 +4,11 @@
 // construtora -> deve sempre iniciar com letra maiuscula (new)
 
 function Pessoa(nome, sobrenome) {
+    const ID = 123456;
+    const metodoInterno = function() {
+
+    };
+
     this.nome = nome
     this.sobrenome = sobrenome
 
