@@ -1,5 +1,6 @@
 // Funções recursivas 
 // "Ela mesmo se chama"
+// ela chama ela mesmo ate atingir o objetivo que foi determinado nela mesmo!
 function recursiva (max){
     if (max >= 10) return //para aqui quando for maior que 10
     max++ // max que começa no 0 sobe 1
