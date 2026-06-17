@@ -24,7 +24,3 @@ const p2 = new Pessoa('Maria', 'Oliveira')
 
 p1.metodo()
 
-console.log(p1.nome)
-console.log(typeof(p1.nome))
-console.log(p2.nome)
-console.log(typeof(p2.nome))
