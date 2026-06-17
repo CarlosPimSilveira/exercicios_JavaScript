@@ -1,5 +1,5 @@
 // Funções recursivas 
 // "Ela mesmo se chama"
-function recursiva(){
-    
+function recursiva (max){
+
 }
