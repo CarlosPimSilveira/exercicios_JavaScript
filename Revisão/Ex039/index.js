@@ -19,7 +19,8 @@ function Pessoa(nome, sobrenome) {
     }
 } // Pessoa.nome = 
 
-
+const p1 = new Pessoa('Carlos', 'Pim')
+const p2 = new Pessoa('Maria', 'Oliveira')
 
 p1.metodo()
 
