@@ -24,3 +24,4 @@ const p2 = new Pessoa('Maria', 'Oliveira')
 
 p1.metodo()
 
+console.log(p1.nome)
