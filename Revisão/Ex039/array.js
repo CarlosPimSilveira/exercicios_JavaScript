@@ -11,3 +11,7 @@ console.log(nomes)
 const novo = nomes // num é copia é apontar para o mesmo local da memoria!
 novo.pop() // ambos perdem pq ambos apontam para o mesmo local na memoria!
 console.log(nomes, novo)
+// copiar pegar todos os elementos e nao apontar para o mesmo local
+const novos = [...nomes]
+novos[2] = 'João' // agora como ambos não estão ligados posso alterar 1 sem afetar o outro!
+console.log(nomes, novos)
