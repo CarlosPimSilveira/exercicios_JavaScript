@@ -15,3 +15,4 @@ console.log(nomes, novo)
 const novos = [...nomes]
 novos[2] = 'João' // agora como ambos não estão ligados posso alterar 1 sem afetar o outro!
 console.log(nomes, novos)
+console.log(novos.length)
