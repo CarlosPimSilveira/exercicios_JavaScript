@@ -18,4 +18,9 @@ console.log(nomes, novos)
 console.log(novos.length)
 const removido1 = novos.pop() //final
 const removido2 = novos.shift() // começo
-console.log(removido, novos)
+console.log(removido1, removido2, novos)
+novos.push('João') // adicionando novos nomes no array
+novos.push('Carlos')
+novos.push('Rafael')
+novos.unshift('vai para o primeiro lugar') // adiciona no começo do array
+console.log(novos)
