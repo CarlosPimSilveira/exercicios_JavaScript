@@ -8,5 +8,6 @@ const nomes = ['Maria', 'João', 'Eduardo', 'Gabriel', 'Júlia']
 // splice tambem pode retornar o remodivo mas ela remove um array e nao uma string! diferente do pop()
 // splice(-1, 1) remove a julia pois ela é o -1 e to removendo 1 
 // splice(-2, 1) remove o gabriel pois ele é indice -2 e to removendo apenas 1
+// splice(-2, Number.MAX_VALUE) tire do -2(gabriel) ate o final (max_value) é um numero maximo que o js suporta
 const removidos = nomes.splice(-2, 1)
 console.log(nomes, removidos)
