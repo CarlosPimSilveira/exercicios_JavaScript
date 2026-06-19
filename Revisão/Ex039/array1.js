@@ -9,4 +9,5 @@ console.log(novo1)
 
 const nome = 'Luiz Otávio Miranda'
 const nomes1 = nome.split(' ') // separando para fazer um array usando o espaço para separar!
+console.log(nome)
 console.log(nomes1)
