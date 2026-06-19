@@ -6,3 +6,7 @@ const novo1 = nomes.slice(1, -1)
 console.log(nomes)
 console.log(novo)
 console.log(novo1)
+
+const nome = 'Luiz Otávio Miranda'
+const nomes1 = nome.split(' ') // separando para fazer um array usando o espaço para separar!
+console.log(nomes1)
