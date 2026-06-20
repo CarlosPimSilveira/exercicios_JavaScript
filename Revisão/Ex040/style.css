@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    background-color: black;
+    color: white;
+}
+
+.btncssEditar {
+    background-color: gray;
+    cursor: pointer;
+}
