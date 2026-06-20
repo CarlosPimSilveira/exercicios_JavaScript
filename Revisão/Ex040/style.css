@@ -11,7 +11,8 @@ body {
 .btncssEditar {
     background-color: white;
     cursor: pointer;
-    
+    width: 80px;
+    height: 30px;
 }
 
 .btncssEditar:hover {
