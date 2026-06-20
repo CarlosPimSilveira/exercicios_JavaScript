@@ -4,6 +4,29 @@
 // Retorne os números maiores que 10
 const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27]
 
+let maior10 = []
+
+for (let c = 0; c < numeros.length; c++) {
+    if (numeros[c] >= 10) 
+        maior10.push(numeros[c])
+    
+}
+
+console.log(maior10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Retorne as pessoas que tem o nome com 5 letras ou mais
 // Retorne as pessoas com mais de 50 anos
