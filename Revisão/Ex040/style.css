@@ -9,6 +9,12 @@ body {
 }
 
 .btncssEditar {
-    background-color: gray;
+    background-color: white;
     cursor: pointer;
+    
+}
+
+.btncssEditar:hover {
+    background-color: gray;
+    color: white;
 }
