@@ -8,6 +8,7 @@ if (revArray.length === 0) {
 }
 
 function enviar()  {
+    if (txtArray.value === '') return
     revArray.splice(revArray.length, 0, txtArray.value)
     btnExibir.disabled = false
     txtArray.value = ''
