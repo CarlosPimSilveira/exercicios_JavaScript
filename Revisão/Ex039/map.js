@@ -6,11 +6,10 @@ const numerosEmdobro = numeros.map(valor => valor * 2)
 console.log(numerosEmdobro)
 
 
-
-
-
-
-
+// Para cada elemento:
+// Retorne apenas uma string com o nome da pessoa
+// Remova apenas a chave "nome" do objeto
+// Adicione uma chave id em cada objeto
 
 const pessoas = [
     { nome: 'Luiz', idade: 62 },
@@ -20,3 +19,4 @@ const pessoas = [
     { nome: 'Rosana', idade: 32 },
     { nome: 'Wallace', idade: 47 },
 ]
+
