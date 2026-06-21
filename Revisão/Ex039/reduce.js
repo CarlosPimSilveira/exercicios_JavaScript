@@ -31,3 +31,9 @@ const pessoas = [
     { nome: 'Rosana', idade: 32 },
     { nome: 'Wallace', idade: 47 },
 ]
+const pessoaVelha = pessoas.reduce(function(acumulador, valor) {
+    if (acumulador <= valor.idade)
+        acumulador = valor.idade
+    return acumulador
+}, 0)
+console.log(pessoaVelha)
