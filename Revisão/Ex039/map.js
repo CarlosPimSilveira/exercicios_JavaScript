@@ -22,9 +22,11 @@ const pessoas = [
 
 const nomes = pessoas.map(obj => obj.nome)
 const idades = pessoas.map(obj => ({ idade: obj.idade}))
+// Fizemos um novo objeto um novo para não afetar o objeto original dessa forma podemos mexer sem medo de afetar o original
 const comIds = pessoas.map(function(obj ,indice) {
-    obj.id = (indice + 1)
-    return obj
+    const newObj = {...obj}
+    newObj.id = indice
+    return newObj
 })
 console.log(nomes)
 console.log(idades)
