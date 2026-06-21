@@ -1,9 +1,13 @@
 // Filter - filtrando o array!
 // Filter - Map - Reduce!
-
+// Filter -> Sempre retorna um array, com a mesma quantidade de elemtnos ou menos.
 // Retorne os números maiores que 10
-const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27]
-const numerosFiltrados = numeros.filter(  )
+//               0  1   2   3  4  5  6  7  8  9   10  11  12  13  14... 
+const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27, 10, 15, 20, 22, 29, 63, 99, 14, 15]
+
+// function de callback! usando arrow function de forma moderna!
+const numerosFiltrados = numeros.filter(valor => valor = 10)
+console.log(numerosFiltrados)
 
 /*let maior10 = []
     for (let c = 0; c < numeros.length; c++) {
@@ -11,20 +15,6 @@ const numerosFiltrados = numeros.filter(  )
             maior10.push(numeros[c])
     }
     console.log(maior10)*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Retorne as pessoas que tem o nome com 5 letras ou mais
 // Retorne as pessoas com mais de 50 anos
@@ -38,3 +28,14 @@ const pessoas = [
     { nome: 'Rosana', idade: 32 },
     { nome: 'Wallace', idade: 47 },
 ]
+
+const pessoasComNomeGrande = pessoas.filter(obj => obj.nome.length >= 5)
+console.log(pessoasComNomeGrande)
+
+const pessoasVelhas = pessoas.filter(obj => obj.idade > 50)
+console.log(pessoasVelhas)
+
+// toLowerCase -> caso tenha letra maiuscula ou minuscula
+// endsWith -> função que basicamente é um termina com? ai vc coloca a letra!                                               
+const pessoasFinalA = pessoas.filter(obj => obj.nome.toLowerCase().endsWith('a'))
+console.log(pessoasFinalA)
