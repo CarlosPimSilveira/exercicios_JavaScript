@@ -21,5 +21,8 @@ const pessoas = [
 ]
 
 const nomes = pessoas.map(obj => obj.nome)
+const idades = pessoas.map(obj => ({ idade: obj.idade}))
 console.log(nomes)
+console.log(idades)
+
 
