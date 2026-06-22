@@ -4,4 +4,5 @@ const pessoa = {
     sobrenome: 'Otávio'
 }
 
-console.log(pessoa.nome)
+console.log(pessoa['nome'])
+console.log(pessoa.sobrenome)
