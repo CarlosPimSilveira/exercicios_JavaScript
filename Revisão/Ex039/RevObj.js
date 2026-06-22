@@ -14,4 +14,11 @@ pessoa1.nome = 'Luiz'
 pessoa1.sobrenome = 'Otávio'
 console.log(pessoa1.nome)
 console.log(pessoa1.sobrenome)
+pessoa1.falarNome = function () {
+    console.log(`${this.nome} está falando seu nome.`)
+}
 
+pessoa1.falarNome()
+
+delete pessoa1.nome
+console.log(pessoa1)
