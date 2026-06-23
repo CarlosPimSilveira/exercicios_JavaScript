@@ -11,4 +11,6 @@ pessoa1.getDataNascimento = function() {
     return dataAtual.getFullYear() - this.idade
 }
 
-for()
+for(let chave in pessoa1) {
+    console.log(chave)
+}
