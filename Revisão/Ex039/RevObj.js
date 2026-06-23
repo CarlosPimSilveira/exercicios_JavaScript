@@ -12,13 +12,21 @@ console.log(pessoa.sobrenome)
 const pessoa1 = new Object()
 pessoa1.nome = 'Luiz'
 pessoa1.sobrenome = 'Otávio'
+pessoa1.idade = 27
 console.log(pessoa1.nome)
 console.log(pessoa1.sobrenome)
 pessoa1.falarNome = function () {
-    console.log(`${this.nome} está falando seu nome.`)
+    return(`${this.nome} está falando seu nome.`)
 }
 
-pessoa1.falarNome()
+pessoa1.getDataNascimento = function () {
+    const dataAtual = new Date()
+    return dataAtual.getFullYear() - this.idade
+}
+
+console.log(pessoa1.getDataNascimento())
+
+console.log(pessoa1.falarNome())
 
 delete pessoa1.nome
 console.log(pessoa1)
