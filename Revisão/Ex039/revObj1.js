@@ -10,7 +10,7 @@ pessoa1.getDataNascimento = function() {
     const dataAtual = new Date()
     return dataAtual.getFullYear() - this.idade
 }
-
+// quando functions estão dentro de objetos chamamos de metodos!
 for(let chave in pessoa1) {
-    console.log(chave)
+    console.log(pessoa1[chave])
 }
