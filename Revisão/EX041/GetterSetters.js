@@ -27,8 +27,25 @@ function Produto(nome, preco, estoque) {
     })
 }
 
+function criaProduto(nome) {
+    return {
+        get nome() {
+            return nome
+        },
+        set nome(valor) {
+            valor = valor.replace('coisa.', '')
+            nome = valor
+        }
+    }
+}
+
+const p2 = criaProduto('Camiseta')
+p2.nome = 'qualquer coisa.'
+console.log(p2.nome)
+
+/*
 const p1 = new Produto('Camiseta', 20, 3)
 //console.log(p1)
 p1.estoque = 'O valor que eu quero'
 console.log(p1.estoque)
-
+*/
