@@ -19,7 +19,7 @@ function Produto(nome, preco, estoque) {
         },
         set: function(valor) {
             if (typeof valor !== 'number') {
-                console.log('Bad value')
+                throw new TypeError('teste')
                 return
             }
             estoquePrivado = valor
