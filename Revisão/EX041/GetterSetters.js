@@ -23,5 +23,6 @@ function Produto(nome, preco, estoque) {
 
 const p1 = new Produto('Camiseta', 20, 3)
 console.log(p1)
+p1.estoque = 'O valor que eu quero'
 console.log(p1.estoque)
 
