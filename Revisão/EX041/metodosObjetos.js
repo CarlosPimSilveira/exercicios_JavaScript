@@ -11,7 +11,3 @@ Object.freeze (congela o objeto)
 Object.defineProperties(define várias propriedades)
 Object.defineProperty (define uma propriedade)
 */
-
-function teste() {
-    console.log('teste')
-}
