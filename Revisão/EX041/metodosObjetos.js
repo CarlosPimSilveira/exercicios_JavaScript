@@ -5,3 +5,5 @@ Object.assign(des, any)
 Object.getOwnPropertyDescriptor(o, 'prop')
 ...(spread)
 
+// Já vimos
+Object.Keys(retorna as chaves)
