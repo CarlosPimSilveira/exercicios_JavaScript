@@ -20,9 +20,16 @@ const caneca = {
     ...produto, 
     material: 'Porcelana'
 }
+const canec = Object.assign({}, produto, {
+    mateira: 'Porcelana',
+    fornecedor: 'Lojas 100'
+})
 
 caneca.nome = 'Outro nome'
 caneca.preco = 2.5
+canec.nome = 'Nova coisa'
+canec.preco = 5
 
 console.log(produto)
 console.log(caneca)
+console.log(canec)
