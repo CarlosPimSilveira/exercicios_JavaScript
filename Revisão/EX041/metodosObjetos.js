@@ -17,5 +17,6 @@ const produto = {
     preco: 1.8
 }
 const outraCoisa = produto
+produto.nome = 'Luiz'
 
 console.log(outraCoisa)
