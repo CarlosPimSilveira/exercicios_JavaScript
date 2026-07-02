@@ -11,3 +11,10 @@ Object.freeze (congela o objeto)
 Object.defineProperties(define várias propriedades)
 Object.defineProperty (define uma propriedade)
 */
+
+const produto = {
+    nome: 'Caneca',
+    preco: 1.8
+}
+
+const outraCoisa = produto
