@@ -25,6 +25,8 @@ const canec = Object.assign({}, produto, {
     fornecedor: 'Lojas 100'
 })
 
+caneca.nome = 'Outro nome'
+
 
 console.log(produto)
 console.log(caneca)
