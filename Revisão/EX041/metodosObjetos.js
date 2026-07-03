@@ -31,3 +31,4 @@ canec.nome = 'Nova coisa'
 canec.preco = 5
 
 console.log(produto)
+console.log(caneca)
