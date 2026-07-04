@@ -25,6 +25,8 @@ const canec = Object.assign({}, produto, {
     fornecedor: 'Lojas 100'
 })
 
+const cane = {nome: produto.nome, preco: produto.preco}
+
 caneca.nome = 'Outro nome'
 caneca.preco = 2.5
 canec.nome = 'Nova coisa'
@@ -32,3 +34,5 @@ canec.preco = 5
 
 console.log(produto)
 console.log(caneca)
+console.log(cane)
+
