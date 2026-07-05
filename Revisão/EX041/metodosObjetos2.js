@@ -5,4 +5,5 @@ Object.defineProperty(produto, 'nome', {
     value: 'Qualquer outra coisa'
 })
 
+console.log(Object.getOwnPropertyDescriptor(produto, 'nome'))
 
