@@ -13,3 +13,6 @@ console.log(p1.nomeCompleto);
 
 
 function Pessoa(nome, sobrenome) {
+    this.nome = nome
+    this.sobrenome = sobrenome
+} // palavra new cria um objeto vazio {} - this não é uma variavel! -> cria um novo objeto e atrela 
