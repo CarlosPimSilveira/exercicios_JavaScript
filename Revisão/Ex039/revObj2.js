@@ -12,3 +12,7 @@ const p1 = criaPessoa('Carlos', 'Pim');
 console.log(p1.nomeCompleto); 
 
 
+function Pessoa(nome, sobrenome) {
+    this.nome = nome
+    this.sobrenome = sobrenome
+} 
