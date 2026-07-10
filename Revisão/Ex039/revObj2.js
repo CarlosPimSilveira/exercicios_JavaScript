@@ -8,3 +8,7 @@ function criaPessoa(nome, sobrenome) {
         }
     };
 }
+const p1 = criaPessoa('Carlos', 'Pim');
+console.log(p1.nomeCompleto); 
+
+
