@@ -20,6 +20,8 @@ function Pessoa(nome, sobrenome) {
 // Instância
 const pessoa1 = new Pessoa('Luiz', 'O.')   // <- Pessoa = função construtora
 const pessoa2 = new Pessoa('Maria', 'A.')  // <- Pessoa = função construtora
+const data = new Date() // <- Date = Função construtora
 
 console.dir(pessoa1)
 console.dir(pessoa2)
+console.dir(data)
