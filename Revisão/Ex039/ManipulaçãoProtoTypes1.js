@@ -40,5 +40,6 @@ console.log(p3)
 
 p1.aumento(5)
 console.log(p1)
+
 p2.aumento(25)
 console.log(p2)
