@@ -10,5 +10,9 @@ const objB = {
     // __proto__: Object.prototype
 }
 
+const objC = new Object()
+objC.chaveC = 'C'
+
 Object.setPrototypeOf(objB, objA)
+Object.setPrototypeOf(objC, objB)
 console.log(objB.chaveA)
