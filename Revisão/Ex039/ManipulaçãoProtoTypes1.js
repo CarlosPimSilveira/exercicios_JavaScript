@@ -27,7 +27,7 @@ const p3 = Object.create(Produto.prototype, {
         enumerable: true,
         value: 113
     },
-    tamanho2: {
+    tamanho: {
         writable: true,
         configurable: true,
         enumerable: true,
