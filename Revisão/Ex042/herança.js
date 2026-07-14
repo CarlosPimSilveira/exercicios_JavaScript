@@ -46,7 +46,6 @@ function Caneca(nome, preco, material, estoque) {
 Caneca.prototype = Object.create(Produto.prototype)
 Caneca.prototype.constructor = Caneca
 
-
 const produto = new Produto('Gen', 111)
 const camiseta = new Camiseta('Regata', 7.5, 'Preta')
 const caneca = new Caneca('Caneca', 13, 'Plástico', 5)
