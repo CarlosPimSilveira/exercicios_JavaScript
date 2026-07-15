@@ -51,6 +51,10 @@ ValidaCPF.prototype.criaDigito = function(cpfParcial) {
     return digito > 9 ? '0' : String(digito)
 }
 
+ValidaCPF.prototype.isSequencia = function() {
+    const sequencia = this.cpfLimpo[0].repeat(this.cpfLimpo.length) //vai repetir o primeiro caractere da string
+    return sequencia === this.cpfLimpo
+}
 
 // 705.484.450-52 | 070.987.720-03 - CPF de exemplo nao é um CPF
 const cpf = new ValidaCPF('705.484.450-52')
