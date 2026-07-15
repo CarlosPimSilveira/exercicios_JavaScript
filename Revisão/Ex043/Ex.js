@@ -56,10 +56,3 @@ ValidaCPF.prototype.isSequencia = function() {
     return sequencia === this.cpfLimpo
 }
 
-// 705.484.450-52 | 070.987.720-03 - CPF de exemplo nao é um CPF
-const cpf = new ValidaCPF('705.484.450-52')
-if(cpf.valida()) {
-    console.log('CPF válido!')
-} else {
-    console.log('CPF inválido!')
-}
