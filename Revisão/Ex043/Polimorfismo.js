@@ -56,3 +56,9 @@ cc.depositar(10)
 cc.sacar(110)
 cc.sacar(1)
 
+console.log()
+
+const cp = new ContaPoupanca(12, 33, 0)
+cp.depositar(10)
+cp.sacar(110)
+cp.sacar(1)
