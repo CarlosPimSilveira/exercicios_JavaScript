@@ -48,3 +48,11 @@ function ContaPoupanca(agencia, conta, saldo) {
     Conta.call(this, agencia, conta, saldo)
 }
 
+ContaPoupanca.prototype = Object.create(Conta.prototype)
+ContaPoupanca.prototype.constructor = ContaPoupanca
+
+const cc = new ContaCorrente(11, 22, 0, 100)
+cc.depositar(10)
+cc.sacar(110)
+cc.sacar(1)
+
