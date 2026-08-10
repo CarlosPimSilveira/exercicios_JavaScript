@@ -63,3 +63,10 @@ if(cpf.valida()) {
 } else {
     console.log('CPF inválido!')
 }
+
+const x = 5
+if (x == 5)
+    if (x != 5)
+        console.log('A')
+    else
+        console.log('B')
