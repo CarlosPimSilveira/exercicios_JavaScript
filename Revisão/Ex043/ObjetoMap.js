@@ -18,3 +18,8 @@ for (const pessoa of pessoas) {
 }
 
 console.log(novasPessoas)
+
+for (const pessoa of novasPessoas) {
+    console.log(pessoa)
+}
+
