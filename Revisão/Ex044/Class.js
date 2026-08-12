@@ -1,7 +1,11 @@
 // Criando classes
 
 class Pessoa{
-    constructor() {
-        
+    constructor(nome, sobrenome) {
+        this.nome = nome
+        this.sobrenome = sobrenome
     }
 }
+
+const p1 = new Pessoa('Luiz', 'Miranda')
+console.log(p1)
