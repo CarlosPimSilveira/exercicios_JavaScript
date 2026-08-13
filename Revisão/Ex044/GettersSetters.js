@@ -1,17 +1,19 @@
+const _velocidade = Symbol('Velocidade')
+
 class Carro {
     constructor(nome) {
         this.nome = nome
-        this.velocidade = 0
+        this[_velocidade] = 0
     }
 
     acelerar() {
-        if (this.velocidade >= 100) return
-        this.velocidade++
+        if (this[_velocidade] >= 100) return
+        this[_velocidade]++
     }
 
     freiar() {
-        if (this.velocidade <= 0) return
-        this.velocidade--;
+        if (this[_velocidade] <= 0) return
+        this[_velocidade]--;
     }
 }
 
