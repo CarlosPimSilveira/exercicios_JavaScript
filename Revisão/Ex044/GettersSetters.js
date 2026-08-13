@@ -5,6 +5,7 @@ class Carro {
     }
 
     acelerar() {
+        if (this.velocidade >= 100) return
         this.velocidade++
     }
 }
