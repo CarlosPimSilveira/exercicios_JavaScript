@@ -25,5 +25,9 @@ class DispositivoEletronico {
 }
 
 const d1 = new DispositivoEletronico('Smartphone')
-console.log(d1.ligar)
+d1.ligar()
+d1.ligar()
+d1.desligar()
+d1.desligar()
+console.log(d1)
 
