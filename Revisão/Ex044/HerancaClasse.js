@@ -24,10 +24,15 @@ class DispositivoEletronico {
     }
 }
 
-const d1 = new DispositivoEletronico('Smartphone')
-d1.ligar()
-d1.ligar()
-d1.desligar()
-d1.desligar()
-console.log(d1)
+// Herda do dispositivo eletronico e tem tudo dele
+class Smartphone extends DispositivoEletronico {
+    constructor(nome, cor, modelo) {
+        super(nome); // Passando para o dispositivoeletronico chamando o construtor da class pai
+        this.cor = cor
+        this.modelo = modelo
+    }
+}
 
+const s1 = new Smartphone('Iphone', 'Preto', 'Modelo 13 pro max')
+s1.ligar()
+console.log(s1)
