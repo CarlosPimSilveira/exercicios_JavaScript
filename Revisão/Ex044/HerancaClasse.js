@@ -33,6 +33,13 @@ class Smartphone extends DispositivoEletronico {
     }
 }
 
+class Tablet extends DispositivoEletronico {
+    constructor(nome, temWifi) {
+        super(nome)
+        this.temWifi = temWifi
+    }
+}
+
 const s1 = new Smartphone('Iphone', 'Preto', 'Modelo 13 pro max')
 s1.ligar()
 console.log(s1)
