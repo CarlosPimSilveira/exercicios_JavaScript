@@ -47,3 +47,5 @@ class Tablet extends DispositivoEletronico {
 const s1 = new Smartphone('Iphone', 'Preto', 'Modelo 13 pro max')
 s1.ligar()
 console.log(s1)
+const t1 = new Tablet('Ipad', true)
+console.log(t1.ligado)
