@@ -49,3 +49,4 @@ s1.ligar()
 console.log(s1)
 const t1 = new Tablet('Ipad', true)
 console.log(t1.ligado)
+t1.ligar() // Primeiro busca no tablet caso nao tivesse la ele ia buscar do pai
