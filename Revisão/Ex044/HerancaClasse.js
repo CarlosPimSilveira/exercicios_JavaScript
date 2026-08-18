@@ -38,6 +38,10 @@ class Tablet extends DispositivoEletronico {
         super(nome)
         this.temWifi = temWifi
     }
+
+    ligar() {
+        console.log('Olha, você alterou o método ligar.')
+    }
 }
 
 const s1 = new Smartphone('Iphone', 'Preto', 'Modelo 13 pro max')
