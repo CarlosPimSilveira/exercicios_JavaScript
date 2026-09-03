@@ -11,10 +11,6 @@ class ControleRemoto {
         teste();
     }
 
-    // Método de instância 
-    aumentarVolume() {
-        this.volume += 2
-    }
 
     // Método de instância 
     diminuirVolume() {
