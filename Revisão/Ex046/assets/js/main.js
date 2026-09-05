@@ -1,17 +1,20 @@
 class ValidaFormulario {
     constructor() {
         this.formulario = document.querySelector('.formulario')
-
-
         this.eventos()
     }
 
     // Metodos!
     eventos() {
         this.formulario.addEventListener('submit', e => {
-            this.
+            this.handleSubmit(e)
         })
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        console.log('Formulário não enviado...')
     }
 }
 
-const valida = ValidaFormulario()
+const valida = new ValidaFormulario()
