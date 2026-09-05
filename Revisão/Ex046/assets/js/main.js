@@ -13,7 +13,11 @@ class ValidaFormulario {
 
     handleSubmit(e) {
         e.preventDefault();
-        console.log('Formulário não enviado...')
+        const camposValidos = this.camposSaoValidos()
+    }
+
+    camposSaoValidos() {
+        let valid = true
     }
 }
 
