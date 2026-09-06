@@ -35,7 +35,29 @@ class ValidaFormulario {
                 if(!this.validaCPF(campo)) valid = false
             }
 
+            if(campo.classList.contains('usuario')) {
+                if(!this.validaUsuario(campo)) valid = false
+            }
+
         }
+    }
+
+    validaUsuario(campo) {
+        const usuario = campo.value
+        let valid = true
+
+        if(usuario.length < 3 || usuario.length >  12) {
+            this.criaErro(campo, 'Usuário precisa ter entre 3 e 12 caracteres.')
+            valid = false
+        }
+
+        
+        if(!usuario.match(/^[a-zA-Z0-9]+$/g)) {
+            this.criaErro(campo, 'Nome de usuário precisa conter apenas letras e/ou números.')
+            valid = false
+        }
+
+        return true
     }
 
     validaCPF(campo) {
