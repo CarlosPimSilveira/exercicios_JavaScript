@@ -24,4 +24,7 @@ esperaAi('Frase 1', rand(1, 3))
         console.log(resposta)
         return esperaAi('Frase 3', rand(1, 3))
     })
+    .then(resposta => {
+        console.log(resposta)
+    })
     .catch()
