@@ -26,5 +26,7 @@ esperaAi('Frase 1', rand(1, 3))
     })
     .then(resposta => {
         console.log(resposta)
+    }).then(() => {
+        console.log('Eu serei o último a ser exibido.')
     })
     .catch()
