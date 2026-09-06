@@ -16,5 +16,12 @@ function esperaAi(msg, tempo) {
 // Then() - é execultado apos o resolve e catch apos o reject
 
 esperaAi('Frase 1', rand(1, 3))
-    .then()
+    .then(resposta => {
+        console.log(resposta)
+        return esperaAi('Frase 2', rand(1, 3))
+    })
+    .then(resposta => {
+        console.log(resposta)
+        return esperaAi('Frase 3', rand(1, 3))
+    })
     .catch()
