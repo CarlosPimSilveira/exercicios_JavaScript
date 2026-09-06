@@ -6,11 +6,15 @@ function rand(min, max) {
 
 
 function esperaAi(msg, tempo) {
-    setTimeout(() => {
-        console.log(msg)
-    }, tempo)
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(msg)
+        }, tempo)
+    }) 
 }
 
+// Then() - é execultado apos o resolve e catch apos o reject
+
 esperaAi('Frase 1', rand(1, 3))
-esperaAi('Frase 2', rand(1, 3))
-esperaAi('Frase 3', rand(1, 3))
+    .then()
+    .catch()
