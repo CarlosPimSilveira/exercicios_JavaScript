@@ -25,11 +25,28 @@ class ValidaFormulario {
 
         for(let campo of this.formulario.querySelectorAll('.validar')) {
             let label = campo.previousElementSibling.innerText // Busca o irmao anterior!
+
             if(!campo.value) {
                 this.criaErro(campo, `Campo "${label}" não pode estar em branco`)
                 valid = false
             }
+
+            if(campo.classList.contains('cpf')) {
+                if(!this.validaCPF(campo)) valid = false
+            }
+
         }
+    }
+
+    validaCPF(campo) {
+        const cpf = new ValidaCPF(campo.value) 
+
+        if(!cpf.valida()) {
+            this.criaErro(campo, 'CPF inválido.')
+            return false
+        }
+
+        return true
     }
 
     criaErro(campo, msg) {
