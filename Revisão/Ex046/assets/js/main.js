@@ -14,6 +14,11 @@ class ValidaFormulario {
     handleSubmit(e) {
         e.preventDefault();
         const camposValidos = this.camposSaoValidos()
+        const senhasValidas = this.senhasSaoValidas()
+    }
+
+    senhasSaoValidas() {
+        
     }
 
     camposSaoValidos() {
@@ -38,8 +43,8 @@ class ValidaFormulario {
             if(campo.classList.contains('usuario')) {
                 if(!this.validaUsuario(campo)) valid = false
             }
-
         }
+    return valid
     }
 
     validaUsuario(campo) {
