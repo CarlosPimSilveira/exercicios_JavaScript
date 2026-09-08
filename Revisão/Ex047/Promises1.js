@@ -13,3 +13,5 @@ function esperaAi(msg, tempo) {
         }, tempo)
     })
 }
+
+// 
