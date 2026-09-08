@@ -5,13 +5,7 @@ function rand(min, max) {
 }
 
 function esperaAi(msg, tempo) {
-    return new Promise((resolve, reject) => {
-        if(typeof msg !== 'string') reject(false)
 
-        setTimeout(() => {
-            resolve(msg)
-        }, tempo)
-    })
 }
 
 // Promise.all Promise.race Promise.resolve Promise.reject
