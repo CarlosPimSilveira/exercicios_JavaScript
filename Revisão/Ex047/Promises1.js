@@ -15,3 +15,12 @@ function esperaAi(msg, tempo) {
 }
 
 // Promise.all Promise.race Promise.resolve Promise.reject
+
+const promises = [
+    'Primeiro valor',
+    esperaAi('Promise 1', 3000),
+    esperaAi('Promise 2', 500),
+    esperaAi('Promise 3', 100),
+    'Outro valor'
+]
+
