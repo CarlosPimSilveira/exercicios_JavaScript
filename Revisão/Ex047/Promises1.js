@@ -7,7 +7,7 @@ function rand(min, max) {
 function esperaAi(msg, tempo) {
     return new Promise((resolve, reject) => {
         if(typeof msg !== 'string') { 
-            reject(false)
+            reject('Cai no erro')
             return
         }
 
@@ -20,17 +20,28 @@ function esperaAi(msg, tempo) {
 // Promise.all Promise.race Promise.resolve Promise.reject
 
 const promises = [
-    'Primeiro valor',
+   // 'Primeiro valor',
     esperaAi('Promise 1', 3000),
     esperaAi('Promise 2', 500),
     esperaAi('Promise 3', 1000),
-    esperaAi(1000, 1000),
-    'Outro valor'
+   // esperaAi(1000, 1000),
+   // 'Outro valor'
 ]
 
 Promise.all(promises)
     .then(function(valor) {
         console.log(valor)
+    })
+    .catch(function(erro) {
+        console.log(erro)
+    })
+
+// Pega o resultado da Promise que terminar primeiro.
+// As outras Promises continuam sendo executadas normalmente.
+// O Promise.race() apenas ignora os resultados delas.
+Promise.race(promises)
+    .then(function(valor) {
+        console.log(valor + ' - Pego a com menor tempo para execultar e paro')
     })
     .catch(function(erro) {
         console.log(erro)
