@@ -20,7 +20,8 @@ const promises = [
     'Primeiro valor',
     esperaAi('Promise 1', 3000),
     esperaAi('Promise 2', 500),
-    esperaAi('Promise 3', 100),
+    esperaAi('Promise 3', 1000),
+    esperaAi(1000, 1000),
     'Outro valor'
 ]
 
