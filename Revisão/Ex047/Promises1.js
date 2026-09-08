@@ -24,3 +24,10 @@ const promises = [
     'Outro valor'
 ]
 
+Promise.all(promises)
+    .then(function(valor) {
+        console.log(valor)
+    })
+    .catch(function(erro) {
+        console.log(erro)
+    })
