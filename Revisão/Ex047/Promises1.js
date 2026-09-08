@@ -9,7 +9,7 @@ function esperaAi(msg, tempo) {
         if(typeof msg !== 'string') reject(false)
 
         setTimeout(() => {
-            resolve(msg)
+            resolve(msg.toUpperCase() + ' - Passei na promise')
         }, tempo)
     })
 }
