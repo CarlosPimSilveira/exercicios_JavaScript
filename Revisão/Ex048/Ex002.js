@@ -58,6 +58,34 @@ if (IdadePessoa20 > 18) {
 }
 
 // Ex 21 - Verifique se um aluno foi aprovado ou reprovado.
-// Considerando aprovado nota maior que 6
-const AlunoNota21 = 7
+// Considerando aprovado nota maior ou igual 6
+const AlunoNota21 = 4
+if (AlunoNota21 === 10) {
+    console.log('Aluno Aprovado! nota maxima!')
+} else if (AlunoNota21 >= 6 && AlunoNota21 <= 9) {
+    console.log('Aluno Aprovado! nota dentro da media')
+} else if (AlunoNota21 >= 5) {
+    console.log('Recuperação!')
+} else {
+    console.log('Reprovado!')
+}
 
+// Ex 22 - Calcule a situação de um aluno usando média:
+/* 
+    < 5 → reprovado
+    5–6.9 → recuperação
+    >= 7 → aprovado
+*/
+const nota122 = 8
+const nota222 = 6
+const nota322 = 9
+let media22 = (nota122 + nota222 + nota322) / 3
+if (media22 >= 7) {
+    console.log('Aprovado!')
+} else if (media22 >= 5) {
+    console.log('Recuperação!')
+} else {
+    console.log('Reprovado!')
+}
+
+// Ex 23 - Crie uma calculadora usando +, -, * e /. 
