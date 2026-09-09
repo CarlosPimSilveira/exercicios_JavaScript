@@ -78,7 +78,8 @@ const desconto = 12
 pResultado = pResultado * (1 - desconto / 100)
 console.log(`Valor com desconto: R$ ${pResultado.toFixed(2)}`)
 
-
-
-
-
+// Ex 15 - Calcule o IMC a partir de peso e altura.
+const peso15 = 125
+const altura15 = 1.80
+const imc = peso15 / (altura15 * altura15)
+console.log(`Seu imc é de: ${imc.toFixed(2)}`)
