@@ -55,3 +55,30 @@ const minutos12 = Math.floor(segundosRestantes / 60);
 const segundos12 = segundosRestantes % 60;
 
 console.log(`${horas12}:${minutos12}:${segundos12}`); 
+
+// Ex 13 - Troque o valor de duas variáveis.
+let A = 10
+let B = 5
+let C = B
+B = A
+A = C
+console.log(A + ' - ' + B)
+
+// Ex 14 - Calcule quanto uma pessoa gastou em uma compra com vários produtos.
+let Pa = 10
+let Pb = 15
+let Pc = 5
+let Pd = 20
+let Pe = 25
+let Pf = 100
+let pResultado = Pa + Pb + Pc + Pd + Pe + Pf
+console.log(pResultado)
+const desconto = 12
+// Adicionado o desconto
+pResultado = pResultado * (1 - desconto / 100)
+console.log(`Valor com desconto: R$ ${pResultado.toFixed(2)}`)
+
+
+
+
+
