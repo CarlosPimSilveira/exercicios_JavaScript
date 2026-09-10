@@ -151,5 +151,22 @@ if (ladoA25 >= ladoB25 && ladoA25 >= ladoC25) {
 } 
 
 // Ex 26 - Identifique se um triângulo é equilátero, isósceles ou escaleno.
+const triA26 = 20
+const triB26 = 20
+const triC26 = 10
+
+if (triA26 === triB26 && triA26 === triC26) {
+    console.log('É um triangulo Equilátero!')
+}
+if ((triA26 === triB26 && triA26 !== triC26) ||
+            (triA26 === triC26 && triA26 !== triB26) ||
+                (triB26 === triC26 && triB26 !== triA26)) {
+    console.log('É um triangulo Isósceles!')
+}
+if ((triA26 !== triB26 && triA26 !== triC26) &&
+    (triB26 !== triA26 && triB26 !== triC26) &&
+    (triC26 !== triA26 && triC26 !== triB26)) {
+    console.log('É um triangulo Escaleno!')
+}
 
 
