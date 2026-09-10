@@ -163,10 +163,5 @@ if ((triA26 === triB26 && triA26 !== triC26) ||
                 (triB26 === triC26 && triB26 !== triA26)) {
     console.log('É um triangulo Isósceles!')
 }
-if ((triA26 !== triB26 && triA26 !== triC26) &&
-    (triB26 !== triA26 && triB26 !== triC26) &&
-    (triC26 !== triA26 && triC26 !== triB26)) {
-    console.log('É um triangulo Escaleno!')
-}
 
 
