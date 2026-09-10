@@ -89,3 +89,67 @@ if (media22 >= 7) {
 }
 
 // Ex 23 - Crie uma calculadora usando +, -, * e /. 
+const N123 = 10
+const N223 = 15
+const Sinal23 = '/'
+let resposta23 = 0
+
+switch(Sinal23) {
+    case '+':
+        resposta23 = N123 + N223
+        console.log(`Valor total é: ${resposta23}`)
+        break;
+    case '-':
+        resposta23 = N123 - N223
+        console.log(`Valor total é: ${resposta23}`)
+        break;
+    case '/':
+        resposta23 = N123 / N223
+        console.log(`Valor total é: ${resposta23}`)
+        break;
+    case '*':
+        resposta23 = N123 * N223
+        console.log(`Valor total é: ${resposta23}`)
+        break;
+}
+
+// Ex 24 - Verifique se um ano é bissexto.
+const ano24 = 2000
+if (ano24 % 400 === 0) {
+    console.log('O ano é bissexto')
+} else if (ano24 % 100 === 0) {
+    console.log('Ano não bissexto')
+} else if (ano24 % 4 === 0) {
+    console.log('O ano é bissexto')
+} else {
+    console.log('Ano não bissexto')
+}
+
+// Ex 25 - Verifique se três números podem formar um triângulo.
+const ladoA25 = 40
+const ladoB25 = 15
+const ladoC25 = 40
+
+if (ladoA25 >= ladoB25 && ladoA25 >= ladoC25) {
+    if ((ladoB25 + ladoC25) > ladoA25) {
+        console.log('É capaz de formar um triângulo')
+    } else {
+        console.log('Não é capaz de formar um triângulo')
+    }
+} else if (ladoB25 >= ladoA25 && ladoB25 >= ladoC25) {
+    if ((ladoA25 + ladoC25) > ladoB25) {
+        console.log('É capaz de formar um triângulo')
+    } else {
+        console.log('Não é capaz de formar um triângulo')
+    }
+} else if (ladoC25 >= ladoA25 && ladoC25 >= ladoB25) {
+    if ((ladoB25 + ladoA25) > ladoC25) {
+        console.log('É capaz de formar um triângulo')
+    } else {
+        console.log('Não é capaz de formar um triângulo')
+    }
+} 
+
+// Ex 26 - Identifique se um triângulo é equilátero, isósceles ou escaleno.
+
+
