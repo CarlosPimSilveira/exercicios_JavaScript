@@ -113,7 +113,7 @@ switch(Sinal23) {
         break;
 }
 
-// Ex 24 - Verifique se um ano é bissexto.
+
 const ano24 = 2000
 if (ano24 % 400 === 0) {
     console.log('O ano é bissexto')
