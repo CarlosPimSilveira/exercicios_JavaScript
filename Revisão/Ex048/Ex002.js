@@ -183,7 +183,7 @@ if (login === 'admin' && senha === 123456) {
 
 // Ex 28 - Verifique se uma senha possui pelo menos 8 caracteres
 
-
+const senha28 = 123456789
 
 if (String(senha28).length >= 8) {
     console.log('Senha possui 8 caracteres ou mais')
