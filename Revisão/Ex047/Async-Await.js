@@ -12,3 +12,8 @@ function esperaAi(msg, tempo) {
                 return
             }
 
+            resolve(msg.toUpperCase() + ' - Passei na promise')
+            return
+        }, tempo);
+    })
+}
