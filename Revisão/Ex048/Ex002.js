@@ -169,4 +169,20 @@ if ((triA26 !== triB26 && triA26 !== triC26) &&
     console.log('É um triangulo Escaleno!')
 }
 
+// Ex 27 - Crie um sistema simples de login.
+
+const login = 'admin'
+const senha = 123456
+
+if (login === 'admin' && senha === 123456) {
+    console.log('Logado')
+} else if (login != 'admin') {
+    console.log('Login invalido')
+} else {
+    console.log('Senha invalida')
+}
+
+
+
+
 
