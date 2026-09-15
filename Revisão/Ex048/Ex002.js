@@ -170,7 +170,6 @@ if ((triA26 !== triB26 && triA26 !== triC26) &&
 }
 
 // Ex 27 - Crie um sistema simples de login.
-
 const login = 'admin'
 const senha = 123456
 
@@ -181,6 +180,17 @@ if (login === 'admin' && senha === 123456) {
 } else {
     console.log('Senha invalida')
 }
+
+// Ex 28 - Verifique se uma senha possui pelo menos 8 caracteres
+
+const senha28 = 123456789
+
+if (senha28.length >= 8) {
+    console.log('Senha possui 8 caracteres ou mais')
+}
+
+
+
 
 
 
