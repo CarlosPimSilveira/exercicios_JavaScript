@@ -189,6 +189,18 @@ if (String(senha28).length >= 8) {
     console.log('Senha possui 8 caracteres ou mais')
 }
 
+// Ex 31 - Mostre os números de 1 a 10
+for(let c = 1; c <= 10; c++) {
+    console.log(c)
+}
+
+// Ex 32 - Mostre os números de 10 a 1.
+for(let c = 10; c >= 1; c--) {
+    console.log(c)
+}
+
+// Ex 33 - Mostre todos os números pares de 1 a 100
+
 
 
 
