@@ -217,7 +217,13 @@ for (let n = 1; n <= 100; n++) {
 }
 
 // Ex 35 - Calcule a soma de 1 até 100.
+let soma = 0
+for (let p = 1; p <= 100; p++) {
+    soma += p
+}
+console.log(soma)
 
+// Ex 36 - Calcule a soma de todos os números pares de 1 a 100
 
 
 
