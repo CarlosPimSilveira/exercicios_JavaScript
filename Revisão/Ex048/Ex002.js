@@ -224,9 +224,31 @@ for (let p = 1; p <= 100; p++) {
 console.log(soma)
 
 // Ex 36 - Calcule a soma de todos os números pares de 1 a 100
+let soma36 = 0
+for (let c = 1; c <= 100; c++) {
+    if (c % 2 === 0) {
+        soma36 += c
+    }
+}
+console.log(soma36)
 
+// Ex 37 - Mostre a tabuada de um número.
+const tab = 3
+for (let c = 0; c <= 10; c++) {
+    console.log(tab + ' x ' + c + ' = ' + tab*c)
+}
 
+// Ex 38 - Calcule o fatorial de um número. 
+function calcularFatorial(n) {
+    if (n < 0) return "Não existe fatorial de número negativo.";
+    let resultado = 1;
+    for (let i = 1; i <= n; i++) {
+        resultado *= i;
+    }
+    return resultado;
+}
 
+console.log(calcularFatorial(5));
 
 
 
