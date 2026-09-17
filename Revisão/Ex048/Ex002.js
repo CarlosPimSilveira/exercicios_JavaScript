@@ -199,7 +199,7 @@ for(let c = 10; c >= 1; c--) {
     console.log(c)
 }
 
-console.log('-')
+console.log('Par')
 
 // Ex 33 - Mostre todos os números pares de 1 a 100
 for(let n = 1; n <= 100; n++) {
@@ -207,8 +207,16 @@ for(let n = 1; n <= 100; n++) {
         console.log(n)
 }
 
+console.log('Impar')
 
+// Ex 34 - Mostre todos os números ímpares de 1 a 100.
+for (let n = 1; n <= 100; n++) {
+    if (n % 2 !== 0) {
+        console.log(n)
+    }
+}
 
+// Ex 35 - Calcule a soma de 1 até 100.
 
 
 
