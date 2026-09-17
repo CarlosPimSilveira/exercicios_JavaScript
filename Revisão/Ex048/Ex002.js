@@ -268,6 +268,8 @@ for (let c = 1; c <= numero40; c++) {
 }
 console.log(soma40)
 
+// Ex 41 - Mostre todos os números primos entre 1 e 100.
+
 
 
 
