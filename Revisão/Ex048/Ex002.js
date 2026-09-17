@@ -250,5 +250,17 @@ function calcularFatorial(n) {
 
 console.log(calcularFatorial(5));
 
+// Ex 39 - Conte quantos números existem entre 1 e 100 divisíveis por 3.
+let soma39 = 0
+
+for (let c = 1; c <= 100; c++) {
+    if (c % 3 === 0) 
+        soma39 += 1
+}
+console.log(soma39)
+
+
+
+
 
 
