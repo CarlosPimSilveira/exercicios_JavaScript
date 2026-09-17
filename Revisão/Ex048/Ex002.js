@@ -274,3 +274,10 @@ console.log(soma40)
 
 
 
+
+
+
+
+
+
+
