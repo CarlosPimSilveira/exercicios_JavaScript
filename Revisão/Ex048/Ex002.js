@@ -259,6 +259,14 @@ for (let c = 1; c <= 100; c++) {
 }
 console.log(soma39)
 
+// Ex 40 - Mostre os divisores de um número. 
+let numero40 = 12
+let soma40 = [] 
+for (let c = 1; c <= numero40; c++) {
+    if (numero40 % c === 0)
+        soma40.push(c)
+}
+console.log(soma40)
 
 
 
