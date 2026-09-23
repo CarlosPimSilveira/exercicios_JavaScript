@@ -131,6 +131,11 @@ const ladoB25 = 15
 const ladoC25 = 40
 
 if (ladoA25 >= ladoB25 && ladoA25 >= ladoC25) {
+    if ((ladoB25 + ladoC25) > ladoA25) {
+        console.log('É capaz de formar um triângulo')
+    } else {
+        console.log('Não é capaz de formar um triângulo')
+    }
 
 } 
 
