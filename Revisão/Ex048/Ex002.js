@@ -142,7 +142,13 @@ if (ladoA25 >= ladoB25 && ladoA25 >= ladoC25) {
     } else {
         console.log('Não é capaz de formar um triângulo')
     }
-}
+} else if (ladoC25 >= ladoA25 && ladoC25 >= ladoB25) {
+    if ((ladoB25 + ladoA25) > ladoC25) {
+        console.log('É capaz de formar um triângulo')
+    } else {
+        console.log('Não é capaz de formar um triângulo')
+    }
+} 
 
 // Ex 26 - Identifique se um triângulo é equilátero, isósceles ou escaleno.
 const triA26 = 20
