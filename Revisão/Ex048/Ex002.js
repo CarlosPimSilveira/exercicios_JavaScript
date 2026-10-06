@@ -293,7 +293,7 @@ for (let num = 1; num <= 100; num++) {
 let num43 = '5712'
 let invertida = ''
 
-for (let c = 3; c >= 0; c--) {
+for (let c = num43.length -1; c >= 0; c--) {
     invertida += num43[c]
 }
 console.log(invertida)
