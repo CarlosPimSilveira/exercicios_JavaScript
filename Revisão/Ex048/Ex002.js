@@ -155,7 +155,7 @@ const triA26 = 20
 const triB26 = 20
 const triC26 = 10
 
-if (triA26 === triB26 && triA26 === triC26) {
+if (triA26 === triB26 && triA26 === triC26) {-
     console.log('É um triangulo Equilátero!')
 }
 if ((triA26 === triB26 && triA26 !== triC26) ||
@@ -270,9 +270,33 @@ console.log(soma40)
 
 // Ex 41 - Mostre todos os números primos entre 1 e 100.
 
+function ehPrimo(numero) {
+    if (numero < 2) return false;     
+    for (let i = 2; i <= Math.sqrt(numero); i++) {
+        if (numero % i === 0) {
+            return false; 
+        }
+    }
+    return true;
+}
 
+console.log("Números primos entre 1 e 100:");
+for (let num = 1; num <= 100; num++) {
+    if (ehPrimo(num)) {
+        //console.log(num);
+    }
+}
 
+// EX 43 - Inverta os dígitos de um número.
 
+//           0123  
+let num43 = '5712'
+let invertida = ''
+
+for (let c = 3; c >= 0; c--) {
+    invertida += num43[c]
+}
+console.log(invertida)
 
 
 
