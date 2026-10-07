@@ -8,6 +8,7 @@ let numAdivinhar = rand(1, 10)
 
 function verificar() {
     const txtNumAdv = document.querySelector('#txtNumAdv')
+
     const advNum = document.querySelector('.advNum')
     const respostaAnterior = document.querySelector('.resposta')
 
@@ -18,9 +19,14 @@ function verificar() {
     const divResp = document.createElement('div')
     const pResp = document.createElement('p')
 
-    divResp.classList.add('resposta')
+    if (isNaN(txtNumAdv.value)) {
+        alert('Digite um numero!')
+        txtNumAdv.value = ''
+        txtNumAdv.focus()
+        return
+    }
 
-    console.log(numAdivinhar)
+    divResp.classList.add('resposta')
 
     if (txtNumAdv.value == numAdivinhar) {
         pResp.textContent = 'Numero certo!!'
@@ -28,7 +34,7 @@ function verificar() {
     } else {
         pResp.textContent = 'Numero errado tente novamente!!'
     }
-    
+
     txtNumAdv.value = ''
     txtNumAdv.focus()
     divResp.appendChild(pResp)
