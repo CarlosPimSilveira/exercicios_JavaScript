@@ -363,7 +363,7 @@ function maior49(n1, n2, n3) {
     } else if (n2 > n1 && n2 > n3) {
         return (`Segundo numero maior n2_49:  ${n2}`)
     } else {
-        return (`Segundo numero maior n3_49:  ${n3}`)
+        return (`Terceiro numero maior n3_49:  ${n3}`)
     }
 }
 
