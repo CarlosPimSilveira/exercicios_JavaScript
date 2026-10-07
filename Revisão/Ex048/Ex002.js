@@ -402,6 +402,7 @@ let aMedia = [10, 5, 20, 30]
 let resultado52 = 0
 
 function mediaArray(n1) {
+    resultado52 = 0
     for (c = aMedia.length-1; c >= 0; c--) {
         resultado52 += n1[c]        
     }
@@ -409,6 +410,51 @@ function mediaArray(n1) {
 }
 
 console.log(`A media é ` + mediaArray(aMedia))
+
+// Ex 53 - Crie uma função que converte Celsius para Fahrenheit.
+let cel53 = 31
+
+function calculaFahrenheit(n1) {
+    return (n1 * 1.8) + 32
+}
+
+console.log(`A temperatura em celsius ${cel53} fica em Fahrenheit ` + calculaFahrenheit(cel53))
+
+
+// Ex 54 - Crie uma função que calcula um desconto.
+let prod54 = 115
+let desconto54 = 10 // 10%
+let resultado54 = 0
+
+function calDesc(n1, n2) {
+    resultado54 = n1 * (n2 / 100)
+    return resultado54 = n1 - resultado54
+}
+
+console.log(`O produto custava ${prod54} com desconto de ${desconto54}% ficou ` + calDesc(prod54, desconto54))
+
+
+// Ex 55 - Crie uma função que conta as vogais de uma palavra.
+let vog55 = ['a', 'e', 'i', 'o', 'u']
+let palavraVog = 'Carlos Pim'
+
+function contarVog(n1) {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
