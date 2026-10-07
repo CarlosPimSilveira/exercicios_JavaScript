@@ -311,5 +311,18 @@ console.log(`O numero tem ${tamDig}`)
 
 // Ex 46 - Crie uma função que soma dois números.
 
+let n1_46 = 10
+let n2_46 = 20
+
+function somar46(n1_46, n2_46) {
+    return  n1_46 + n2_46
+}
+
+console.log(somar46(n1_46, n2_46))
+
+
+
+
+
 
 
