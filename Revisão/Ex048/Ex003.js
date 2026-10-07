@@ -45,6 +45,25 @@ console.log(`A soma dos valores do array são ` + somarArray(a61))
 
 // Ex 63 - Calcule a média dos números de um array.
 
+let a63 = [10, 20, 30]
+
+function mediaArray(n1) {
+    if (n1.length !== 0) {
+        let resulMedia = 0
+        for (let c = n1.length - 1; c >= 0; c--) {
+            resulMedia += n1[c]
+        }
+        return resulMedia / n1.length
+    } else {
+        return('Array vazio')
+    }
+}
+
+console.log(`A media dos valores é ` + mediaArray(a63))
+
+// Ex 64 — Encontre o maior número de um array.
+
+
 
 
 
