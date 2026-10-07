@@ -317,8 +317,57 @@ let n2_46 = 20
 function somar46(n1_46, n2_46) {
     return  n1_46 + n2_46
 }
-
 console.log(somar46(n1_46, n2_46))
+
+// Ex 47 - Crie uma função que verifica se um número é par.
+
+let n1_47 = 2
+
+function VeriPar(n1) {
+    if (n1 % 2 === 0) {
+        return ('Par')
+    } else {
+        return ('Impar')
+    }
+}
+
+console.log(VeriPar(n1_47))
+
+
+// Ex 48 Crie uma função que retorna o maior entre dois números
+
+let n1_48 = 30
+let n2_48 = 100
+
+function maior48(n1, n2) {
+    if (n1 > n2) {
+        return (`Primeiro numero maior n1_48: ${n1}`)
+    } else {
+        return (`Segundo numero maior n2_48:  ${n2}`)
+    }
+}
+
+console.log(maior48(n1_48, n2_48))
+
+
+// Ex 49 - Crie uma função que retorna o maior entre três números.
+console.log('MAIOR 3')
+
+let n1_49 = 30
+let n2_49 = 100
+let n3_49 = 120
+
+function maior49(n1, n2, n3) {
+    if (n1 > n2 && n1 > n3) {
+        return (`Primeiro numero maior n1_49: ${n1}`)
+    } else if (n2 > n1 && n2 > n3) {
+        return (`Segundo numero maior n2_49:  ${n2}`)
+    } else {
+        return (`Segundo numero maior n3_49:  ${n3}`)
+    }
+}
+
+console.log(maior49(n1_49, n2_49, n3_49))
 
 
 
