@@ -369,6 +369,47 @@ function maior49(n1, n2, n3) {
 
 console.log(maior49(n1_49, n2_49, n3_49))
 
+// Ex 50 - Crie uma função que calcula o fatorial de um número.
+
+function calcularFatorial50(n) {
+    if (n < 0) return "Não existe fatorial de número negativo.";
+    let resultado = 1;
+    for (let i = 1; i <= n; i++) {
+        resultado *= i;
+    }
+    return resultado;
+}
+
+console.log(calcularFatorial50(5));
+
+// Ex 51 - Crie uma função que verifica se um número é primo. 
+
+function ehPrimo51(numero) {
+    if (numero < 2) return false;     
+    for (let i = 2; i <= Math.sqrt(numero); i++) {
+        if (numero % i === 0) {
+            return false; 
+        }
+    }
+    return true;
+}
+
+console.log(`O numero 5 ` + ehPrimo51(5))
+
+// Ex 52 - Crie uma função que calcula a média de um array.
+
+let aMedia = [10, 5, 20, 30]
+let resultado52 = 0
+
+function mediaArray(n1) {
+    for (c = aMedia.length-1; c >= 0; c--) {
+        resultado52 += n1[c]        
+    }
+    return resultado52 / aMedia.length
+}
+
+console.log(`A media é ` + mediaArray(aMedia))
+
 
 
 
