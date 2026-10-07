@@ -298,10 +298,18 @@ for (let c = num43.length -1; c >= 0; c--) {
 }
 console.log(invertida)
 
+// Ex 44 - Conte quantos dígitos possui um número.
 
+let num44 = '5712'
+let tamDig = 0
 
+for (let c = num44.length -1; c >= 0; c--) {
+    tamDig++
+}
 
+console.log(`O numero tem ${tamDig}`)
 
+// Ex 46 - Crie uma função que soma dois números.
 
 
 
