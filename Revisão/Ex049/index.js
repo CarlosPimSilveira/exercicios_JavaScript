@@ -4,26 +4,33 @@ function rand(min, max) {
     return Math.floor(Math.random() * (max - min) + min)
 }
 
-const numAdivinhar = rand(1, 10)
+let numAdivinhar = rand(1, 10)
 
 function verificar() {
-    const txtNumAdv = document.querySelector('#txtNumAdv').value
+    const txtNumAdv = document.querySelector('#txtNumAdv')
     const advNum = document.querySelector('.advNum')
-    const divResp = document.createElement('div')
-    const pResp = document.createElement('p')
-    console.log(numAdivinhar)
+    const respostaAnterior = document.querySelector('.resposta')
 
-    if (divResp) {
-        pResp.remove()
-        divResp.remove()
-        
+    if (respostaAnterior) {
+        respostaAnterior.remove()
     }
 
-    if (txtNumAdv == numAdivinhar) {
+    const divResp = document.createElement('div')
+    const pResp = document.createElement('p')
+
+    divResp.classList.add('resposta')
+
+    console.log(numAdivinhar)
+
+    if (txtNumAdv.value == numAdivinhar) {
         pResp.textContent = 'Numero certo!!'
+        numAdivinhar = rand(1, 10)
     } else {
         pResp.textContent = 'Numero errado tente novamente!!'
     }
+    
+    txtNumAdv.value = ''
+    txtNumAdv.focus()
     divResp.appendChild(pResp)
     advNum.appendChild(divResp)
 }
