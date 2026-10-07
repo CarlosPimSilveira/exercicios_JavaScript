@@ -454,6 +454,47 @@ function somarVog(n1, n2) {
 
 console.log(`A palavra ${palavraVog} tem ` + somarVog(palavraVog.toLocaleLowerCase(), vog55) + ` vogais`)
 
+// Ex 56 - Crie uma função que inverte uma string.
+let palavraInvertida = 'Carlos Pim'
+
+function inverterPalavra(n1) {
+    let salvaPalavraInvertida = ''
+    for (let c = n1.length-1; c >= 0 ;c--) {
+        salvaPalavraInvertida += n1[c]
+    }
+    return salvaPalavraInvertida
+}
+
+console.log(inverterPalavra(palavraInvertida))
+
+// Ex 57 - Crie uma função que verifica se uma palavra é um palíndromo.
+let palin57 = 'arara'
+
+function palindromo(n1) {
+    let palinInvertido = ''
+
+    for (let c = n1.length-1; c >= 0; c--) {
+        palinInvertido += n1[c]
+    }
+
+    if (n1 === palinInvertido) {
+        return ('A palavra é um palíndromo')
+    } else {
+        return ('A palavra não é um palíndromo')
+    }
+
+}
+
+console.log(palindromo('Arara'.toLocaleLowerCase()))
+console.log(palindromo('Carlos'.toLocaleLowerCase()))
+console.log(palindromo('Ovo'.toLocaleLowerCase()))
+
+
+
+
+
+
+
 
 
 
