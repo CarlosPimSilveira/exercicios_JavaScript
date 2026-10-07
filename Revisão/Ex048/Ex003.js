@@ -63,6 +63,23 @@ console.log(`A media dos valores é ` + mediaArray(a63))
 
 // Ex 64 — Encontre o maior número de um array.
 
+let aMaior64 = [10, -10, 100, -100]
+
+function maiorNumArrat(n1) {
+    let maiorNum64 = n1[0]
+    for (let c = n1.length-1; c >= 0; c--) {
+        if (maiorNum64 < n1[c])
+            maiorNum64 = n1[c]
+    }
+    return maiorNum64
+}
+
+console.log(`O numero maior do array é ` + maiorNumArrat(aMaior64))
+
+
+
+
+
 
 
 
