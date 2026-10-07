@@ -489,14 +489,37 @@ console.log(palindromo('Arara'.toLocaleLowerCase()))
 console.log(palindromo('Carlos'.toLocaleLowerCase()))
 console.log(palindromo('Ovo'.toLocaleLowerCase()))
 
+// Ex 58 - Crie uma função que retorna o menor número de um array.
 
+let menorArray58 = [ 10, 15, 5, 25, 35, 1 ]
 
+function menorDigArray(n1) {
+    let menorValor58 = n1[0]
+    for (let c = n1.length-1; c >= 0; c--) {
+        if (menorValor58 > n1[c]) {
+            menorValor58 = n1[c]
+        }
+    }
+    return menorValor58
+}
 
+console.log(`O menor numero do array é ` + menorDigArray(menorArray58))
 
+// Ex 59 - retornar o maior númeor de um array
 
+let maiorArray59 = [ 10, 15, 5, 25, 35, 1 ]
 
+function maiorDigArray(n1) {
+    let maiorValor59 = n1[0]
+    for (let c = n1.length-1; c >= 0; c--) {
+        if (maiorValor59 < n1[c]) {
+            maiorValor59 = n1[c]
+        }
+    }
+    return maiorValor59
+}
 
-
+console.log(`O maior numero do array é ` + maiorDigArray(maiorArray59))
 
 
 
