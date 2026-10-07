@@ -536,4 +536,3 @@ console.log(`O maior numero do array é ` + maiorDigArray(maiorArray59))
 
 
 
-
