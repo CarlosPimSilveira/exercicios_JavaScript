@@ -436,12 +436,23 @@ console.log(`O produto custava ${prod54} com desconto de ${desconto54}% ficou ` 
 
 // Ex 55 - Crie uma função que conta as vogais de uma palavra.
 let vog55 = ['a', 'e', 'i', 'o', 'u']
+//            0    1    2    3    4
 let palavraVog = 'Carlos Pim'
+//                0123456789 
 
-function contarVog(n1) {
-    
+function somarVog(n1, n2) {
+    let contarVog = 0
+    for (let c = n1.length-1; c >= 0; c--) {
+        for(let i = 0; i <= n2.length-1; i++) {
+            if (n1[c] === n2[i]) {
+                contarVog += 1
+            }
+        }
+    }
+    return contarVog
 }
 
+console.log(`A palavra ${palavraVog} tem ` + somarVog(palavraVog.toLocaleLowerCase(), vog55) + ` vogais`)
 
 
 
