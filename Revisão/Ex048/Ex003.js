@@ -119,6 +119,35 @@ function numImp(n1) {
 
 console.log(`O total de numeros impares é ` + numImp(imp67))
 
+// Ex 68 — Crie um novo array contendo apenas os números pares.
+
+let aNum68 = [2, 5, 6, 7, 9, 10, 12, 15, 20, 25, 35, 36, 44]
+
+function newArrayPar(n1) {
+    let newArrayPar = []
+    for (let c = 0; c < n1.length; c++) {
+        if (n1[c] % 2 === 0)
+            newArrayPar.push(n1[c]) 
+    }
+    return newArrayPar
+}
+
+console.log(`O array com apenas numeros pares ` + newArrayPar(aNum68))
+
+//n1.length-1
+
+let aNum681 = [2, 5, 6, 7, 9, 10, 12, 15, 20, 25, 35, 36, 44]
+
+function newArrayPar1(n1) {
+    let newArrayPar1 = n1.filter( num => num % 2 === 0)
+    return newArrayPar1
+}
+
+console.log(`O array com apenas numeros pares ` + newArrayPar1(aNum681))
+
+// Ex 69 — Crie um novo array contendo apenas os números maiores que 10.
+
+
 
 
 
