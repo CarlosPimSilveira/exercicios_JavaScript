@@ -76,8 +76,34 @@ function maiorNumArrat(n1) {
 
 console.log(`O numero maior do array é ` + maiorNumArrat(aMaior64))
 
+// Ex 65 — Encontre o menor número de um array.
+let aMenor65 = [10, 100, 5, 90]
 
+function menorNumArrat(n1) {
+    let menorNum65 = n1[0]
+    for (let c = n1.length-1; c >= 0; c--) {
+        if (menorNum65 > n1[c])
+            menorNum65 = n1[c]
+    }
+    return menorNum65
+}
 
+console.log(`O numero maior do array é ` + menorNumArrat(aMenor65))
+
+// Ex 66 — Conte quantos números pares existem em um array.
+let par66 = [2, 5, 7, 6, 8, 10, 11, 13, 15, 17]
+
+function numPar(n1) {
+    let parTot = 0
+    for (let c = n1.length-1; c >= 0; c--) {
+        if (n1[c] % 2 === 0) {
+            parTot += 1
+        }
+    }
+    return parTot
+}
+
+console.log(`O total de numeros pares é ` + numPar(par66))
 
 
 
