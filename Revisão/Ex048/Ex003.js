@@ -197,6 +197,42 @@ function buscaValor(n1, vlrBuscar) {
 
 console.log(`Resultado da busca: ` + buscaValor(verArray, 5))
 
+// Ex 72 - Conte quantas vezes determinado valor aparece em um array.
+let a72 = [2, 4, 2, 6, 4, 2, 7, 2, 9, 4, 8, 2, 6, 4, 10, 11, 15, 2]
+
+function contarValores(n1, valorContar) {
+    let quantasVzsApareceu = 0
+    for (let c = 0; c <= n1.length-1; c++) {
+        if (n1[c] === valorContar) {
+            quantasVzsApareceu += 1
+        }
+    }
+    return quantasVzsApareceu 
+}
+
+console.log(`O valor aparece ` + contarValores(a72, 2))
+
+// Ex 73 — Remova os valores duplicados de um array
+let a73 = [2, 4, 2, 6, 4, 2, 7, 2, 9, 4, 8, 2, 6, 4, 10, 11, 15, 2]
+//         0  1  2  3  4  5  6  7  8  9  10 11 12 13 14  15  16  17  
+
+function removeValoresDuplicados(n1) {
+    let aLimpo = [n1[0]]
+    for (let c = 0; c <= n1.length-1; c++) {
+        let jaExite = false
+        for (let i = 0; i <= aLimpo.length-1; i++) {
+            if (aLimpo[i] === n1[c])
+                jaExite = true;
+        }
+        if (!jaExite)
+            aLimpo.push(n1[c])
+    }
+    return aLimpo
+}
+
+console.log(`Novo array sem valores duplicados ` + removeValoresDuplicados(a73))
+
+
 
 
 
