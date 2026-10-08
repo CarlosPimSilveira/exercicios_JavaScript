@@ -147,6 +147,62 @@ console.log(`O array com apenas numeros pares ` + newArrayPar1(aNum681))
 
 // Ex 69 — Crie um novo array contendo apenas os números maiores que 10.
 
+let aMaior10 = [ 5, 6, 9, 10, 11, 15, 16, 17, 22, 3, 1 ]
+
+function maiorArray10(n1) {
+    let newArray10 = []
+    for (let c = 0; c <= n1.length-1; c++) {
+        if (n1[c] > 10)
+            newArray10.push(n1[c])
+    }
+    return newArray10
+}
+
+console.log(`O novo array com numeros maiores que 10: ` + maiorArray10(aMaior10))
+
+// Ex 70 — Inverta a ordem dos elementos de um array.
+
+let invArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+function invnewArray(n1) {
+    let arrayInvertido = []
+
+    for (let c = n1.length-1; c >= 0; c--) {
+        arrayInvertido.push(n1[c])
+    }
+
+    return arrayInvertido
+}
+
+console.log(`Os dados do array invertido ficam: ` + invnewArray(invArray))
+
+// Ex 71 — Verifique se determinado valor existe em um array.
+let verArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+function buscaValor(n1, vlrBuscar) {
+    let achouValorSerBuscado = false
+    for (let c = 0; c < n1.length-1; c++) {
+        if (n1[c] === vlrBuscar) {
+            achouValorSerBuscado = true
+            break
+        }
+    }
+    if (achouValorSerBuscado) {
+        return `O numero ${vlrBuscar} existe no array`
+    } else {
+        return `O numero ${vlrBuscar} não existe no array`
+    }
+
+}
+
+console.log(`Resultado da busca: ` + buscaValor(verArray, 5))
+
+
+
+
+
+
+
 
 
 
