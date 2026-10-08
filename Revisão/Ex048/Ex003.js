@@ -105,10 +105,19 @@ function numPar(n1) {
 
 console.log(`O total de numeros pares é ` + numPar(par66))
 
+// Ex 67 — Conte quantos números ímpares existem em um array.
+let imp67 = [2, 5, 7, 6, 8, 10, 11, 13, 15, 17]
 
+function numImp(n1) {
+    let impTot = 0
+    for(let c = n1.length-1; c >= 0; c--) {
+        if (n1[c] % 2 !== 0)
+            impTot += 1
+    }
+    return impTot
+}
 
-
-
+console.log(`O total de numeros impares é ` + numImp(imp67))
 
 
 
