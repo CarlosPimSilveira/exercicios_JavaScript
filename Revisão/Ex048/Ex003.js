@@ -279,6 +279,43 @@ function segundoMaior(n1) {
 
 console.log(`O segundo maior numero é: ${segundoMaior(numeros75)}`)
 
+// 76 — Conte quantos caracteres existem em uma string.
+//             123456 789
+let conteQT = 'Carlos Pim'
+//             0123456789
+
+function contarCaracteres(n1) {
+    let conCarac = 0
+    for (let c = 0; c < n1.length; c++) {
+        conCarac += 1
+    }
+
+    return conCarac
+}
+
+console.log(`O nome ${conteQT} tem ` + contarCaracteres(conteQT) + ` caracteres!`)
+
+// Ex 77 — Conte quantas vogais existem em uma string.
+
+let contarVogaisStrings = 'Carlos Pim'
+let vog = [ 'a', 'e', 'i', 'o', 'u' ]
+
+function contarVogais(n1, n2) {
+    let contarVog = 0
+    for (let c = 0; c < n1.length; c++) {
+        for (let i = 0; i < n2.length; i++) {
+            if (n2[i] === n1[c]) 
+                contarVog++
+        }
+    }
+    return contarVog
+}
+
+console.log(`Na palavra ${contarVogaisStrings} tem ` + contarVogais(contarVogaisStrings.toLocaleLowerCase(), vog) + ` vogais`)
+
+
+
+
 
 
 
