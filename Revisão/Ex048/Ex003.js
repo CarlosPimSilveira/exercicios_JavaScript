@@ -304,8 +304,10 @@ function contarVogais(n1, n2) {
     let contarVog = 0
     for (let c = 0; c < n1.length; c++) {
         for (let i = 0; i < n2.length; i++) {
-            if (n2[i] === n1[c]) 
+            if (n2[i] === n1[c]) {
                 contarVog++
+                break
+            }
         }
     }
     return contarVog
