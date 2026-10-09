@@ -315,7 +315,22 @@ function contarVogais(n1, n2) {
 
 console.log(`Na palavra ${contarVogaisStrings} tem ` + contarVogais(contarVogaisStrings.toLocaleLowerCase(), vog) + ` vogais`)
 
+// 78 — Conte quantas palavras existem em uma frase
+let contarPalavras = 'Eu estou aprendendo javascript'
 
+function contarPalavrasFrases(n1) {
+    let palavrasEmFrases = 0
+    for (let c = 0; c < n1.length; c++) {
+        if (c === 0 && n1[c] !== ' ')
+            palavrasEmFrases++
+        if (n1[c] !== ' ' && n1[c-1] === ' ')
+            palavrasEmFrases++
+    }
+
+    return palavrasEmFrases
+}
+
+console.log(`A frase ${contarPalavras} tem ` + contarPalavrasFrases(contarPalavras) + ` palavras`)
 
 
 
