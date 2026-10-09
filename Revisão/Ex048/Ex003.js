@@ -252,10 +252,32 @@ function OrdArray(n1) {
 
 console.log(`Array ordenado: ` + OrdArray(numeros74));
 
-// 75 — Encontre o segundo maior número de um array
-let numeros75 = [10, 5, 30, 8, 20, 15]
+// Ex 75 — Encontre o segundo maior número de um array
+let numeros75 = [10, 5, 30, 8, 20, 15, 35]
 
+function segundoMaior(n1) {
+    let maior75 = -Infinity
+    let segMaior = -Infinity
 
+    for (let c = 0; c < n1.length; c++) {
+        let numAt = n1[c]
+        if (numAt > maior75) {
+            segMaior = maior75
+            maior75 = numAt
+        }
+        else if (numAt > segMaior && numAt !== maior75) {
+            segMaior = numAt
+        }
+    }
+
+    if (segMaior === -Infinity) {
+        return 'Não existe segundo maior número distinto'
+    }
+
+    return segMaior
+}
+
+console.log(`O segundo maior numero é: ${segundoMaior(numeros75)}`)
 
 
 
