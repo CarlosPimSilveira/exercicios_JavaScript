@@ -251,7 +251,10 @@ function OrdArray(n1) {
 }
 
 console.log(`Array ordenado: ` + OrdArray(numeros74));
-// Saída: Array ordenado: 1,2,3,5,8,10
+
+// 75 — Encontre o segundo maior número de um array
+let numeros75 = [10, 5, 30, 8, 20, 15]
+
 
 
 
