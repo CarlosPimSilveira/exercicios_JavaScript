@@ -232,7 +232,26 @@ function removeValoresDuplicados(n1) {
 
 console.log(`Novo array sem valores duplicados ` + removeValoresDuplicados(a73))
 
+// Ex 74 — Ordene um array sem utilizar sort
+let numeros74 = [8, 3, 10, 1, 5, 2];
 
+function OrdArray(n1) {
+    let arr = [...n1]; 
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                let aux = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = aux;
+            }
+        }
+    }
+    return arr; 
+}
+
+console.log(`Array ordenado: ` + OrdArray(numeros74));
+// Saída: Array ordenado: 1,2,3,5,8,10
 
 
 
