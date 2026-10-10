@@ -374,7 +374,7 @@ function maiorPalavra(n1) {
     for (let c = 1; c < n1.length; c++) {        
             if (n1[c] !== ' ')
                 maiorPalavraFrase += n1[c]
-            if (maiorPalavraFrase.length > proximaMaiorPalavra.length && (n1[c+1] === ' ' || n1[c+1] === '')) {
+            if (maiorPalavraFrase.length > proximaMaiorPalavra.length && (n1[c+1] === ' ' || n1.length-1 === c)) {
                 proximaMaiorPalavra = maiorPalavraFrase
             }
             if (n1[c] === ' ' )
