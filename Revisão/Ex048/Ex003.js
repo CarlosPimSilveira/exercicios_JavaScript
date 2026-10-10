@@ -364,13 +364,30 @@ function verificaPalindromo(n1) {
 
 console.log(verificaPalindromo(palavraPalindromo))
 
+// 81 — Encontre a palavra mais longa de uma frase
+//             01234567891  JavaScript
+let frase81 = 'Eu estou aprendendo JavaScripttttttttt'
+function maiorPalavra(n1) {
+    let maiorPalavraFrase = n1[0]
+    let proximaMaiorPalavra = ''
 
+    for (let c = 1; c < n1.length; c++) {        
+            if (n1[c] !== ' ')
+                maiorPalavraFrase += n1[c]
+            if (maiorPalavraFrase.length > proximaMaiorPalavra.length && (n1[c+1] === ' ' || n1[c+1] === '')) {
+                proximaMaiorPalavra = maiorPalavraFrase
+            }
+            if (n1[c] === ' ' )
+                maiorPalavraFrase = ''
+    }
 
+    return proximaMaiorPalavra
+}
 
-
-
-
-
+console.log(`A maior palavra é ` + maiorPalavra(frase81))
+// maiorPalavraFrase += n1[c]
+//  && n1[c-1] === ' '
+// if (n1[c] !== ' ' && n1[c-1] === ' ')
 
 
 
