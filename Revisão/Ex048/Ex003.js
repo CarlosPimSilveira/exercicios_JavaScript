@@ -336,8 +336,8 @@ console.log(`A frase ${contarPalavras} tem ` + contarPalavrasFrases(contarPalavr
 let frase79 = 'Eu amo JavaScript'
 
 function inverterFrases(n1) {
-    let palavraInvertida
-    for (let c = n1.length; c >= 0; c--) {
+    let palavraInvertida = ''
+    for (let c = n1.length-1; c >= 0; c--) {
         palavraInvertida += n1[c]
     }
     return palavraInvertida
