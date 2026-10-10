@@ -345,6 +345,25 @@ function inverterFrases(n1) {
 
 console.log(`A frase invertida fica ` + inverterFrases(frase79))
 
+// 80 — Verifique se uma palavra é um palíndromo.
+
+let palavraPalindromo = 'arara'
+
+function verificaPalindromo(n1) {
+    let invertePalavra = ''
+    for (let c = n1.length-1; c >= 0; c--) {
+        invertePalavra += n1[c]
+    }
+
+    if (invertePalavra === n1) {
+        return 'A palavra é um palíndromo '
+    } else {
+        return 'A palavra não é um palíndromo '  
+    }
+}
+
+console.log(verificaPalindromo(palavraPalindromo))
+
 
 
 
