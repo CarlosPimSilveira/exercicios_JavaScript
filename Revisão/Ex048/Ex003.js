@@ -366,12 +366,12 @@ console.log(verificaPalindromo(palavraPalindromo))
 
 // 81 — Encontre a palavra mais longa de uma frase
 //             01234567891  JavaScript
-let frase81 = 'Eu estou aprendendo JavaScripttttttttt'
+let frase81 = 'Eu estou aprendendo JavaScrip'
 function maiorPalavra(n1) {
-    let maiorPalavraFrase = n1[0]
+    let maiorPalavraFrase = ''
     let proximaMaiorPalavra = ''
 
-    for (let c = 1; c < n1.length; c++) {        
+    for (let c = 0; c < n1.length; c++) {        
             if (n1[c] !== ' ')
                 maiorPalavraFrase += n1[c]
             if (maiorPalavraFrase.length > proximaMaiorPalavra.length && (n1[c+1] === ' ' || n1.length-1 === c)) {
@@ -380,7 +380,6 @@ function maiorPalavra(n1) {
             if (n1[c] === ' ' )
                 maiorPalavraFrase = ''
     }
-
     return proximaMaiorPalavra
 }
 
