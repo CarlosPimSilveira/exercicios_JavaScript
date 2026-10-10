@@ -319,7 +319,7 @@ console.log(`Na palavra ${contarVogaisStrings} tem ` + contarVogais(contarVogais
 let contarPalavras = 'Eu estou aprendendo javascript'
 
 function contarPalavrasFrases(n1) {
-    let palavrasEmFrases = 0
+    let palavrasEmFrases = 0 
     for (let c = 0; c < n1.length; c++) {
         if (c === 0 && n1[c] !== ' ')
             palavrasEmFrases++
@@ -331,6 +331,20 @@ function contarPalavrasFrases(n1) {
 }
 
 console.log(`A frase ${contarPalavras} tem ` + contarPalavrasFrases(contarPalavras) + ` palavras`)
+
+// 79 — Inverta uma frase
+let frase79 = 'Eu amo JavaScript'
+
+function inverterFrases(n1) {
+    let palavraInvertida
+    for (let c = n1.length; c >= 0; c--) {
+        palavraInvertida += n1[c]
+    }
+    return palavraInvertida
+}
+
+console.log(`A frase invertida fica ` + inverterFrases(frase79))
+
 
 
 
