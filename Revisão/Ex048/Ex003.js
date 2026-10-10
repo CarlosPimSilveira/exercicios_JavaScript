@@ -384,12 +384,17 @@ function maiorPalavra(n1) {
 }
 
 console.log(`A maior palavra é ` + maiorPalavra(frase81))
-// maiorPalavraFrase += n1[c]
-//  && n1[c-1] === ' '
-// if (n1[c] !== ' ' && n1[c-1] === ' ')
 
+// Ex - Crie um objeto representando um usuário
 
+const pessoa = {
+    Nome: "Carlos",
+    Idade: 27,
+    Email: "Email.Gmail.com.br",
+    Profissao: "Programador"
+}
 
+console.log(pessoa)
 
 
 
