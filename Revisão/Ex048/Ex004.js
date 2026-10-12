@@ -10,8 +10,7 @@ const pessoasCadastradas = [
 ]
 
 function cadUsuario (newUsuario) {
-
-
+    
 
 }
 
