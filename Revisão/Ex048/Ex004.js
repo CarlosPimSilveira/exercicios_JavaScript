@@ -10,7 +10,7 @@ const pessoasCadastradas = [
 ]
 
 function cadUsuario (newUsuario) {
-    pessoasCadastradas.push({Nome: newUsuario.nome , Idade: newUsuario.Idade, Email: newUsuario.email})
+    pessoasCadastradas.push({Nome: newUsuario.Nome , Idade: newUsuario.Idade, Email: newUsuario.Email})
 }
 
 cadUsuario(newPessoa)
