@@ -17,4 +17,18 @@ function cadUsuario (newUsuario) {
     pessoasCadastradas.push({Nome: newUsuario.Nome , Idade: newUsuario.Idade, Email: newUsuario.Email})
 }
 
+// Função que exibe pessoas cadastradas!
+function exibeCadUsuarios(pessoasCadastradas) {
+    let exibirCadastrados = {}
+    for (let c = 0; c < pessoasCadastradas.length; c++) {
+        exibirCadastrados = pessoasCadastradas.nome
+    }
+    console.log(exibirCadastrados)
+}
+
+// Chama a função que cadastra!
 cadUsuario(newPessoa)
+
+// Chama a função que exibe os cadastrados
+exibeCadUsuarios(pessoasCadastradas)
+
