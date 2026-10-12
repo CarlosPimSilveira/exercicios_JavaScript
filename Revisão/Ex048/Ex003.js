@@ -385,7 +385,8 @@ function maiorPalavra(n1) {
 
 console.log(`A maior palavra é ` + maiorPalavra(frase81))
 
-// Ex - Crie um objeto representando um usuário
+// Ex - 82 Crie um objeto representando um usuário
+// Ex - 83 — Mostre os dados de um usuário armazenado em um objeto
 
 const pessoa = {
     Nome: "Carlos",
@@ -394,8 +395,10 @@ const pessoa = {
     Profissao: "Programador"
 }
 
-console.log(pessoa)
+console.log(pessoa.Nome)
+console.log(`Nome: ${pessoa.Nome} Idade: ${pessoa.Idade}`)
 
+// Ex 84 — Criar vários usuários e descobrir qual deles é o mais velho.
 
 
 
