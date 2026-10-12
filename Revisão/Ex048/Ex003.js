@@ -400,8 +400,28 @@ console.log(`Nome: ${pessoa.Nome} Idade: ${pessoa.Idade}`)
 
 // Ex 84 — Criar vários usuários e descobrir qual deles é o mais velho.
 
+const cadPessoa = [
+    { nome: 'Carlos', idade: 27 },
+    { nome: 'Pedro', idade: 35 },
+    { nome: 'Ana', idade: 22 },
+    { nome: 'Lucas', idade: 41 }
+]
 
+function objetoPessoaVelha(n1) {
+    let objVelho = {
+        nome: n1[0].nome,
+        idade: n1[0].idade
+    }
+    for (let c = 0; c < n1.length; c++) {
+        if (objVelho.idade < n1[c].idade) {
+            objVelho.nome = n1[c].nome
+            objVelho.idade = n1[c].idade
+        }
+    }
+    return objVelho.nome + ' ' + objVelho.idade
+}
 
+console.log(`A pessoa mais velha é ` + objetoPessoaVelha(cadPessoa) )
 
 
 
