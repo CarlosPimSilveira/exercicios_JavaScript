@@ -18,17 +18,15 @@ function cadUsuario (newUsuario) {
 }
 
 // Função que exibe pessoas cadastradas!
-function exibeCadUsuarios(pessoasCadastradas) {
-    let exibirCadastrados = {}
+function listarUsuarios(pessoasCadastradas) {
     for (let c = 0; c < pessoasCadastradas.length; c++) {
-        exibirCadastrados = pessoasCadastradas.nome
+        console.log(`Nome: ` + pessoasCadastradas[c].Nome + ` | Idade: ` + pessoasCadastradas[c].Idade + ` | Email: ` + pessoasCadastradas[c].Email)
     }
-    console.log(exibirCadastrados)
 }
 
 // Chama a função que cadastra!
 cadUsuario(newPessoa)
 
 // Chama a função que exibe os cadastrados
-exibeCadUsuarios(pessoasCadastradas)
+listarUsuarios(pessoasCadastradas)
 
