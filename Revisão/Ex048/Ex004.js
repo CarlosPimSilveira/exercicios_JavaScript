@@ -24,9 +24,30 @@ function listarUsuarios(pessoasCadastradas) {
     }
 }
 
+function buscarUsuario(n1) {
+    let AchouCliente = false
+    let numCad = 0
+    for (let c = 0; c < pessoasCadastradas.length; c++) {
+        if (n1 === pessoasCadastradas[c].Nome.toLocaleLowerCase()) {
+            AchouCliente = true
+            numCad === c
+        }
+    }
+    if (AchouCliente === true) {
+        return (`Nome: ` + pessoasCadastradas[numCad].Nome + ` | Idade: ` + pessoasCadastradas[numCad].Idade + ` |    Email: ` + pessoasCadastradas[numCad].Email)
+    } else {
+        return (`Usuario ${n1} não encontrado`)
+    }
+}
+
 // Chama a função que cadastra!
 cadUsuario(newPessoa)
 
 // Chama a função que exibe os cadastrados
 listarUsuarios(pessoasCadastradas)
+
+// Busca usuarios
+console.log(buscarUsuario('carlos'))
+
+
 
