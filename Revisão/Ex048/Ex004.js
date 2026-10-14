@@ -28,9 +28,9 @@ function buscarUsuario(n1) {
     let AchouCliente = false
     let numCad = 0
     for (let c = 0; c < pessoasCadastradas.length; c++) {
-        if (n1 === pessoasCadastradas[c].Nome.toLocaleLowerCase()) {
+        if (n1.toLocaleLowerCase() === pessoasCadastradas[c].Nome.toLocaleLowerCase()) {
             AchouCliente = true
-            numCad === c
+            numCad = c
         }
     }
     if (AchouCliente === true) {
