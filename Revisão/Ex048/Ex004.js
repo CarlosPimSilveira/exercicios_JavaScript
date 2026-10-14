@@ -40,6 +40,24 @@ function buscarUsuario(n1) {
     }
 }
 
+function removerUsuario(n1) {
+    let achouApagar = false
+    let numApagar = 0
+    for (let c = 0; c < pessoasCadastradas.length; c++) {
+        if (n1.toLocaleLowerCase() === pessoasCadastradas[c].Nome.toLocaleLowerCase()) {
+            achouApagar = true
+            numApagar = c
+            break
+        }
+    }
+    if (achouApagar === true) {
+        pessoasCadastradas.splice(numApagar, 1)
+        return `Registro apagado! ${n1}` 
+    } else {
+        return `Registro não encontrado! ${n1}`
+    }
+}
+
 // Chama a função que cadastra!
 cadUsuario(newPessoa)
 
@@ -49,5 +67,8 @@ listarUsuarios(pessoasCadastradas)
 // Busca usuarios
 console.log(buscarUsuario('carlos'))
 
+// Remova usuários
+console.log(removerUsuario('carlos'))
 
-
+// Chama a função que exibe os cadastrados
+listarUsuarios(pessoasCadastradas)
