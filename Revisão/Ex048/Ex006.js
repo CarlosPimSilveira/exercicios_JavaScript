@@ -2,6 +2,7 @@
 let veiculosEstacionados = []
 
 function registrarEntrada(pla, mod) {
+    let novoVeiculo = { placa: pla, modelo: mod };
     let achouVeiculo = false;
     let infoCarro = '';
     let indexParaRemover = -1; 
@@ -13,8 +14,11 @@ function registrarEntrada(pla, mod) {
             indexParaRemover = index;
         }
     });
-
-    veiculosEstacionados.push(novoVeiculo);
+    if (achouVeiculo) {
+        return console.log('Veiculo ja esta estacionado!')
+    } else {
+        veiculosEstacionados.push(novoVeiculo);
+    }
 }
 
 // Lista veiculos
@@ -48,7 +52,7 @@ function buscarVeiculo(n1) {
     }
 }
 
-// Retira veiculo
+// Registra saida 
 function registrarSaida(n1) {
     let achouVeiculo = false;
     let infoCarro = '';
