@@ -21,12 +21,20 @@ function listarVeiculos() {
 
 // Busca veiculo
 function buscarVeiculo(n1) {
+    let achouVeiculo = false
+    let infoCarro = ''
     veiculosEstacionados.forEach((veiculo, index) => {
         index + 1
-        if (veiculo.placa === n1) {
-            return 'Veiculo encontrado'
+        if (veiculo.placa.toLocaleLowerCase() === n1.toLocaleLowerCase()) {
+            infoCarro = `Placa: ${veiculo.placa} | Modelo: ${veiculo.modelo}`
+            achouVeiculo = true
         }
     })
+    if (achouVeiculo) {
+        return `Veiculo encontrado! ${infoCarro}`
+    } else {
+        return 'Veiculo não encontrado!'
+    }
 }
 
 // Cadastra veiculos
