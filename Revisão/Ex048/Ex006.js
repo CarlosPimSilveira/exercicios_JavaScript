@@ -47,6 +47,8 @@ listarVeiculos()
 // Busca veiculo
 console.log(buscarVeiculo('abc1234'))
 
+// Registra saida
+console.log(registrarSaida('abc1234'))
 
 
 
