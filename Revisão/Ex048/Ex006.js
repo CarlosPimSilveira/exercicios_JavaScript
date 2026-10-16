@@ -37,6 +37,28 @@ function buscarVeiculo(n1) {
     }
 }
 
+function registrarSaida(n1) {
+    let achouVeiculo = false;
+    let infoCarro = '';
+    let indexParaRemover = -1; // Guarda a posição do veículo
+
+    veiculosEstacionados.forEach((veiculo, index) => {
+        if (veiculo.placa.toLowerCase() === n1.toLowerCase()) {
+            infoCarro = `Placa: ${veiculo.placa} | Modelo: ${veiculo.modelo}`;
+            achouVeiculo = true;
+            indexParaRemover = index; // Salva o índice atual
+        }
+    });
+
+    if (achouVeiculo && indexParaRemover !== -1) {
+        // O splice remove 1 elemento a partir do índice encontrado
+        veiculosEstacionados.splice(indexParaRemover, 1); 
+        console.log(`Saída registrada para: ${infoCarro}`);
+    } else {
+        console.log("Veículo não encontrado.");
+    }
+}
+
 // Cadastra veiculos
 registrarEntrada('ABC1234', 'Gol')
 registrarEntrada('DEF5678', 'Civic')
