@@ -37,21 +37,21 @@ function buscarVeiculo(n1) {
     }
 }
 
+// Retira veiculo
 function registrarSaida(n1) {
     let achouVeiculo = false;
     let infoCarro = '';
-    let indexParaRemover = -1; // Guarda a posição do veículo
+    let indexParaRemover = -1; 
 
     veiculosEstacionados.forEach((veiculo, index) => {
         if (veiculo.placa.toLowerCase() === n1.toLowerCase()) {
             infoCarro = `Placa: ${veiculo.placa} | Modelo: ${veiculo.modelo}`;
             achouVeiculo = true;
-            indexParaRemover = index; // Salva o índice atual
+            indexParaRemover = index;
         }
     });
 
     if (achouVeiculo && indexParaRemover !== -1) {
-        // O splice remove 1 elemento a partir do índice encontrado
         veiculosEstacionados.splice(indexParaRemover, 1); 
         console.log(`Saída registrada para: ${infoCarro}`);
     } else {
@@ -70,7 +70,7 @@ listarVeiculos()
 console.log(buscarVeiculo('abc1234'))
 
 // Registra saida
-console.log(registrarSaida('abc1234'))
+registrarSaida('abc1234')
 
 
 
