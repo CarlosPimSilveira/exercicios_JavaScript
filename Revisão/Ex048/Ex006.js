@@ -4,20 +4,18 @@ let veiculosEstacionados = []
 function registrarEntrada(pla, mod) {
     let novoVeiculo = { placa: pla, modelo: mod };
     let achouVeiculo = false;
-    let infoCarro = '';
-    let indexParaRemover = -1; 
 
-    veiculosEstacionados.forEach((veiculo, index) => {
-        if (veiculo.placa.toLowerCase() === n1.toLowerCase()) {
-            infoCarro = `Placa: ${veiculo.placa} | Modelo: ${veiculo.modelo}`;
+    veiculosEstacionados.forEach((veiculo) => {
+        if (veiculo.placa.toLowerCase() === pla.toLowerCase()) {
             achouVeiculo = true;
-            indexParaRemover = index;
         }
     });
+
     if (achouVeiculo) {
-        return console.log('Veiculo ja esta estacionado!')
+        return console.log('Veículo já está estacionado!');
     } else {
         veiculosEstacionados.push(novoVeiculo);
+        console.log(`Veículo ${mod} (Placa: ${pla}) registrado com sucesso!`);
     }
 }
 
