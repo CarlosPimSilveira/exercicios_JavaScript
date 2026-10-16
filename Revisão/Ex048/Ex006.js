@@ -19,6 +19,16 @@ function listarVeiculos() {
     });
 }
 
+// Busca veiculo
+function buscarVeiculo(n1) {
+    veiculosEstacionados.forEach((veiculo, index) => {
+        index + 1
+        if (veiculo.placa === n1) {
+            return 'Veiculo encontrado'
+        }
+    })
+}
+
 // Cadastra veiculos
 registrarEntrada('ABC1234', 'Gol')
 registrarEntrada('DEF5678', 'Civic')
@@ -26,7 +36,8 @@ registrarEntrada('DEF5678', 'Civic')
 // Lista veiculos
 listarVeiculos()
 
-
+// Busca veiculo
+console.log(buscarVeiculo('abc1234'))
 
 
 
