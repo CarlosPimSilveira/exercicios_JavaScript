@@ -2,7 +2,7 @@
 let estoqueMercado = []
 
 function cadastrarProduto(produto, preco, estoque) {
-    estoqueMercado.push('Nome: ' + produto, 'Preco: ' + preco, 'Estoque: ' + estoque)
+    estoqueMercado.push({'Nome: ': produto, 'Preco: ': preco, 'Estoque: ':  estoque})
 }
 
 
