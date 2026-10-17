@@ -5,7 +5,7 @@ let carrinho = []
 
 function cadastrarProduto(produto, preco, estoque) {
     if (preco >= 0 && estoque >= 0 && Number.isInteger(estoque)) {
-        estoqueMercado.push({'Nome': produto, 'Preco': preco, 'Estoque':  estoque})
+        estoqueMercado.push({ 'Nome': produto, 'Preco': preco, 'Estoque': estoque })
     } else {
         return console.log('Produto com informações invalidas')
     }
@@ -16,38 +16,53 @@ function listarProdutos() {
         return console.log('Estoque vazio!')
     } else {
         estoqueMercado.forEach((produto, index) => {
-            console.log(index+1 + `. Nome: ` + produto.Nome + ` | Preço: ` + produto.Preco + ` | Estoque: ` + produto.Estoque)
+            console.log(index + 1 + `. Nome: ` + produto.Nome + ` | Preço: ` + produto.Preco + ` | Estoque: ` + produto.Estoque)
         });
     }
 }
 
 function adicionarCarrinho(nomeProduto, qtd) {
     let produtoEncontrado = false
+    let estoqueZeado = false
+
     estoqueMercado.forEach((produto) => {
         if (produto.Nome.toLowerCase() === nomeProduto.toLowerCase()) {
             produtoEncontrado = true
-            if (produto.Estoque > 0 && 
-                qtd <= produto.Estoque && 
-                Number.isInteger(qtd) && 
-                !(qtd <= 0)) {
+            if (produto.Estoque < qtd) {
+                estoqueZeado = true
+            } else if (
+                produto.Estoque > 0 &&
+                qtd <= produto.Estoque &&
+                Number.isInteger(qtd) &&
+                !(qtd <= 0)
+            ) {
                 produto.Estoque -= qtd
-                carrinho.push({'Nome': nomeProduto, 'Preco': produto.Preco, 'Quantidade':  qtd})
+
+                carrinho.push({
+                    'Nome': nomeProduto,
+                    'Preco': produto.Preco,
+                    'Quantidade': qtd
+                })
             }
-        } 
+        }
     })
-        if (!produtoEncontrado) 
-            return console.log('Produto não encontrado!')
+
+    if (!produtoEncontrado)
+        return console.log('Produto não existe!')
+
+    if (estoqueZeado)
+        return console.log('Quantidade maior que o estoque')
 }
 
 // Lista carrinho do cliente
 function listarCarrinhoCliente() {
-        if (!carrinho.length) {
+    if (!carrinho.length) {
         return console.log('Carrinho vazio!')
     } else {
         console.log('Carrinho cliente!')
         console.log('----------------')
         carrinho.forEach((carrinho, index) => {
-            console.log(index+1 + `. Nome: ` + carrinho.Nome + ` | Preço: ` + carrinho.Preco + `  | Quantidade: ` + carrinho.Quantidade)
+            console.log(index + 1 + `. Nome: ` + carrinho.Nome + ` | Preço: ` + carrinho.Preco + `  | Quantidade: ` + carrinho.Quantidade)
         });
         console.log('----------------')
     }
@@ -73,6 +88,7 @@ listarProdutos()
 adicionarCarrinho('Arroz', 2)
 adicionarCarrinho('Leite', 5)
 adicionarCarrinho('Chocolate', 5)
+adicionarCarrinho('Leite', 50)
 
 // Lista carrinho do cliente
 listarCarrinhoCliente()
