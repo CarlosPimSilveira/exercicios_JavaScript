@@ -21,10 +21,13 @@ function listarProdutos() {
 //.toLowerCase()
 
 function adicionarCarrinho(nomeProduto, qtd) {
-    estoqueMercado.forEach((produto, index) => {
+    estoqueMercado.forEach((produto) => {
         index+1
         if (produto.Nome.toLowerCase() === nomeProduto.toLowerCase()) {
-            if (produto.Estoque > 0 && qtd <= produto.Estoque) {
+            if (produto.Estoque > 0 && 
+                qtd <= produto.Estoque && 
+                Number.isInteger(qtd) && 
+                !(qtd <= 0)) {
                 produto.Estoque -= qtd
             }
         }
