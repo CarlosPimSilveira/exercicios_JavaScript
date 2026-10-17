@@ -50,6 +50,14 @@ function listarCarrinhoCliente() {
     }
 }
 
+function calcularTotalCarrinho() {
+    let totcarrinho = 0
+    carrinho.forEach((carrinho) => {
+        totcarrinho += (carrinho.Quantidade * carrinho.Preco)
+    })
+    console.log(totcarrinho)
+}
+
 // Cadastra produtos
 cadastrarProduto('Arroz', 25.90, 10)
 cadastrarProduto('Feijão', 8.50, 20)
@@ -67,4 +75,7 @@ listarCarrinhoCliente()
 
 // apenas confere o estoque
 listarProdutos()
+
+// Calcular o valor do carrinho do cliente
+calcularTotalCarrinho()
 
