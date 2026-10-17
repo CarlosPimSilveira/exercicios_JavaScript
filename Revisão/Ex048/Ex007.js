@@ -25,13 +25,13 @@ function adicionarCarrinho(nomeProduto, qtd) {
     let produtoEncontrado = false
     estoqueMercado.forEach((produto) => {
         if (produto.Nome.toLowerCase() === nomeProduto.toLowerCase()) {
+            produtoEncontrado = true
             if (produto.Estoque > 0 && 
                 qtd <= produto.Estoque && 
                 Number.isInteger(qtd) && 
                 !(qtd <= 0)) {
                 produto.Estoque -= qtd
                 carrinho.push({'Nome': nomeProduto, 'Preco': produto.Preco, 'Quantidade':  qtd})
-                produtoEncontrado = true
             }
         } 
     })
