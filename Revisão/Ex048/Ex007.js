@@ -18,6 +18,18 @@ function listarProdutos() {
         });
     }
 }
+//.toLowerCase()
+
+function adicionarCarrinho(nomeProduto, qtd) {
+    estoqueMercado.forEach((produto, index) => {
+        index+1
+        if (produto.Nome.toLowerCase() === nomeProduto.toLowerCase()) {
+            if (produto.Estoque > 0 && qtd <= produto.Estoque) {
+                produto.Estoque -= qtd
+            }
+        }
+    })
+}
 
 // Cadastra produtos
 cadastrarProduto('Arroz', 25.90, 10)
@@ -27,4 +39,8 @@ cadastrarProduto('Leite', 5.99, 15)
 // Listar produtos
 listarProdutos()
 
+// Carrinho do cliente recebe nome do produto e quantidade que quer
+adicionarCarrinho('Arroz', 2)
+
+listarProdutos()
 
