@@ -44,7 +44,7 @@ function listarCarrinhoCliente() {
         console.log('Carrinho cliente!')
         console.log('----------------')
         carrinho.forEach((carrinho, index) => {
-            console.log(index+1 + `. Nome: ` + carrinho.Nome + ` | Preço: ` + carrinho.Preco + `  | Quantidade: ` + carrinho.qtd)
+            console.log(index+1 + `. Nome: ` + carrinho.Nome + ` | Preço: ` + carrinho.Preco + `  | Quantidade: ` + carrinho.Quantidade)
         });
         console.log('----------------')
     }
@@ -60,6 +60,7 @@ listarProdutos()
 
 // Carrinho do cliente recebe nome do produto e quantidade que quer
 adicionarCarrinho('Arroz', 2)
+adicionarCarrinho('Leite', 5)
 
 // Lista carrinho do cliente
 listarCarrinhoCliente()
