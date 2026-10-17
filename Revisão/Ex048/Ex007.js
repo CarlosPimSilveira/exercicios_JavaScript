@@ -22,7 +22,7 @@ function listarProdutos() {
 }
 
 function adicionarCarrinho(nomeProduto, qtd) {
-    let prodNaoEncontrado = false
+    let produtoEncontrado = false
     estoqueMercado.forEach((produto) => {
         if (produto.Nome.toLowerCase() === nomeProduto.toLowerCase()) {
             if (produto.Estoque > 0 && 
@@ -31,13 +31,11 @@ function adicionarCarrinho(nomeProduto, qtd) {
                 !(qtd <= 0)) {
                 produto.Estoque -= qtd
                 carrinho.push({'Nome': nomeProduto, 'Preco': produto.Preco, 'Quantidade':  qtd})
-                prodNaoEncontrado = false
+                produtoEncontrado = true
             }
-        } else {
-            prodNaoEncontrado = true
-        }
+        } 
     })
-        if (prodNaoEncontrado) 
+        if (!produtoEncontrado) 
             return console.log('Produto não encontrado!')
 }
 
