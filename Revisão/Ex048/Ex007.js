@@ -20,9 +20,9 @@ function listarProdutos() {
         });
     }
 }
-//.toLowerCase()
 
 function adicionarCarrinho(nomeProduto, qtd) {
+    let prodNaoEncontrado = false
     estoqueMercado.forEach((produto) => {
         if (produto.Nome.toLowerCase() === nomeProduto.toLowerCase()) {
             if (produto.Estoque > 0 && 
@@ -31,9 +31,14 @@ function adicionarCarrinho(nomeProduto, qtd) {
                 !(qtd <= 0)) {
                 produto.Estoque -= qtd
                 carrinho.push({'Nome': nomeProduto, 'Preco': produto.Preco, 'Quantidade':  qtd})
+                prodNaoEncontrado = false
             }
+        } else {
+            prodNaoEncontrado = true
         }
     })
+        if (prodNaoEncontrado) 
+            return console.log('Produto não encontrado!')
 }
 
 // Lista carrinho do cliente
@@ -69,6 +74,7 @@ listarProdutos()
 // Carrinho do cliente recebe nome do produto e quantidade que quer
 adicionarCarrinho('Arroz', 2)
 adicionarCarrinho('Leite', 5)
+adicionarCarrinho('Chocolate', 5)
 
 // Lista carrinho do cliente
 listarCarrinhoCliente()
