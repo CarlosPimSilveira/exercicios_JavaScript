@@ -29,7 +29,7 @@ function adicionarCarrinho(nomeProduto, qtd) {
     estoqueMercado.forEach((produto) => {
         if (produto.Nome.toLowerCase() === nomeProduto.toLowerCase()) {
             produtoEncontrado = true
-            if (qtd < 0 || !Number.isInteger(qtd)) {
+            if (qtd <= 0 || !Number.isInteger(qtd)) {
                 numNegativo = true
             }
             else if (produto.Estoque < qtd) {
