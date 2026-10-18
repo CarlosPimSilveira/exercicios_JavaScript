@@ -86,8 +86,8 @@ function calcularTotalCarrinho() {
 // Remove itens carrinho
 function removeItensCarrinho(produto, un) {
     
-    carrinho.forEach((carrinho) =>{
-        if (produto === carrinho.Nome)
+    carrinho.forEach((item) =>{
+        if (produto === item.Nome)
             carrinho.splice(produto, un)
     })
 }
