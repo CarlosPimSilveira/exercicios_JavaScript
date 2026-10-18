@@ -83,6 +83,15 @@ function calcularTotalCarrinho() {
     console.log(totcarrinho)
 }
 
+// Remove itens carrinho
+function removeItensCarrinho(produto, un) {
+    
+    carrinho.forEach((carrinho) =>{
+        if (produto === carrinho.Nome)
+            carrinho.splice(produto, un)
+    })
+}
+
 // Cadastra produtos
 cadastrarProduto('Arroz', 25.90, 10)
 cadastrarProduto('Feijão', 8.50, 20)
@@ -109,4 +118,12 @@ listarProdutos()
 
 // Calcular o valor do carrinho do cliente
 calcularTotalCarrinho()
+
+// Remove produtos do carrinho
+removeItensCarrinho('Leite', 2)
+
+// Lista carrinho do cliente
+listarCarrinhoCliente()
+
+
 
