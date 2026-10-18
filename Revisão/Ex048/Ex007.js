@@ -85,11 +85,14 @@ function calcularTotalCarrinho() {
 
 // Remove itens carrinho
 function removeItensCarrinho(produto, un) {
+    let posicao = -1
     
-    carrinho.forEach((item) =>{
-        if (produto === item.Nome)
-            carrinho.splice(produto, un)
+    carrinho.forEach((item, index) =>{
+        if (produto.toLowerCase() === item.Nome.toLowerCase()) {
+            posicao = index
+        }
     })
+    carrinho[posicao].Quantidade -= un
 }
 
 // Cadastra produtos
