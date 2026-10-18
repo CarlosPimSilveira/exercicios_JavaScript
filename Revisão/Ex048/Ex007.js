@@ -24,11 +24,15 @@ function listarProdutos() {
 function adicionarCarrinho(nomeProduto, qtd) {
     let produtoEncontrado = false
     let estoqueZeado = false
+    let numNegativo = false
 
     estoqueMercado.forEach((produto) => {
         if (produto.Nome.toLowerCase() === nomeProduto.toLowerCase()) {
             produtoEncontrado = true
-            if (produto.Estoque < qtd) {
+            if (qtd < 0 || !Number.isInteger(qtd)) {
+                numNegativo = true
+            }
+            else if (produto.Estoque < qtd) {
                 estoqueZeado = true
             } else if (
                 produto.Estoque > 0 &&
@@ -52,6 +56,9 @@ function adicionarCarrinho(nomeProduto, qtd) {
 
     if (estoqueZeado)
         return console.log('Quantidade maior que o estoque')
+
+    if (numNegativo)
+        return console.log('Numero negativo ou invalido!')
 }
 
 // Lista carrinho do cliente
@@ -80,6 +87,10 @@ function calcularTotalCarrinho() {
 cadastrarProduto('Arroz', 25.90, 10)
 cadastrarProduto('Feijão', 8.50, 20)
 cadastrarProduto('Leite', 5.99, 15)
+
+adicionarCarrinho('Arroz', -5)
+adicionarCarrinho('Arroz', 0)
+adicionarCarrinho('Arroz', 2.5)
 
 // Listar produtos
 listarProdutos()
