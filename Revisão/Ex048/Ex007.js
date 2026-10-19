@@ -101,6 +101,7 @@ function removeItensCarrinho(produto, un) {
             return console.log('Quantidade devolvida invalida maior que quantidade do carrinho')
         } else {
             carrinho[posicao].Quantidade -= un
+            
             if (carrinho[posicao].Quantidade === 0){
                 carrinho.splice(posicao, 1)
             }
@@ -140,6 +141,6 @@ removeItensCarrinho('Leite', 2)
 
 // Lista carrinho do cliente
 listarCarrinhoCliente()
-
+listarProdutos()
 
 
