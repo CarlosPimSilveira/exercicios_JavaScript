@@ -87,7 +87,7 @@ function calcularTotalCarrinho() {
 function removeItensCarrinho(produto, un) {
     let posicao = -1
 
-    if (un < 0) {
+    if (un < 0 || un === 0 || !Number.isInteger(un)) {
         return console.log('Quantidade invalida!')
     } else {
         carrinho.forEach((item, index) => {
