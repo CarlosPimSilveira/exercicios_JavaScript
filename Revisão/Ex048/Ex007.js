@@ -105,18 +105,20 @@ function removeItensCarrinho(produto, un) {
                 if (produto.toLowerCase() === item.Nome.toLowerCase())
                     posicaoEstoque = index
             })
-            if (posicaoEstoque != -1) {
+            if (posicaoEstoque === -1) {
+                return 
+            } else {
+                carrinho[posicao].Quantidade -= un
+                if (carrinho[posicao].Quantidade === 0) {
+                    carrinho.splice(posicao, 1)
+                }
                 estoqueMercado[posicaoEstoque].Estoque += un
-            }
-            carrinho[posicao].Quantidade -= un
-            if (carrinho[posicao].Quantidade === 0){
-                carrinho.splice(posicao, 1)
             }
         }
     }
 }
 
-// Cadastra produtos 
+// Cadastra produtos ('Concluido')
 cadastrarProduto('Arroz', 25.90, 10)
 cadastrarProduto('Feijão', 8.50, 20)
 cadastrarProduto('Leite', 5.99, 15)
