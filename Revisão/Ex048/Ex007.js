@@ -97,6 +97,8 @@ function removeItensCarrinho(produto, un) {
         })
         if (posicao === -1) {
             return console.log('Produto não encontrado!')
+        } else if (carrinho[posicao].Quantidade < un) {
+            return console.log('Quantidade devolvida invalida maior que quantidade do carrinho')
         } else {
             carrinho[posicao].Quantidade -= un
         }
