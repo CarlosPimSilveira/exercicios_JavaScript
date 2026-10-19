@@ -86,16 +86,24 @@ function calcularTotalCarrinho() {
 // Remove itens carrinho
 function removeItensCarrinho(produto, un) {
     let posicao = -1
-    
-    carrinho.forEach((item, index) =>{
-        if (produto.toLowerCase() === item.Nome.toLowerCase()) {
-            posicao = index
+
+    if (un < 0) {
+        return console.log('Quantidade invalida!')
+    } else {
+        carrinho.forEach((item, index) => {
+            if (produto.toLowerCase() === item.Nome.toLowerCase()) {
+                posicao = index
+            }
+        })
+        if (posicao === -1) {
+            return console.log('Produto não encontrado!')
+        } else {
+            carrinho[posicao].Quantidade -= un
         }
-    })
-    carrinho[posicao].Quantidade -= un
+    }
 }
 
-// Cadastra produtos
+// Cadastra produtos 
 cadastrarProduto('Arroz', 25.90, 10)
 cadastrarProduto('Feijão', 8.50, 20)
 cadastrarProduto('Leite', 5.99, 15)
