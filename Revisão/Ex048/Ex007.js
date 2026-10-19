@@ -101,14 +101,14 @@ function removeItensCarrinho(produto, un) {
             return console.log('Quantidade devolvida invalida maior que quantidade do carrinho')
         } else {
             let posicaoEstoque = -1
-            estoqueMercado.forEach((itemMercado, indexMercado) => {
-                if (carrinho[posicao].Nome === itemMercado.Nome.toLowerCase())
-                    posicaoEstoque = indexMercado
+            estoqueMercado.forEach((item, index) => {
+                if (produto.toLowerCase() === item.Nome.toLowerCase())
+                    posicaoEstoque = index
             })
             if (posicaoEstoque != -1) {
-                estoqueMercado[posicaoEstoque].Quantidade += un
+                estoqueMercado[posicaoEstoque].Estoque += un
             }
-            
+            carrinho[posicao].Quantidade -= un
             if (carrinho[posicao].Quantidade === 0){
                 carrinho.splice(posicao, 1)
             }
