@@ -120,19 +120,17 @@ function removeItensCarrinho(produto, un) {
 
 function finalizarCompra() {
     let totCarrinho = 0
-    let ContadarCarrinho = 0
 
     if (carrinho.length === 0) {
         return console.log('Carrinho vazio')
     }
 
-    carrinho.forEach((itemFinalizar, indexFinalizar) => {
+    carrinho.forEach((itemFinalizar) => {
         totCarrinho += (itemFinalizar.Preco * itemFinalizar.Quantidade)
-        ContadarCarrinho += indexFinalizar
     })
-    for (let c = 0; c < ContadarCarrinho; c++) {
-        carrinho.splice(carrinho[c], carrinho.Quantidade)
-    }
+
+    carrinho.splice(0, carrinho.length)
+
     return console.log(`O total da compra foi: ${totCarrinho} `)
 }
 
