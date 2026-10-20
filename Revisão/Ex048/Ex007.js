@@ -118,6 +118,35 @@ function removeItensCarrinho(produto, un) {
     }
 }
 
+function finalizarCompra() {
+    let totCarrinho = 0
+    let ContadarCarrinho = 0
+
+    if (carrinho.length === 0) {
+        return console.log('Carrinho vazio')
+    }
+
+    carrinho.forEach((itemFinalizar, indexFinalizar) => {
+        totCarrinho += (itemFinalizar.Preco * itemFinalizar.Quantidade)
+        ContadarCarrinho += indexFinalizar
+    })
+    for (let c = 0; c < ContadarCarrinho; c++) {
+        carrinho.splice(carrinho[c], carrinho.Quantidade)
+    }
+    return console.log(`O total da compra foi: ${totCarrinho} `)
+}
+
+/*
+    let posicaoFinalizar = -1
+
+    carrinho.forEach((itemFinalizar, indexFinalizar) => {
+        
+    })
+
+    if (posicaoFinalizar === -1)
+*/
+
+
 // Cadastra produtos ('Concluido')
 cadastrarProduto('Arroz', 25.90, 10)
 cadastrarProduto('Feijão', 8.50, 20)
@@ -135,6 +164,7 @@ adicionarCarrinho('Arroz', 2)
 adicionarCarrinho('Leite', 5)
 adicionarCarrinho('Chocolate', 5)
 adicionarCarrinho('Leite', 50)
+adicionarCarrinho('Feijão', 5)
 
 // Lista carrinho do cliente
 listarCarrinhoCliente()
@@ -151,5 +181,10 @@ removeItensCarrinho('Leite', 2)
 // Lista carrinho do cliente
 listarCarrinhoCliente()
 listarProdutos()
+
+finalizarCompra()
+listarCarrinhoCliente()
+
+
 
 
