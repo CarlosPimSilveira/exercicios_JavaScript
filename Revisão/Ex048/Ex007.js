@@ -134,17 +134,6 @@ function finalizarCompra() {
     return console.log(`O total da compra foi: ${totCarrinho} `)
 }
 
-/*
-    let posicaoFinalizar = -1
-
-    carrinho.forEach((itemFinalizar, indexFinalizar) => {
-        
-    })
-
-    if (posicaoFinalizar === -1)
-*/
-
-
 // Cadastra produtos ('Concluido')
 cadastrarProduto('Arroz', 25.90, 10)
 cadastrarProduto('Feijão', 8.50, 20)
