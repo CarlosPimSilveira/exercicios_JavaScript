@@ -22,8 +22,19 @@ function cadastrarCandidato(nome, numero) {
     }
 }
 
+function registrarVoto(voto) {
+    candidatos.forEach((votar) => {
+        if (votar.Numero === voto) {
+            votar.Votos++
+        }
+    })
+}
+
 cadastrarCandidato('Ze', 1000)
 cadastrarCandidato('Maria', 1000)
+cadastrarCandidato('Valeria', 100)
+cadastrarCandidato('Eduardo', 10)
+
+registrarVoto(1000)
 
 console.log(candidatos)
-
