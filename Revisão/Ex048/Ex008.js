@@ -37,7 +37,7 @@ function registrarVoto(voto) {
 function listarResultados() {
     if (candidatos.length !== 0) {
         candidatos.forEach((politicos, index) => {
-            console.log(`Candidato: ${index} numero: ${politicos.Nome} votos totais: ${politicos.Votos}`)
+            console.log(`${index} Candidato: ${politicos.Nome} numero: ${politicos.Numero} votos totais: ${politicos.Votos}`)
             index++
         })
     } else {
