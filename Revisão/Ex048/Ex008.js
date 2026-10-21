@@ -45,6 +45,10 @@ function listarResultados() {
     }
 }
 
+function calcularTotalVotos() {
+    
+}
+
 cadastrarCandidato('Ze', 1000)
 cadastrarCandidato('Maria', 1000)
 cadastrarCandidato('Valeria', 100)
@@ -55,7 +59,7 @@ registrarVoto(1111)
 
 listarResultados()
 
-
+calcularTotalVotos()
 
 
 
