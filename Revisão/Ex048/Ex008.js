@@ -3,7 +3,15 @@
 let candidatos = []
 
 function cadastrarCandidato(nome, numero) {
+    let numRepetido = false
+
     if (nome !== '' && numero > 0 && Number.isInteger(numero)) {
+        candidatos.forEach((cadCandidato) => {
+            if (cadCandidato.Numero === numero)
+                numRepetido = true;
+        })
+        if (numRepetido) 
+            return console.log('Candidato com numero igual')
         candidatos.push({
             'Nome': nome,
             'Numero': numero,
@@ -15,6 +23,7 @@ function cadastrarCandidato(nome, numero) {
 }
 
 cadastrarCandidato('Ze', 1000)
+cadastrarCandidato('Maria', 1000)
 
 console.log(candidatos)
 
