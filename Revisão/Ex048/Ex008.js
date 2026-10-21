@@ -37,8 +37,8 @@ function registrarVoto(voto) {
 function listarResultados() {
     if (candidatos.length !== 0) {
         candidatos.forEach((politicos, index) => {
-            console.log(`${index} Candidato: ${politicos.Nome} numero: ${politicos.Numero} votos totais: ${politicos.Votos}`)
             index++
+            console.log(`${index} Candidato: ${politicos.Nome} numero: ${politicos.Numero} votos totais: ${politicos.Votos}`)
         })
     } else {
         return console.log('Nenhum candidato cadastrado!')
@@ -54,3 +54,10 @@ registrarVoto(1000)
 registrarVoto(1111)
 
 listarResultados()
+
+
+
+
+
+
+
