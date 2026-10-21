@@ -23,11 +23,15 @@ function cadastrarCandidato(nome, numero) {
 }
 
 function registrarVoto(voto) {
+    let CandNaoEncontrado = false
     candidatos.forEach((votar) => {
         if (votar.Numero === voto) {
+            CandNaoEncontrado = true
             votar.Votos++
         }
     })
+    if (!CandNaoEncontrado)
+        console.log('candidato não existe!')
 }
 
 cadastrarCandidato('Ze', 1000)
@@ -36,5 +40,6 @@ cadastrarCandidato('Valeria', 100)
 cadastrarCandidato('Eduardo', 10)
 
 registrarVoto(1000)
+registrarVoto(1111)
 
 console.log(candidatos)
