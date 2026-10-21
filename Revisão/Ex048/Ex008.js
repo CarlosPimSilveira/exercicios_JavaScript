@@ -46,7 +46,11 @@ function listarResultados() {
 }
 
 function calcularTotalVotos() {
-    
+    let totVotosGeral = 0
+    candidatos.forEach((cand) => {
+        totVotosGeral += cand.Votos
+    })
+    console.log(`O total de votos geral foi: ${totVotosGeral}`)
 }
 
 cadastrarCandidato('Ze', 1000)
@@ -55,6 +59,21 @@ cadastrarCandidato('Valeria', 100)
 cadastrarCandidato('Eduardo', 10)
 
 registrarVoto(1000)
+registrarVoto(1000)
+registrarVoto(1000)
+registrarVoto(1000)
+registrarVoto(1000)
+registrarVoto(1000)
+registrarVoto(100)
+registrarVoto(100)
+registrarVoto(100)
+registrarVoto(100)
+registrarVoto(100)
+registrarVoto(10)
+registrarVoto(10)
+registrarVoto(10)
+registrarVoto(10)
+registrarVoto(10)
 registrarVoto(1111)
 
 listarResultados()
