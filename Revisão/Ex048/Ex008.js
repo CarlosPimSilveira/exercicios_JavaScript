@@ -34,6 +34,16 @@ function registrarVoto(voto) {
         console.log('candidato não existe!')
 }
 
+function listarResultados() {
+    if (candidatos.length !== 0) {
+        candidatos.forEach((politicos) => {
+
+        })
+    } else {
+        return console.log('Nenhum candidato cadastrado!')
+    }
+}
+
 cadastrarCandidato('Ze', 1000)
 cadastrarCandidato('Maria', 1000)
 cadastrarCandidato('Valeria', 100)
@@ -42,4 +52,4 @@ cadastrarCandidato('Eduardo', 10)
 registrarVoto(1000)
 registrarVoto(1111)
 
-console.log(candidatos)
+listarResultados()
