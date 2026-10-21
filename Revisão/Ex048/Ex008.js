@@ -5,7 +5,7 @@ let candidatos = []
 function cadastrarCandidato(nome, numero) {
     let numRepetido = false
 
-    if (nome !== '' && numero > 0 && Number.isInteger(numero)) {
+    if (nome.trim() !== '' && numero > 0 && Number.isInteger(numero)) {
         candidatos.forEach((cadCandidato) => {
             if (cadCandidato.Numero === numero)
                 numRepetido = true;
