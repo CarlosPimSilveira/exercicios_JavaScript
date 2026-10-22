@@ -64,6 +64,7 @@ function descobrirVencedor() {
         if (cand.Votos > vencedor) {
             vencedor = cand.Votos
             quemVenceu = cand.Nome
+            empatou = [cand]
         } else if (cand.Votos === vencedor) {
             empatou.push({
             'Nome': cand.Nome,
