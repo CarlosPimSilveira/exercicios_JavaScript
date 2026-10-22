@@ -54,17 +54,30 @@ function calcularTotalVotos() {
 }
 
 function descobrirVencedor() {
-    let vencedor = candidatos[0].Votos
-    let quemVenceu = candidatos[0].Nome
     if (candidatos.length === 0)
         return console.log('Nenhum candidato cadastrado!')
+    let vencedor = candidatos[0].Votos
+    let quemVenceu = candidatos[0].Nome
+    let empatou = []
+    let segundoTurno = false
     candidatos.forEach((cand) => {
         if (cand.Votos > vencedor) {
             vencedor = cand.Votos
             quemVenceu = cand.Nome
-        } 
+        } else if (cand.Votos === vencedor) {
+            empatou.push({
+            'Nome': cand.Nome,
+            'Numero': cand.Numero,
+            'Votos': cand.Votos})
+            segundoTurno = true
+        }
     })
-    console.log(`O vencedor foi ${quemVenceu} com ${vencedor} votos`)
+    
+    if (!segundoTurno) {
+        console.log(`O vencedor foi ${quemVenceu} com ${vencedor} votos`)
+    } else {
+        console.log(`teremos segundo turno entre ${empatou[0].Nome} e ${empatou[1].Nome}`)
+    }
 }
 
 cadastrarCandidato('Ze', 1000)
@@ -73,6 +86,9 @@ cadastrarCandidato('Valeria', 100)
 cadastrarCandidato('Eduardo', 10)
 
 registrarVoto(1000)
+registrarVoto(100)
+/*
+registrarVoto(1000)
 registrarVoto(1000)
 registrarVoto(1000)
 registrarVoto(1000)
@@ -97,7 +113,7 @@ registrarVoto(10)
 registrarVoto(10)
 registrarVoto(10)
 registrarVoto(10)
-registrarVoto(1111)
+registrarVoto(1111) */
 
 listarResultados()
 
