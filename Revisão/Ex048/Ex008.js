@@ -54,10 +54,17 @@ function calcularTotalVotos() {
 }
 
 function descobrirVencedor() {
-    let vencedor = candidatos[0]
+    let vencedor = candidatos[0].Votos
+    let quemVenceu = candidatos[0].Nome
+    if (candidatos.length === 0)
+        return console.log('Nenhum candidato cadastrado!')
     candidatos.forEach((cand) => {
-
+        if (cand.Votos > vencedor) {
+            vencedor = cand.Votos
+            quemVenceu = cand.Nome
+        } 
     })
+    console.log(`O vencedor foi ${quemVenceu} com ${vencedor} votos`)
 }
 
 cadastrarCandidato('Ze', 1000)
@@ -71,6 +78,15 @@ registrarVoto(1000)
 registrarVoto(1000)
 registrarVoto(1000)
 registrarVoto(1000)
+registrarVoto(100)
+registrarVoto(100)
+registrarVoto(100)
+registrarVoto(100)
+registrarVoto(100)
+registrarVoto(100)
+registrarVoto(100)
+registrarVoto(100)
+registrarVoto(100)
 registrarVoto(100)
 registrarVoto(100)
 registrarVoto(100)
