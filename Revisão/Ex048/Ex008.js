@@ -56,9 +56,9 @@ function calcularTotalVotos() {
 function descobrirVencedor() {
     if (candidatos.length === 0)
         return console.log('Nenhum candidato cadastrado!')
-    let vencedor = candidatos[0].Votos
-    let quemVenceu = candidatos[0].Nome
-    let empatou = []
+    let vencedor = -1
+    let quemVenceu = ''
+    let empatou = [candidatos[0]]
     let segundoTurno = false
     candidatos.forEach((cand) => {
         if (cand.Votos > vencedor) {
