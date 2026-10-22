@@ -53,6 +53,13 @@ function calcularTotalVotos() {
     console.log(`O total de votos geral foi: ${totVotosGeral}`)
 }
 
+function descobrirVencedor() {
+    let vencedor = candidatos[0]
+    candidatos.forEach((cand) => {
+
+    })
+}
+
 cadastrarCandidato('Ze', 1000)
 cadastrarCandidato('Maria', 1000)
 cadastrarCandidato('Valeria', 100)
@@ -80,7 +87,6 @@ listarResultados()
 
 calcularTotalVotos()
 
-
-
+descobrirVencedor()
 
 
