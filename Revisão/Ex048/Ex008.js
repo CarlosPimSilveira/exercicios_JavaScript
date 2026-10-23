@@ -61,8 +61,25 @@ function descobrirVencedor() {
     let empatou = [candidatos[0]]
     let segundoTurno = false
     let totVotos = calcularTotalVotos()
-    console.log(totVotos)
+    let porcCandidato = 0
+    let porcentagem = []
+
     candidatos.forEach((cand) => {
+        porcCandidato = (cand.Votos / totVotos) * 100
+        porcentagem.push({
+            'Nome': cand.Nome,
+            'NumeroCand': cand.Numero,
+            'Porc': porcCandidato
+        })
+        if (porcCandidato >= 51) {
+            return console.log(`Vitoria do candidato(a): ${cand.Nome}`)
+        }
+    })
+
+}
+
+/*
+candidatos.forEach((cand) => {
         if (cand.Votos > vencedor) {
             vencedor = cand.Votos
             quemVenceu = cand.Nome
@@ -82,7 +99,7 @@ function descobrirVencedor() {
     } else {
         console.log(`teremos segundo turno entre ${empatou[0].Nome} e ${empatou[1].Nome}`)
     }
-}
+*/
 
 cadastrarCandidato('Ze', 1000)
 cadastrarCandidato('Maria', 1000)
@@ -90,6 +107,9 @@ cadastrarCandidato('Valeria', 100)
 cadastrarCandidato('Eduardo', 10)
 
 registrarVoto(1000)
+registrarVoto(100)
+registrarVoto(100)
+registrarVoto(100)
 registrarVoto(100)
 /*
 registrarVoto(1000)
