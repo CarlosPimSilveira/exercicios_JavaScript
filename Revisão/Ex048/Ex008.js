@@ -56,11 +56,9 @@ function calcularTotalVotos() {
 function descobrirVencedor() {
     if (candidatos.length === 0)
         return console.log('Nenhum candidato cadastrado!')
-    let vencedor = -1
-    let quemVenceu = ''
-    let empatou = [candidatos[0]]
-    let segundoTurno = false
     let totVotos = calcularTotalVotos()
+    if (totVotos === 0)
+        return console.log('Nenhum voto registrado!')
     let porcCandidato = 0
     let porcentagem = []
 
@@ -71,11 +69,11 @@ function descobrirVencedor() {
             'NumeroCand': cand.Numero,
             'Porc': porcCandidato
         })
-        if (porcCandidato >= 51) {
-            return console.log(`Vitoria do candidato(a): ${cand.Nome}`)
-        }
     })
-
+    porcentagem.sort((a, b) => b.Porc - a.Porc)
+    if (porcentagem[0].Porc >= 51) {
+        return console.log(`Vitoria do candidato(a): ${porcentagem[0].Nome} com ${porcentagem[0].Porc}% dos votos!`)
+    }
 }
 
 /*
@@ -106,11 +104,11 @@ cadastrarCandidato('Maria', 1000)
 cadastrarCandidato('Valeria', 100)
 cadastrarCandidato('Eduardo', 10)
 
+registrarVoto(100)
+registrarVoto(10)
 registrarVoto(1000)
-registrarVoto(100)
-registrarVoto(100)
-registrarVoto(100)
-registrarVoto(100)
+registrarVoto(1000)
+registrarVoto(1000)
 /*
 registrarVoto(1000)
 registrarVoto(1000)
