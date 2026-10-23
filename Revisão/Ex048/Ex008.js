@@ -50,7 +50,7 @@ function calcularTotalVotos() {
     candidatos.forEach((cand) => {
         totVotosGeral += cand.Votos
     })
-    console.log(`O total de votos geral foi: ${totVotosGeral}`)
+    return(totVotosGeral)
 }
 
 function descobrirVencedor() {
@@ -60,11 +60,14 @@ function descobrirVencedor() {
     let quemVenceu = ''
     let empatou = [candidatos[0]]
     let segundoTurno = false
+    let totVotos = calcularTotalVotos()
+    console.log(totVotos)
     candidatos.forEach((cand) => {
         if (cand.Votos > vencedor) {
             vencedor = cand.Votos
             quemVenceu = cand.Nome
             empatou = [cand]
+            segundoTurno = false
         } else if (cand.Votos === vencedor) {
             empatou.push({
             'Nome': cand.Nome,
@@ -118,7 +121,7 @@ registrarVoto(1111) */
 
 listarResultados()
 
-calcularTotalVotos()
+console.log( `O total de votos geral foi: ${calcularTotalVotos()}` )
 
 descobrirVencedor()
 
