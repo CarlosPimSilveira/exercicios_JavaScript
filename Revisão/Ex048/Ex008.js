@@ -74,10 +74,14 @@ function descobrirVencedor() {
     if (porcentagem[0].Porc >= 51) {
         return console.log(`Vitoria do candidato(a): ${porcentagem[0].Nome} com ${porcentagem[0].Porc}% dos votos!`)
     } else {
-        console.log('Nenhum candidato alcançou 51% dos votos!')
-        console.log('Segundo turno:')
-        console.log(porcentagem[0].Nome + ' - ' + porcentagem[0].Porc + '%')
-        console.log(porcentagem[1].Nome + ' - ' + porcentagem[1].Porc + '%')
+        if (candidatos.length >= 2) {
+            console.log('Nenhum candidato alcançou 51% dos votos!')
+            console.log('Segundo turno:')
+            console.log(porcentagem[0].Nome + ' - ' + porcentagem[0].Porc + '%')
+            console.log(porcentagem[1].Nome + ' - ' + porcentagem[1].Porc + '%')
+        } else {
+            return console.log('Apenas 1 candidato cadastrado!')
+        }
     }
 }
 
