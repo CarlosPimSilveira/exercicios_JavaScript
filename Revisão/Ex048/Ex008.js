@@ -109,7 +109,29 @@ function registrarVotoSegundoTurno(voto) {
     })
     if (!CandNaoEncontrado)
         console.log('candidato não existe!')
+}
 
+function descobrirVencedorSegundoTurno() {
+    if (candidatosSegundoTurno.length !== 2) {
+        return console.log('Apenas 1 candidato cadastrado falha!')
+    }
+
+    let candVencedor = []
+
+    candidatosSegundoTurno.forEach((cand) => {
+        candVencedor.push({
+            'Nome': cand.Nome,
+            'NumeroCand': cand.Numero,
+            'Votos': cand.Votos
+        })
+    })
+    if (candVencedor[0].Votos === 0 && candVencedor[1].Votos === 0) {
+        return console.log('Votos não registrados!')
+    } else if (candVencedor[0].Votos === candVencedor[1].Votos) {
+        return console.log('Empatou novamente!')
+    }
+    candVencedor.sort((a, b) => b.Votos - a.Votos)
+    return console.log(`Vitoria do candidato(a): ${candVencedor[0].Nome} com ${candVencedor[0].Votos} votos!`)
 }
 
 cadastrarCandidato('Ze', 1000)
@@ -136,3 +158,4 @@ registrarVotoSegundoTurno(1000)
 registrarVotoSegundoTurno(1000)
 registrarVotoSegundoTurno(100)
 
+descobrirVencedorSegundoTurno()
