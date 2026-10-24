@@ -94,28 +94,23 @@ function descobrirVencedor() {
     }
 }
 
-/*
-candidatos.forEach((cand) => {
-        if (cand.Votos > vencedor) {
-            vencedor = cand.Votos
-            quemVenceu = cand.Nome
-            empatou = [cand]
-            segundoTurno = false
-        } else if (cand.Votos === vencedor) {
-            empatou.push({
-            'Nome': cand.Nome,
-            'Numero': cand.Numero,
-            'Votos': cand.Votos})
-            segundoTurno = true
+function registrarVotoSegundoTurno(voto) {
+    if (voto === undefined || voto === null || String(voto).trim() === "") {
+        console.log("Erro: Nenhum voto foi informado.");
+        return "Voto vazio!";
+    }
+
+    let CandNaoEncontrado = false
+    candidatosSegundoTurno.forEach((votar) => {
+        if (votar.Numero === voto) {
+            CandNaoEncontrado = true
+            votar.Votos++
         }
     })
-    
-    if (!segundoTurno) {
-        console.log(`O vencedor foi ${quemVenceu} com ${vencedor} votos`)
-    } else {
-        console.log(`teremos segundo turno entre ${empatou[0].Nome} e ${empatou[1].Nome}`)
-    }
-*/
+    if (!CandNaoEncontrado)
+        console.log('candidato não existe!')
+
+}
 
 cadastrarCandidato('Ze', 1000)
 cadastrarCandidato('Maria', 1000)
@@ -130,33 +125,6 @@ registrarVoto(10)
 registrarVoto(1000)
 registrarVoto(1000)
 registrarVoto(1000)
-/*
-registrarVoto(1000)
-registrarVoto(1000)
-registrarVoto(1000)
-registrarVoto(1000)
-registrarVoto(1000)
-registrarVoto(1000)
-registrarVoto(100)
-registrarVoto(100)
-registrarVoto(100)
-registrarVoto(100)
-registrarVoto(100)
-registrarVoto(100)
-registrarVoto(100)
-registrarVoto(100)
-registrarVoto(100)
-registrarVoto(100)
-registrarVoto(100)
-registrarVoto(100)
-registrarVoto(100)
-registrarVoto(100)
-registrarVoto(10)
-registrarVoto(10)
-registrarVoto(10)
-registrarVoto(10)
-registrarVoto(10)
-registrarVoto(1111) */
 
 listarResultados()
 
@@ -164,4 +132,7 @@ console.log( `O total de votos geral foi: ${calcularTotalVotos()}` )
 
 descobrirVencedor()
 
+registrarVotoSegundoTurno(1000)
+registrarVotoSegundoTurno(1000)
+registrarVotoSegundoTurno(100)
 
