@@ -83,7 +83,8 @@ function descobrirVencedor() {
             porcentagem.slice(0, 2).forEach((segundoTurno) => {
                 candidatosSegundoTurno.push({
                     'Nome': segundoTurno.Nome,
-                    'Numero': segundoTurno.NumeroCand
+                    'Numero': segundoTurno.NumeroCand,
+                    'Votos' : 0
                 })
             })
         } else {
