@@ -51,9 +51,10 @@ function saidaEstoque(nome, quantidade) {
         return console.log('Saida invalida! nome errado!')
 
     produto.forEach((prod) => {
-
+        if (prod.Nome.toLowerCase() === nome.toLowerCase()) { 
+            prod.Quantidade -= quantidade
+        }
     })
-
 }
 
 cadastrarProduto('Chocolate', 1.99, 50)
@@ -64,9 +65,9 @@ cadastrarProduto('manteiga', 15.99, 9)
 entradaEstoque('Cafe', 5)
 entradaEstoque('arroz', 5)
 
-saidaEstoque('Cafe', 2)
+saidaEstoque('Cafe', 3)
 
 
-
+console.log(produto)
 
 
