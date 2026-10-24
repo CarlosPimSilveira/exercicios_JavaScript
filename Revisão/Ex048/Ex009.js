@@ -53,11 +53,11 @@ function saidaEstoque(nome, quantidade) {
         return console.log('Saida invalida! nome errado!')
 
     produto.forEach((prod) => {
+        prodNaoAchado = false
         if (prod.Nome.toLowerCase() === nome.toLowerCase()) { 
             if (quantidade > prod.Quantidade) {
                 return console.log('Quantidade invalida! saida maior que estoque')
             }
-            prodNaoAchado = false
             prod.Quantidade -= quantidade
         }
     })
