@@ -73,6 +73,11 @@ function descobrirVencedor() {
     porcentagem.sort((a, b) => b.Porc - a.Porc)
     if (porcentagem[0].Porc >= 51) {
         return console.log(`Vitoria do candidato(a): ${porcentagem[0].Nome} com ${porcentagem[0].Porc}% dos votos!`)
+    } else {
+        console.log('Nenhum candidato alcançou 51% dos votos!')
+        console.log('Segundo turno:')
+        console.log(porcentagem[0].Nome + ' - ' + porcentagem[0].Porc + '%')
+        console.log(porcentagem[1].Nome + ' - ' + porcentagem[1].Porc + '%')
     }
 }
 
@@ -105,6 +110,9 @@ cadastrarCandidato('Valeria', 100)
 cadastrarCandidato('Eduardo', 10)
 
 registrarVoto(100)
+registrarVoto(100)
+registrarVoto(100)
+registrarVoto(10)
 registrarVoto(10)
 registrarVoto(1000)
 registrarVoto(1000)
