@@ -25,22 +25,30 @@ function cadastrarProduto(nome, preco, quantidade) {
 function entradaEstoque(nome, quantidade) {
     let novoProduto = true
 
-    if (quantidade <= 0 || !Number.isInteger(quantidade))
-        return console.log('Entrada invalida! valor do estoque errado!')
 
-    if (String(nome).trim() === "" || typeof nome !== 'string')
-        return console.log('Entrada invalida! nome errado!')
 
     produto.forEach((prod) => {
         if (prod.Nome.toLowerCase() === nome.toLowerCase()) {
             novoProduto = false
             return prod.Quantidade += quantidade
-        }
+        }    if (quantidade <= 0 || !Number.isInteger(quantidade))
+        return console.log('Entrada invalida! valor do estoque errado!')
+
+    if (String(nome).trim() === "" || typeof nome !== 'string')
+        return console.log('Entrada invalida! nome errado!')
     })
 
     if (novoProduto) {
         return console.log('Produto não cadastrado!')
     }
+}
+
+function saidaEstoque(nome, quantidade) {
+    if (quantidade <= 0 || !Number.isInteger(quantidade))
+        return console.log('Saida invalida! valor do estoque errado!')
+
+    if (String(nome).trim() === "" || typeof nome !== 'string')
+        return console.log('Saida invalida! nome errado!')
 }
 
 cadastrarProduto('Chocolate', 1.99, 50)
@@ -51,6 +59,7 @@ cadastrarProduto('manteiga', 15.99, 9)
 entradaEstoque('Cafe', 5)
 entradaEstoque('arroz', 5)
 
+saidaEstoque('Cafe', 2)
 
 
 
