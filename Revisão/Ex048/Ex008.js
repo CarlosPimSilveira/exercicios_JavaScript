@@ -80,6 +80,7 @@ function descobrirVencedor() {
             console.log('Segundo turno:')
             console.log(porcentagem[0].Nome + ' - ' + porcentagem[0].Porc + '%')
             console.log(porcentagem[1].Nome + ' - ' + porcentagem[1].Porc + '%')
+            candidatosSegundoTurno.length = 0
             porcentagem.slice(0, 2).forEach((segundoTurno) => {
                 candidatosSegundoTurno.push({
                     'Nome': segundoTurno.Nome,
