@@ -22,10 +22,24 @@ function cadastrarProduto(nome, preco, quantidade) {
     })
 }
 
+function entradaEstoque(nome, quantidade) {
+    if (quantidade <= 0 || !Number.isInteger(quantidade))
+        return console.log('Entrada invalida! valor do estoque errado!')
+    if (String(nome).trim() === "" )
+        return console.log('Entrada invalida! nome errado!')
+    produto.forEach((prod) => {
+        if (prod.Nome.toLowerCase() === nome.toLowerCase()) {
+            prod.Quantidade += quantidade
+        }
+    })
+}
+
 cadastrarProduto('Chocolate', 1.99, 50)
 cadastrarProduto('Cafe', 5.99, 10)
 cadastrarProduto('açucar', 8.99, 15)
 cadastrarProduto('manteiga', 15.99, 9)
+
+entradaEstoque('Cafe', 5)
 
 
 
