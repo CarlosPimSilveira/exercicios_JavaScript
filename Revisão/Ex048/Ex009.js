@@ -44,6 +44,8 @@ function entradaEstoque(nome, quantidade) {
 }
 
 function saidaEstoque(nome, quantidade) {
+    let prodNaoAchado = true
+
     if (quantidade <= 0 || !Number.isInteger(quantidade))
         return console.log('Saida invalida! valor do estoque errado!')
 
@@ -52,9 +54,17 @@ function saidaEstoque(nome, quantidade) {
 
     produto.forEach((prod) => {
         if (prod.Nome.toLowerCase() === nome.toLowerCase()) { 
+            if (quantidade > prod.Quantidade) {
+                return console.log('Quantidade invalida! saida maior que estoque')
+            }
+            prodNaoAchado = false
             prod.Quantidade -= quantidade
         }
     })
+
+    if (prodNaoAchado) {
+        return console.log('Produto não cadastrado!')
+    }
 }
 
 cadastrarProduto('Chocolate', 1.99, 50)
@@ -66,7 +76,8 @@ entradaEstoque('Cafe', 5)
 entradaEstoque('arroz', 5)
 
 saidaEstoque('Cafe', 3)
-
+saidaEstoque('chocolate', 1)
+saidaEstoque('Cafeeee', 3)
 
 console.log(produto)
 
