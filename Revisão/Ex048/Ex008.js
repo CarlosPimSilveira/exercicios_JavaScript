@@ -125,12 +125,12 @@ function descobrirVencedorSegundoTurno() {
             'Votos': cand.Votos
         })
     })
+    candVencedor.sort((a, b) => b.Votos - a.Votos)
     if (candVencedor[0].Votos === 0 && candVencedor[1].Votos === 0) {
         return console.log('Votos não registrados!')
     } else if (candVencedor[0].Votos === candVencedor[1].Votos) {
         return console.log('Empatou novamente!')
     }
-    candVencedor.sort((a, b) => b.Votos - a.Votos)
     return console.log(`Vitoria do candidato(a): ${candVencedor[0].Nome} com ${candVencedor[0].Votos} votos!`)
 }
 
