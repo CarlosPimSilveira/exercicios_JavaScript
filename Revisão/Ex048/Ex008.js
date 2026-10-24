@@ -1,6 +1,7 @@
 // Sistema de votação
 
 let candidatos = []
+let candidatosSegundoTurno = []
 
 function cadastrarCandidato(nome, numero) {
     let numRepetido = false
@@ -79,6 +80,12 @@ function descobrirVencedor() {
             console.log('Segundo turno:')
             console.log(porcentagem[0].Nome + ' - ' + porcentagem[0].Porc + '%')
             console.log(porcentagem[1].Nome + ' - ' + porcentagem[1].Porc + '%')
+            porcentagem.slice(0, 2).forEach((segundoTurno) => {
+                candidatosSegundoTurno.push({
+                    'Nome': segundoTurno.Nome,
+                    'Numero': segundoTurno.NumeroCand
+                })
+            })
         } else {
             return console.log('Apenas 1 candidato cadastrado!')
         }
