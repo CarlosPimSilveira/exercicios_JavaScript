@@ -28,7 +28,7 @@ function entradaEstoque(nome, quantidade) {
     if (quantidade <= 0 || !Number.isInteger(quantidade))
         return console.log('Entrada invalida! valor do estoque errado!')
 
-    if (String(nome).trim() === "" )
+    if (String(nome).trim() === "" || typeof nome !== 'string')
         return console.log('Entrada invalida! nome errado!')
 
     produto.forEach((prod) => {
