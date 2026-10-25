@@ -53,8 +53,8 @@ function saidaEstoque(nome, quantidade) {
         return console.log('Saida invalida! nome errado!')
 
     produto.forEach((prod) => {
-        prodNaoAchado = false
         if (prod.Nome.toLowerCase() === nome.toLowerCase()) { 
+            prodNaoAchado = false
             if (quantidade > prod.Quantidade) {
                 return console.log('Quantidade invalida! saida maior que estoque')
             }
@@ -65,6 +65,29 @@ function saidaEstoque(nome, quantidade) {
     if (prodNaoAchado) {
         return console.log('Produto não cadastrado!')
     }
+}
+
+function consultarEstoque() {
+    if (produto.length === 0)
+        return console.log('Nenhum produto cadastrado!')
+    let exibirProd = ''
+    let exibirTop = ''
+    let valorEstoque = 0
+    let totalEstoque = 0
+
+    exibirTop = 'Produto  Preço unitario  Quantidade  Valor em estoque\n'
+
+    produto.forEach((prod) =>{
+        valorEstoque = 0
+        if (prod.Quantidade !== 0)
+            valorEstoque = prod.Quantidade * prod.Preco; 
+        
+        exibirProd += (`${prod.Nome}     R$ ${prod.Preco}      ${prod.Quantidade}      R$ ${valorEstoque.toFixed(2)} \n`)
+        totalEstoque += valorEstoque
+    })
+
+    console.log(exibirTop + exibirProd)
+    console.log(`Total geral: R$ ${totalEstoque.toFixed(2)}`)
 }
 
 cadastrarProduto('Chocolate', 1.99, 50)
@@ -79,6 +102,9 @@ saidaEstoque('Cafe', 3)
 saidaEstoque('chocolate', 1)
 saidaEstoque('Cafeeee', 3)
 
-console.log(produto)
+consultarEstoque()
+
+
+
 
 
