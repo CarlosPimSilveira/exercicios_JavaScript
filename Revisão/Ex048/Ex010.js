@@ -34,23 +34,20 @@ function emprestarLivro(codigo) {
 
     let livroAchado = false
     let indice = 0
-    livros.forEach((livro) => {
+    livros.forEach((livro, ind) => {
         if (codigo === livro.Codigo) {
             livroAchado = true
-            indice++
+            indice = ind
         }
     })
     if (livroAchado === false) {
         return console.log('Livro não achado ou não cadastrado!')
-    } 
-    if (livroAchado && livros[indice].Disponivel) {
+    } else if (livros[indice].Disponivel) {
         livros[indice].Disponivel = false
-        return console.log('Livro pode ser emprestado!')
-    } 
-    if (livroAchado && livros[indice].Disponivel === false) {
-        return console.log('Livro ja emprestado!')
+        return console.log('Realizado emprestimo do livro!')
+    } else {
+        return console.log('Livro emprestado!')
     }
-
 }
 
 
@@ -62,6 +59,7 @@ cadastrarLivro('A Revolução dos Bichos', 'George Orwell', 104);
 cadastrarLivro('O Hobbit', 'J. R. R. Tolkien', 105);
 
 emprestarLivro(103)
+
 
 
 
