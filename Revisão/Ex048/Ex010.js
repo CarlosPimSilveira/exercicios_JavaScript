@@ -28,6 +28,17 @@ function cadastrarLivro(titulo, autor, codigo) {
     })
 }
 
+function emprestarLivro(codigo) {
+    if (codigo <= 0 || !Number.isInteger(codigo))
+        return console.log('Codigo invalido!')
+
+    livros.forEach((livro) => {
+        if (codigo === livro.Codigo) {
+
+        }
+    })
+}
+
 
 cadastrarLivro('A voz do silêncio', 'yoshitoki oima', 12151)
 cadastrarLivro('Dom Casmurro', 'Machado de Assis', 101);
@@ -36,7 +47,7 @@ cadastrarLivro('1984', 'George Orwell', 103);
 cadastrarLivro('A Revolução dos Bichos', 'George Orwell', 104);
 cadastrarLivro('O Hobbit', 'J. R. R. Tolkien', 105);
 
-
+emprestarLivro(103)
 
 
 
