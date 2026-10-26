@@ -2,11 +2,12 @@
 let livros = []
 
 function cadastrarLivro(titulo, autor, codigo) {
-    if (String(titulo).trim() === "" || typeof titulo !== 'string' || String(autor).trim() === "" || typeof autor !== 'string')
+    if (typeof titulo !== 'string' ||  String(titulo).trim() === "" || 
+        typeof autor !== 'string' || String(autor).trim() === "")
         return console.log('Cadastro invalido! titulo ou autor errados!')
 
     if (codigo <= 0 || !Number.isInteger(codigo))
-        return console.log('Quantidade invalida!')
+        return console.log('Codigo invalido!')
 
     let codLivroIgual = false
 
@@ -29,7 +30,11 @@ function cadastrarLivro(titulo, autor, codigo) {
 
 
 cadastrarLivro('A voz do silêncio', 'yoshitoki oima', 12151)
-
+cadastrarLivro('Dom Casmurro', 'Machado de Assis', 101);
+cadastrarLivro('O Pequeno Príncipe', 'Antoine de Saint-Exupéry', 102);
+cadastrarLivro('1984', 'George Orwell', 103);
+cadastrarLivro('A Revolução dos Bichos', 'George Orwell', 104);
+cadastrarLivro('O Hobbit', 'J. R. R. Tolkien', 105);
 
 
 
