@@ -7,6 +7,12 @@ function cadastrarLivro(titulo, autor, codigo) {
 
     if (codigo <= 0 || !Number.isInteger(codigo))
         return console.log('Quantidade invalida!')
+
+    livros.forEach((livro) => {
+        if (codigo === livro.Codigo) {
+            return console.log('Codigo do livro igual!')
+        }
+    })
 }
 
 cadastrarLivro('A voz do silêncio', 'yoshitoki oima', 12151)
