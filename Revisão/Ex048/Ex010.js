@@ -50,6 +50,24 @@ function emprestarLivro(codigo) {
     }
 }
 
+function devolverLivro(codigo) {
+    if (codigo <= 0 || !Number.isInteger(codigo))
+        return console.log('Codigo invalido!')
+
+    let indice = 0
+    livros.forEach((livro, ind) => {
+        if (codigo === livro.Codigo) {
+            indice = ind
+        }
+    })
+
+    if (livros[indice].Disponivel === true) {
+        return console.log('Livro ja havia sido devolvido!')
+    } else {
+        livros[indice].Disponivel = true
+        return console.log('Devolução completa!')
+    }
+}
 
 cadastrarLivro('A voz do silêncio', 'yoshitoki oima', 12151)
 cadastrarLivro('Dom Casmurro', 'Machado de Assis', 101);
@@ -59,7 +77,10 @@ cadastrarLivro('A Revolução dos Bichos', 'George Orwell', 104);
 cadastrarLivro('O Hobbit', 'J. R. R. Tolkien', 105);
 
 emprestarLivro(103)
+emprestarLivro(105)
+emprestarLivro(104)
 
+devolverLivro(105)
 
 
 
