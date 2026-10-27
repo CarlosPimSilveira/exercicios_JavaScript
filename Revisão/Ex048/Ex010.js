@@ -93,6 +93,17 @@ function consultarDisponibilidade(codigo) {
 
     if (codigo <= 0 || !Number.isInteger(codigo))
         return console.log('Codigo invalido!')
+
+    let livroAchado = false
+    let indice = 0
+    livros.forEach((livro, ind) => {
+        if (codigo === livro.Codigo) {
+            if (livro.Disponivel)
+                livroAchado = true
+                indice = ind
+        }
+    })
+    return console.log(`O livro: ${livros[indice].Titulo} esta disponivel!`)
 }
 
 cadastrarLivro('A voz do silêncio', 'yoshitoki oima', 12151)
