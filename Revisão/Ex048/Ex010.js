@@ -75,6 +75,16 @@ function devolverLivro(codigo) {
     }
 }
 
+function listarLivros() {
+    let livrosListar = ''
+
+    livros.forEach((livro) => {
+        livrosListar += `Titulo: ${livro.Titulo} autor: ${livro.Autor} Cod. livro: ${livro.Codigo} Disponivel: ${livro.Disponivel} \n`
+    })
+
+    return console.log(livrosListar)
+}
+
 cadastrarLivro('A voz do silêncio', 'yoshitoki oima', 12151)
 cadastrarLivro('Dom Casmurro', 'Machado de Assis', 101);
 cadastrarLivro('O Pequeno Príncipe', 'Antoine de Saint-Exupéry', 102);
@@ -87,6 +97,8 @@ emprestarLivro(105)
 emprestarLivro(104)
 
 devolverLivro(105)
+
+listarLivros()
 
 
 
