@@ -77,7 +77,9 @@ function devolverLivro(codigo) {
 
 function listarLivros() {
     let livrosListar = ''
-
+    if (livros.length === 0) 
+        return console.log('Nenhum livro cadastrado')
+    
     livros.forEach((livro) => {
         livrosListar += `Titulo: ${livro.Titulo} autor: ${livro.Autor} Cod. livro: ${livro.Codigo} Disponivel: ${livro.Disponivel} \n`
     })
