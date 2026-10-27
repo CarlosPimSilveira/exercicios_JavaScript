@@ -81,7 +81,7 @@ function listarLivros() {
         return console.log('Nenhum livro cadastrado')
     
     livros.forEach((livro) => {
-        livrosListar += `Titulo: ${livro.Titulo} autor: ${livro.Autor} Cod. livro: ${livro.Codigo} Disponivel: ${livro.Disponivel} \n`
+        livrosListar += `Titulo: ${livro.Titulo} autor: ${livro.Autor} Cod. livro: ${livro.Codigo} Disponivel: ${livro.Disponivel ? 'Sim' : 'Não'} \n`
     })
 
     return console.log(livrosListar)
