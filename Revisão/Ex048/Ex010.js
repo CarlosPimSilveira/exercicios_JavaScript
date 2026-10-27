@@ -87,6 +87,14 @@ function listarLivros() {
     return console.log(livrosListar)
 }
 
+function consultarDisponibilidade(codigo) {
+    if (livros.length === 0) 
+        return console.log('Nenhum livro cadastrado')
+
+    if (codigo <= 0 || !Number.isInteger(codigo))
+        return console.log('Codigo invalido!')
+}
+
 cadastrarLivro('A voz do silêncio', 'yoshitoki oima', 12151)
 cadastrarLivro('Dom Casmurro', 'Machado de Assis', 101);
 cadastrarLivro('O Pequeno Príncipe', 'Antoine de Saint-Exupéry', 102);
@@ -101,6 +109,8 @@ emprestarLivro(104)
 devolverLivro(105)
 
 listarLivros()
+
+consultarDisponibilidade(105)
 
 
 
