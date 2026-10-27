@@ -54,12 +54,18 @@ function devolverLivro(codigo) {
     if (codigo <= 0 || !Number.isInteger(codigo))
         return console.log('Codigo invalido!')
 
+    let livroAchado = false
     let indice = 0
     livros.forEach((livro, ind) => {
         if (codigo === livro.Codigo) {
+            livroAchado = true
             indice = ind
         }
     })
+
+    if (!livroAchado) {
+        return console.log('Livro não cadastrado no sistema')
+    }
 
     if (livros[indice].Disponivel === true) {
         return console.log('Livro ja havia sido devolvido!')
