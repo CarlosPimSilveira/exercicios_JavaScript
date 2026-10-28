@@ -29,10 +29,8 @@ function cadastrarLivro(titulo, autor, codigo) {
 }
 
 function confereCodigo(codigo) {
-    if (codigo <= 0 || !Number.isInteger(codigo)) {
-        return true
-    }
-}
+    return (codigo <= 0 || !Number.isInteger(codigo))
+} 
 
 function emprestarLivro(codigo) {
     if (confereCodigo(codigo) === true)
@@ -140,5 +138,8 @@ consultarDisponibilidade(104)
 
 
 
-
+emprestarLivro(-10)
+devolverLivro(0)
+consultarDisponibilidade(2.5)
+emprestarLivro(999)
 
