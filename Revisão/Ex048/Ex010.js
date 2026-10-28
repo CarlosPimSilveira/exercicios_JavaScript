@@ -2,12 +2,9 @@
 let livros = []
 
 function verificarLivros(codigo) {
-    livros.forEach((livro) => {
-        if (codigo === livro.Codigo) {
-            return true
-        }
-    }) 
-    return false
+    return livros.some((livro) => {
+        return codigo === livro.Codigo;
+    });
 }
 
 function cadastrarLivro(titulo, autor, codigo) {
