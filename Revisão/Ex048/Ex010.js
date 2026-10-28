@@ -88,20 +88,13 @@ function consultarDisponibilidade(codigo) {
     if (confereCodigo(codigo) === true)
         return console.log('Codigo invalido!')
 
-    let livroAchado = false
-    let indice = 0
-    livros.forEach((livro, ind) => {
-        if (codigo === livro.Codigo) {
-            livroAchado = true
-            indice = ind
-        }
-    })
+    let livroAchado = verificarLivros(codigo)
 
-    if (livroAchado) {
-        if (livros[indice].Disponivel === true) {
-            return console.log(`O livro: ${livros[indice].Titulo} esta disponivel!`)
+    if (livroAchado.existe) {
+        if (livros[livroAchado.index].Disponivel) {
+            return console.log(`O livro: ${livros[livroAchado.index].Titulo} esta disponivel!`)
         } else {
-            return console.log(`O livro: ${livros[indice].Titulo} esta emprestado`)
+            return console.log(`O livro: ${livros[livroAchado.index].Titulo} esta emprestado`)
         }
     } else {
         return console.log('Livro com codigo não cadastrado!')
