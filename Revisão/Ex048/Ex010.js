@@ -1,6 +1,15 @@
 // Sistema biblioteca!
 let livros = []
 
+function verificarLivros(codigo) {
+    livros.forEach((livro) => {
+        if (codigo === livro.Codigo) {
+            return true
+        }
+    }) 
+    return false
+}
+
 function cadastrarLivro(titulo, autor, codigo) {
     if (typeof titulo !== 'string' ||  String(titulo).trim() === "" || 
         typeof autor !== 'string' || String(autor).trim() === "")
@@ -11,11 +20,7 @@ function cadastrarLivro(titulo, autor, codigo) {
 
     let codLivroIgual = false
 
-    livros.forEach((livro) => {
-        if (codigo === livro.Codigo) {
-            codLivroIgual = true
-        }
-    }) 
+    codLivroIgual = verificarLivros(codigo)
 
     if (codLivroIgual)
         return console.log('Codigo do livro igual!')
