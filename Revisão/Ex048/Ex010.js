@@ -2,10 +2,8 @@
 let livros = []
 
 function verificarLivros(codigo) {
-    return livros.some((livro) => {
-        return codigo === livro.Codigo;
-    });
-}
+    return livros.some(livro => codigo === livro.Codigo);
+} 
 
 function cadastrarLivro(titulo, autor, codigo) {
     if (typeof titulo !== 'string' ||  String(titulo).trim() === "" || 
