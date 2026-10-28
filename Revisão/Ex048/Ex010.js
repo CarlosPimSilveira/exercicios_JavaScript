@@ -2,7 +2,12 @@
 let livros = []
 
 function verificarLivros(codigo) {
-    return livros.some(livro => codigo === livro.Codigo);
+    const indice = livros.findIndex(livro => codigo === livro.Codigo);
+    
+    return {
+        existe: indice !== -1, 
+        index: indice          
+    };
 } 
 
 function cadastrarLivro(titulo, autor, codigo) {
@@ -13,11 +18,9 @@ function cadastrarLivro(titulo, autor, codigo) {
     if (codigo <= 0 || !Number.isInteger(codigo))
         return console.log('Codigo invalido!')
 
-    let codLivroIgual = false
+    let result = verificarLivros(codigo)
 
-    codLivroIgual = verificarLivros(codigo)
-
-    if (codLivroIgual)
+    if (result.existe)
         return console.log('Codigo do livro igual!')
 
     livros.push({
@@ -36,18 +39,12 @@ function emprestarLivro(codigo) {
     if (confereCodigo(codigo) === true)
         return console.log('Codigo invalido!')
 
-    let livroAchado = false
-    let indice = 0
-    livros.forEach((livro, ind) => {
-        if (codigo === livro.Codigo) {
-            livroAchado = true
-            indice = ind
-        }
-    })
-    if (livroAchado === false) {
+    let livroAchado = verificarLivros(codigo)
+    
+    if (livroAchado.existe === false) {
         return console.log('Livro não achado ou não cadastrado!')
-    } else if (livros[indice].Disponivel) {
-        livros[indice].Disponivel = false
+    } else if (livros[livroAchado.index].Disponivel) {
+        livros[livroAchado.index].Disponivel = false
         return console.log('Realizado emprestimo do livro!')
     } else {
         return console.log('Livro emprestado!')
