@@ -103,10 +103,12 @@ function consultarDisponibilidade(codigo) {
         }
     })
 
-    if (livroAchado && livros[indice].Disponivel === true) {
-        return console.log(`O livro: ${livros[indice].Titulo} esta disponivel!`)
-    } else if (livroAchado && livros[indice].Disponivel === false) {
-        return console.log(`O livro: ${livros[indice].Titulo} esta emprestado`)
+    if (livroAchado) {
+        if (livros[indice].Disponivel === true) {
+            return console.log(`O livro: ${livros[indice].Titulo} esta disponivel!`)
+        } else {
+            return console.log(`O livro: ${livros[indice].Titulo} esta emprestado`)
+        }
     } else {
         return console.log('Livro com codigo não cadastrado!')
     }
