@@ -94,16 +94,24 @@ function consultarDisponibilidade(codigo) {
     if (codigo <= 0 || !Number.isInteger(codigo))
         return console.log('Codigo invalido!')
 
-    let livroAchado = false
+    let livroDisponivel = false
     let indice = 0
     livros.forEach((livro, ind) => {
         if (codigo === livro.Codigo) {
-            if (livro.Disponivel)
-                livroAchado = true
-                indice = ind
+            if (livro.Disponivel) {
+                livroDisponivel = true
+            }
+            indice = ind
         }
     })
-    return console.log(`O livro: ${livros[indice].Titulo} esta disponivel!`)
+
+    if (livroDisponivel) {
+        return console.log(`O livro: ${livros[indice].Titulo} esta disponivel!`)
+    } else if (livros[indice].Disponivel === false) {
+        return console.log(`O livro: ${livros[indice].Titulo} esta emprestado`)
+    } else {
+        return console.log('Livro com codigo não cadastrado!')
+    }
 }
 
 cadastrarLivro('A voz do silêncio', 'yoshitoki oima', 12151)
@@ -122,6 +130,7 @@ devolverLivro(105)
 listarLivros()
 
 consultarDisponibilidade(105)
+consultarDisponibilidade(104)
 
 
 
