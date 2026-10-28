@@ -40,11 +40,12 @@ function emprestarLivro(codigo) {
         return console.log('Codigo invalido!')
 
     let livroAchado = verificarLivros(codigo)
-    
+    const indiceLivro = livroAchado.index
+
     if (livroAchado.existe === false) {
         return console.log('Livro não achado ou não cadastrado!')
-    } else if (livros[livroAchado.index].Disponivel) {
-        livros[livroAchado.index].Disponivel = false
+    } else if (livros[indiceLivro].Disponivel) {
+        livros[indiceLivro].Disponivel = false
         return console.log('Realizado emprestimo do livro!')
     } else {
         return console.log('Livro emprestado!')
@@ -56,15 +57,16 @@ function devolverLivro(codigo) {
         return console.log('Codigo invalido!')
 
     let livroAchado = verificarLivros(codigo)
+    const indiceLivro = livroAchado.index
 
     if (livroAchado.existe === false) {
         return console.log('Livro não cadastrado no sistema')
     }
 
-    if (livros[livroAchado.index].Disponivel === true) {
+    if (livros[indiceLivro].Disponivel === true) {
         return console.log('Livro ja havia sido devolvido!')
     } else {
-        livros[livroAchado.index].Disponivel = true
+        livros[indiceLivro].Disponivel = true
         return console.log('Devolução completa!')
     }
 }
@@ -89,12 +91,13 @@ function consultarDisponibilidade(codigo) {
         return console.log('Codigo invalido!')
 
     let livroAchado = verificarLivros(codigo)
+    const indiceLivro = livroAchado.index
 
     if (livroAchado.existe) {
-        if (livros[livroAchado.index].Disponivel) {
-            return console.log(`O livro: ${livros[livroAchado.index].Titulo} esta disponivel!`)
+        if (livros[indiceLivro].Disponivel) {
+            return console.log(`O livro: ${livros[indiceLivro].Titulo} esta disponivel!`)
         } else {
-            return console.log(`O livro: ${livros[livroAchado.index].Titulo} esta emprestado`)
+            return console.log(`O livro: ${livros[indiceLivro].Titulo} esta emprestado`)
         }
     } else {
         return console.log('Livro com codigo não cadastrado!')
