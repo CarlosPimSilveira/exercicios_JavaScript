@@ -59,12 +59,13 @@ function devolverLivro(codigo) {
         return console.log('Codigo invalido!')
 
     const livroAchado = verificarLivros(codigo)
-    const index = livroAchado.index
-    const indiceLivro = livros[index]
 
     if (livroAchado.existe === false) {
         return console.log('Livro não cadastrado no sistema')
     }
+
+    const index = livroAchado.index
+    const indiceLivro = livros[index]
 
     if (indiceLivro.Disponivel === true) {
         return console.log('Livro ja havia sido devolvido!')
