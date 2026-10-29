@@ -40,7 +40,8 @@ function emprestarLivro(codigo) {
         return console.log('Codigo invalido!')
 
     let livroAchado = verificarLivros(codigo)
-    const indiceLivro = livroAchado.index
+    let index = livroAchado.index
+    const indiceLivro = livros[index]
 
     if (livroAchado.existe === false) {
         return console.log('Livro não achado ou não cadastrado!')
