@@ -2,13 +2,13 @@
 let livros = []
 
 function verificarLivros(codigo) {
-    const indice = livros.findIndex(livro => codigo === livro.Codigo);
+    const livroEncontrado = livros.find(livro => codigo === livro.Codigo);
     
     return {
-        existe: indice !== -1, 
-        index: indice          
+        existe: livroEncontrado !== undefined,
+        livro: livroEncontrado          
     };
-} 
+}
 
 function cadastrarLivro(titulo, autor, codigo) {
     if (typeof titulo !== 'string' ||  String(titulo).trim() === "" || 
