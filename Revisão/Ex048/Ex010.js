@@ -44,8 +44,8 @@ function emprestarLivro(codigo) {
 
     if (livroAchado.existe === false) {
         return console.log('Livro não achado ou não cadastrado!')
-    } else if (livros[indiceLivro].Disponivel) {
-        livros[indiceLivro].Disponivel = false
+    } else if (indiceLivro.Disponivel) {
+        indiceLivro.Disponivel = false
         return console.log('Realizado emprestimo do livro!')
     } else {
         return console.log('Livro emprestado!')
