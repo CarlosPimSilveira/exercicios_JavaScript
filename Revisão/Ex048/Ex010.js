@@ -95,10 +95,10 @@ function consultarDisponibilidade(codigo) {
         return console.log('Codigo invalido!')
 
     const livroAchado = verificarLivros(codigo)
-    const index = livroAchado.index
-    const indiceLivro = livros[index]
 
     if (livroAchado.existe) {
+        const index = livroAchado.index
+        const indiceLivro = livros[index]
         if (indiceLivro.Disponivel) {
             return console.log(`O livro: ${indiceLivro.Titulo} esta disponivel!`)
         } else {
