@@ -10,6 +10,10 @@ function verificarLivros(codigo) {
     };
 }
 
+function confereCodigo(codigo) {
+    return (codigo <= 0 || !Number.isInteger(codigo))
+} 
+
 function cadastrarLivro(titulo, autor, codigo) {
     if (typeof titulo !== 'string' ||  String(titulo).trim() === "" || 
         typeof autor !== 'string' || String(autor).trim() === "")
@@ -31,10 +35,6 @@ function cadastrarLivro(titulo, autor, codigo) {
     })
 }
 
-function confereCodigo(codigo) {
-    return (codigo <= 0 || !Number.isInteger(codigo))
-} 
-
 function emprestarLivro(codigo) {
     if (confereCodigo(codigo) === true)
         return console.log('Codigo invalido!')
@@ -44,10 +44,9 @@ function emprestarLivro(codigo) {
     if (livroAchado.existe === false) {
         return console.log('Livro não achado ou não cadastrado!')
     } 
-    const index = livroAchado.index
-    const livro = livros[index]
-    if (livro.Disponivel) {
-        livro.Disponivel = false
+
+    if (livroAchado.livro.Disponivel) {
+        livroAchado.livro.Disponivel = false
         return console.log('Realizado emprestimo do livro!')
     } else {
         return console.log('Livro emprestado!')
