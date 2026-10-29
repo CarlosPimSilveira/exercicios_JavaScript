@@ -39,13 +39,14 @@ function emprestarLivro(codigo) {
     if (confereCodigo(codigo) === true)
         return console.log('Codigo invalido!')
 
-    let livroAchado = verificarLivros(codigo)
-    let index = livroAchado.index
-    const indiceLivro = livros[index]
+    const livroAchado = verificarLivros(codigo)
 
     if (livroAchado.existe === false) {
         return console.log('Livro não achado ou não cadastrado!')
-    } else if (indiceLivro.Disponivel) {
+    } 
+    const index = livroAchado.index
+    const indiceLivro = livros[index]
+    if (indiceLivro.Disponivel) {
         indiceLivro.Disponivel = false
         return console.log('Realizado emprestimo do livro!')
     } else {
