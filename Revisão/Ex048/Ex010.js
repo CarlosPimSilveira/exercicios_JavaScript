@@ -45,9 +45,9 @@ function emprestarLivro(codigo) {
         return console.log('Livro não achado ou não cadastrado!')
     } 
     const index = livroAchado.index
-    const indiceLivro = livros[index]
-    if (indiceLivro.Disponivel) {
-        indiceLivro.Disponivel = false
+    const livro = livros[index]
+    if (livro.Disponivel) {
+        livro.Disponivel = false
         return console.log('Realizado emprestimo do livro!')
     } else {
         return console.log('Livro emprestado!')
@@ -65,12 +65,12 @@ function devolverLivro(codigo) {
     }
 
     const index = livroAchado.index
-    const indiceLivro = livros[index]
+    const livro = livros[index]
 
-    if (indiceLivro.Disponivel === true) {
+    if (livro.Disponivel === true) {
         return console.log('Livro ja havia sido devolvido!')
     } else {
-        indiceLivro.Disponivel = true
+        livro.Disponivel = true
         return console.log('Devolução completa!')
     }
 }
@@ -98,11 +98,11 @@ function consultarDisponibilidade(codigo) {
 
     if (livroAchado.existe) {
         const index = livroAchado.index
-        const indiceLivro = livros[index]
-        if (indiceLivro.Disponivel) {
-            return console.log(`O livro: ${indiceLivro.Titulo} esta disponivel!`)
+        const livro = livros[index]
+        if (livro.Disponivel) {
+            return console.log(`O livro: ${livro.Titulo} esta disponivel!`)
         } else {
-            return console.log(`O livro: ${indiceLivro.Titulo} esta emprestado`)
+            return console.log(`O livro: ${livro.Titulo} esta emprestado`)
         }
     } else {
         return console.log('Livro com codigo não cadastrado!')
