@@ -22,9 +22,7 @@ function cadastrarLivro(titulo, autor, codigo) {
     if (codigo <= 0 || !Number.isInteger(codigo))
         return console.log('Codigo invalido!')
 
-    const result = verificarLivros(codigo)
-
-    if (result.existe)
+    if (verificarLivros(codigo).existe)
         return console.log('Codigo do livro igual!')
 
     livros.push({
