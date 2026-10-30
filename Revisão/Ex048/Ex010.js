@@ -15,8 +15,8 @@ function confereCodigo(codigo) {
 } 
 
 function cadastrarLivro(titulo, autor, codigo) {
-    if (typeof titulo !== 'string' ||  String(titulo).trim() === "" || 
-        typeof autor !== 'string' || String(autor).trim() === "")
+    if (typeof titulo !== 'string' || titulo.trim() === "" || 
+        typeof autor !== 'string' || autor.trim() === "")
         return console.log('Cadastro invalido! titulo ou autor errados!')
 
     if (codigo <= 0 || !Number.isInteger(codigo))
