@@ -93,12 +93,12 @@ function consultarDisponibilidade(codigo) {
     const livroAchado = verificarLivros(codigo)
 
     if (livroAchado.existe) {
-        const livro = livroAchado
+        const livro = livroAchado.livro 
 
-        if (livro[0]) {
-            return console.log(`O livro: ${livro[1]} esta disponivel!`)
+        if (livro.Disponivel) {
+            return console.log(`O livro: ${livro.Titulo} esta disponivel!`)
         } else {
-            return console.log(`O livro: ${livro[1]} esta emprestado`)
+            return console.log(`O livro: ${livro.Titulo} esta emprestado`)
         }
     } else {
         return console.log('Livro com codigo não cadastrado!')
