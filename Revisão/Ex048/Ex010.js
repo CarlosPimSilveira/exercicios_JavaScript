@@ -93,7 +93,7 @@ function consultarDisponibilidade(codigo) {
     const livroAchado = verificarLivros(codigo)
 
     if (livroAchado.existe) {
-        const livro = [livroAchado.livro.Disponivel, livroAchado.livro.Titulo]
+        const livro = livroAchado
 
         if (livro[0]) {
             return console.log(`O livro: ${livro[1]} esta disponivel!`)
