@@ -11,12 +11,7 @@ function verificarLivros(codigo) {
 }
 
 function codigoInvalido(codigo) {
-    if (codigo <= 0 || !Number.isInteger(codigo)) {
-        console.log('Codigo invalido!');
-        return true;
-    } else {
-        return false
-    }
+    return (codigo <= 0 || !Number.isInteger(codigo))
 } 
 
 function cadastrarLivro(titulo, autor, codigo) {
@@ -25,6 +20,7 @@ function cadastrarLivro(titulo, autor, codigo) {
         return console.log('Cadastro invalido! titulo ou autor errados!')
 
     if (codigoInvalido(codigo)) {
+        console.log('Codigo invalido!')
         return
     }
 
@@ -40,8 +36,9 @@ function cadastrarLivro(titulo, autor, codigo) {
 }
 
 function emprestarLivro(codigo) {
-    if (codigoInvalido(codigo) === true)
-        return console.log('Codigo invalido!')
+    if (codigoInvalido(codigo)) {
+        return
+    }
 
     const livroAchado = verificarLivros(codigo)
 
@@ -58,8 +55,9 @@ function emprestarLivro(codigo) {
 }
 
 function devolverLivro(codigo) {
-    if (codigoInvalido(codigo) === true)
-        return console.log('Codigo invalido!')
+    if (codigoInvalido(codigo)) {
+        return
+    }
 
     const livroAchado = verificarLivros(codigo)
 
@@ -91,8 +89,9 @@ function consultarDisponibilidade(codigo) {
     if (livros.length === 0) 
         return console.log('Nenhum livro cadastrado')
 
-    if (codigoInvalido(codigo) === true)
-        return console.log('Codigo invalido!')
+    if (codigoInvalido(codigo)) {
+        return
+    }
 
     const livroAchado = verificarLivros(codigo)
 
