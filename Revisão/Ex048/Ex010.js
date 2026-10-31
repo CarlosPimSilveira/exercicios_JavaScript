@@ -19,7 +19,7 @@ function cadastrarLivro(titulo, autor, codigo) {
         typeof autor !== 'string' || autor.trim() === "")
         return console.log('Cadastro invalido! titulo ou autor errados!')
 
-    if (codigo <= 0 || !Number.isInteger(codigo))
+    if (confereCodigo(codigo))
         return console.log('Codigo invalido!')
 
     if (verificarLivros(codigo).existe)
