@@ -11,7 +11,12 @@ function verificarLivros(codigo) {
 }
 
 function codigoInvalido(codigo) {
-    return (codigo <= 0 || !Number.isInteger(codigo))
+    if (codigo <= 0 || !Number.isInteger(codigo)) {
+        console.log('Codigo invalido!');
+        return true;
+    } else {
+        return false
+    }
 } 
 
 function cadastrarLivro(titulo, autor, codigo) {
@@ -19,8 +24,9 @@ function cadastrarLivro(titulo, autor, codigo) {
         typeof autor !== 'string' || autor.trim() === "")
         return console.log('Cadastro invalido! titulo ou autor errados!')
 
-    if (codigoInvalido(codigo))
-        return console.log('Codigo invalido!')
+    if (codigoInvalido(codigo)) {
+        return
+    }
 
     if (verificarLivros(codigo).existe)
         return console.log('Codigo do livro igual!')
