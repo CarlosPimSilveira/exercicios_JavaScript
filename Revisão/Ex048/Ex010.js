@@ -61,7 +61,7 @@ function emprestarLivro(codigo) {
 
 function devolverLivro(codigo) {
     if (codigoInvalido(codigo)) {
-        console.log('Codigo invalido!')
+        mensagemInvalida()
         return
     }
 
@@ -96,7 +96,7 @@ function consultarDisponibilidade(codigo) {
         return console.log('Nenhum livro cadastrado')
 
     if (codigoInvalido(codigo)) {
-        console.log('Codigo invalido!')
+        mensagemInvalida()
         return
     }
 
