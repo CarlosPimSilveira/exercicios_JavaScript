@@ -14,14 +14,21 @@ function codigoInvalido(codigo) {
     return (codigo <= 0 || !Number.isInteger(codigo))
 } 
 
+function mensagemInvalida(deveCancelar) {
+    if (deveCancelar) {
+        console.log('Codigo invalido!');
+        return true;
+    }
+    return false; 
+}
+
 function cadastrarLivro(titulo, autor, codigo) {
     if (typeof titulo !== 'string' || titulo.trim() === "" || 
         typeof autor !== 'string' || autor.trim() === "")
         return console.log('Cadastro invalido! titulo ou autor errados!')
 
-    if (codigoInvalido(codigo)) {
-        console.log('Codigo invalido!')
-        return
+    if (mensagemInvalida(codigoInvalido(codigo))) {
+        return; 
     }
 
     if (verificarLivros(codigo).existe)
