@@ -41,7 +41,7 @@ function cadastrarLivro(titulo, autor, codigo) {
 
 function emprestarLivro(codigo) {
     if (codigoInvalido(codigo)) {
-        console.log('Codigo invalido!')
+        mensagemInvalida()
         return
     }
 
