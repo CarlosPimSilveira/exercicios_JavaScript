@@ -3,7 +3,7 @@ let livros = []
 
 function verificarLivros(codigo) {
     const livroEncontrado = livros.find(livro => codigo === livro.Codigo);
-    
+
     return {
         existe: livroEncontrado !== undefined,
         livro: livroEncontrado          
