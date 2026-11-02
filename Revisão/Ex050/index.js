@@ -1,4 +1,0 @@
-// XMLHttpRequest get + promises
-
-
-
