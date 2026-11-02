@@ -1,19 +1,21 @@
 // XMLHttpRequest 
 
 const request = obj => {
-    const xhr = new XMLHttpRequest()
-    xhr.open(obj.method, obj.url, true)
-    xhr.send(null)
+    return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest()
+        xhr.open(obj.method, obj.url, true)
+        xhr.send(null)
 
-    xhr.addEventListener('load', () => {
-        if(xhr.status >= 200 && xhr.status < 300) {
-            obj.success(xhr.responseText)
-        } else {
-            obj.error({
-                code: xhr.status,
-                msg: xhr.statusText
-            })
-        }
+        xhr.addEventListener('load', () => {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                resolve(xhr.responseText)
+            } else {
+                reject({
+                    code: xhr.status,
+                    msg: xhr.statusText
+                })
+            }
+        })
     })
 }
 
@@ -31,16 +33,14 @@ document.addEventListener('click', e => {
 function carregaPagina(el) {
     const href = el.getAttribute('href')
     
-    request({
+    const objConfig = {
         method: 'GET',
-        url: href,
-        success(response) {
-            carregaResultado(response)
-        } , 
-        error(errorText) {
-            console.log(errorText)
-        }
-    })
+        url: href
+    }
+
+    request(objConfig).then(response => {
+        carregaResultado(response)
+    }).catch(error => console.log(error))
 }
 
 function carregaResultado(response) {
