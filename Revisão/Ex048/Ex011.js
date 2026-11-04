@@ -87,7 +87,12 @@ function excluirPessoas(nome) {
     const acharPessoa = verificaPessoa(nome)
 
     if (acharPessoa.dados) {
-        cadPessoas = cadPessoas.filter(pessoa => pessoa.Nome.toLowerCase() !== nome.toLowerCase())
+        const indiceParaRemover = cadPessoas.findIndex(
+            pessoa => pessoa.Nome.toLowerCase() === nome.toLowerCase()
+        );
+        if (indiceParaRemover !== -1) {
+            cadPessoas = cadPessoas.filter((_, index) => index !== indiceParaRemover);
+        }
     } else {
         console.log("Pessoa não encontrada.");
     }
@@ -95,6 +100,7 @@ function excluirPessoas(nome) {
 
 cadNovaPessoa('Larissa', '98999-9999')
 cadNovaPessoa('Maria', '99999-9999')
+cadNovaPessoa('Maria', '98999-9999')
 cadNovaPessoa('Jose', '98799-9999')
 cadNovaPessoa('Carlos', '98769-9999')
 cadNovaPessoa('Pedro', '98765-9999')
