@@ -67,12 +67,27 @@ function editarPessoas(nome, novoNome, novoTel) {
         console.log('Ninguem cadastrado!')
         return
     }
-    
+
     const acharPessoa = verificaPessoa(nome)
 
     if (acharPessoa.dados) {
         acharPessoa.dados.Nome = novoNome
         acharPessoa.dados.Telefone = novoTel
+    } else {
+        console.log("Pessoa não encontrada.");
+    }
+}
+
+function excluirPessoas(nome) {
+    if (cadVazio()) {
+        console.log('Ninguem cadastrado!')
+        return
+    }
+
+    const acharPessoa = verificaPessoa(nome)
+
+    if (acharPessoa.dados) {
+        cadPessoas = cadPessoas.filter(pessoa => pessoa.Nome.toLowerCase() !== nome.toLowerCase())
     } else {
         console.log("Pessoa não encontrada.");
     }
@@ -89,7 +104,9 @@ buscarPessoa('carlos')
 
 editarPessoas('jose', 'jose Antonio', '9999-98799')
 console.log('---------------------')
+excluirPessoas('maria')
 listarPessoas()
+
 
 
 
