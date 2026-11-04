@@ -2,12 +2,23 @@
 let cadPessoas = []
 
 function confereNome(nome) {
-    if (typeof nome !== 'string' || nome.trim() === "")
-        return console.log('Cadastro invalido! titulo ou autor errados!')
+    return typeof nome !== 'string' || nome.trim() === ""
+}
+
+function confereTelefone(telefone) {
+    return !telefone || typeof telefone !== 'string' || telefone.trim() === ""
 }
 
 function cadNovaPessoa(nome, telefone) {
-    confereNome(nome)
+    if (confereNome(nome)) {
+        console.log("Erro: Nome inválido.");
+        return
+    }
+
+    if (confereTelefone(telefone)) {
+        console.log("Erro: Telefone inválido.");
+        return false;
+    }
 
     cadPessoas.push({
         Nome: nome,
@@ -16,7 +27,7 @@ function cadNovaPessoa(nome, telefone) {
 }
 
 
-cadNovaPessoa('Maria', 1999999-9999)
+cadNovaPessoa('Maria', '99999-9999')
 
 console.log(cadPessoas)
 
