@@ -71,14 +71,11 @@ function editarPessoas(nome, novoNome, novoTel) {
     const acharPessoa = verificaPessoa(nome)
 
     if (acharPessoa.dados) {
-        const novaPessoa ={
-            Nome: novoNome,
-            Telefone: novoTel
-        }
+        acharPessoa.dados.Nome = novoNome
+        acharPessoa.dados.Telefone = novoTel
     } else {
         console.log("Pessoa não encontrada.");
     }
-    cadPessoas.assign(novaPessoa)
 }
 
 cadNovaPessoa('Larissa', '98999-9999')
