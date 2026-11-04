@@ -62,6 +62,25 @@ function buscarPessoa(nome) {
     }
 }
 
+function editarPessoas(nome, novoNome, novoTel) {
+    if (cadVazio()) {
+        console.log('Ninguem cadastrado!')
+        return
+    }
+    
+    const acharPessoa = verificaPessoa(nome)
+
+    if (acharPessoa.dados) {
+        const novaPessoa ={
+            Nome: novoNome,
+            Telefone: novoTel
+        }
+    } else {
+        console.log("Pessoa não encontrada.");
+    }
+    cadPessoas.assign(novaPessoa)
+}
+
 cadNovaPessoa('Larissa', '98999-9999')
 cadNovaPessoa('Maria', '99999-9999')
 cadNovaPessoa('Jose', '98799-9999')
@@ -71,12 +90,10 @@ cadNovaPessoa('Pedro', '98765-9999')
 listarPessoas()
 buscarPessoa('carlos')
 
+editarPessoas('jose', 'jose Antonio', '9999-98799')
+console.log('---------------------')
+listarPessoas()
 
-/*
-let indiceEncontrado = -1
-    cadPessoas.forEach((pessoa, index) => {
-        if (pessoa.Nome.toLowerCase() === nome.toLowerCase()) {
-            achouPessoa = true;
-            indiceEncontrado = index; 
-        }
-    });*/
+
+
+
