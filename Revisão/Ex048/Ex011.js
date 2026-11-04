@@ -41,19 +41,24 @@ function listarPessoas(){
     }) 
 }
 
+function verificaPessoa(nome) {
+    const pessoaEncontrada = cadPessoas.find(pessoa => nome === pessoa.nome);
+
+    return {
+        existe: pessoaEncontrada !== undefined,
+        Nome: pessoaEncontrada          
+    };
+}
+
 function buscarPessoa(nome) {
     let achouPessoa = false
-    let indiceEncontrado = -1
 
-    cadPessoas.forEach((pessoa, index) => {
-        if (pessoa.Nome.toLowerCase() === nome.toLowerCase()) {
-            achouPessoa = true;
-            indiceEncontrado = index; 
-        }
-    });
+    achouPessoa = verificaPessoa(nome)
 
     if (achouPessoa) {
-        console.log(`Nome: ${cadPessoas[indiceEncontrado].Nome} - Tel: ${cadPessoas[indiceEncontrado].Telefone}`);
+        const pessoa = achouPessoa.Nome
+        const tel = achouPessoa.Telefone
+        console.log(`Nome: ${pessoa} - Tel: ${tel}`);
     } else {
         console.log("Pessoa não encontrada.");
     }
@@ -69,3 +74,11 @@ listarPessoas()
 buscarPessoa('carlos')
 
 
+/*
+let indiceEncontrado = -1
+    cadPessoas.forEach((pessoa, index) => {
+        if (pessoa.Nome.toLowerCase() === nome.toLowerCase()) {
+            achouPessoa = true;
+            indiceEncontrado = index; 
+        }
+    });*/
