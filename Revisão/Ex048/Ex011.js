@@ -45,7 +45,6 @@ function verificaPessoa(nome) {
     const pessoaEncontrada = cadPessoas.find(pessoa => nome.toLowerCase() === pessoa.Nome.toLowerCase());
 
     return {
-        existe: pessoaEncontrada !== undefined,
         dados: pessoaEncontrada
     };
 }
@@ -53,7 +52,7 @@ function verificaPessoa(nome) {
 function buscarPessoa(nome) {
     const resultado = verificaPessoa(nome);
 
-    if (resultado.existe) {
+    if (resultado.dados) {
         const pessoa = resultado.dados.Nome;
         const tel = resultado.dados.Telefone;
 
