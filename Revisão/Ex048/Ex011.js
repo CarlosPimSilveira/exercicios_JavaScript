@@ -9,6 +9,10 @@ function confereTelefone(telefone) {
     return !telefone || typeof telefone !== 'string' || telefone.trim() === ""
 }
 
+function cadVazio() {
+    return cadPessoas.length === 0
+}
+
 function cadNovaPessoa(nome, telefone) {
     if (confereNome(nome)) {
         console.log("Erro: Nome inválido.");
@@ -27,14 +31,32 @@ function cadNovaPessoa(nome, telefone) {
 }
 
 function listarPessoas(){
-    if (cadPessoas.length === 0) {
+    if (cadVazio()) {
         console.log('Ninguem cadastrado!')
         return
     }
 
-    cadPessoas.forEach((pessoas) => {
-        console.log(`Nome: ${pessoas.Nome} telefone: ${pessoas.Telefone}`)
+    cadPessoas.forEach((pessoa) => {
+        console.log(`Nome: ${pessoa.Nome} telefone: ${pessoa.Telefone}`)
     }) 
+}
+
+function buscarPessoa(nome) {
+    let achouPessoa = false
+    let indiceEncontrado = -1
+
+    cadPessoas.forEach((pessoa, index) => {
+        if (pessoa.Nome.toLowerCase() === nome.toLowerCase()) {
+            achouPessoa = true;
+            indiceEncontrado = index; 
+        }
+    });
+
+    if (achouPessoa) {
+        console.log(`Nome: ${cadPessoas[indiceEncontrado].Nome} - Tel: ${cadPessoas[indiceEncontrado].Telefone}`);
+    } else {
+        console.log("Pessoa não encontrada.");
+    }
 }
 
 cadNovaPessoa('Larissa', '98999-9999')
@@ -44,3 +66,6 @@ cadNovaPessoa('Carlos', '98769-9999')
 cadNovaPessoa('Pedro', '98765-9999')
 
 listarPessoas()
+buscarPessoa('carlos')
+
+
