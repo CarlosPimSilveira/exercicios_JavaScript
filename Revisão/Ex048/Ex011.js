@@ -42,22 +42,21 @@ function listarPessoas(){
 }
 
 function verificaPessoa(nome) {
-    const pessoaEncontrada = cadPessoas.find(pessoa => nome === pessoa.nome);
+    const pessoaEncontrada = cadPessoas.find(pessoa => nome.toLowerCase() === pessoa.Nome.toLowerCase());
 
     return {
         existe: pessoaEncontrada !== undefined,
-        Nome: pessoaEncontrada          
+        dados: pessoaEncontrada
     };
 }
 
 function buscarPessoa(nome) {
-    let achouPessoa = false
+    const resultado = verificaPessoa(nome);
 
-    achouPessoa = verificaPessoa(nome)
+    if (resultado.existe) {
+        const pessoa = resultado.dados.Nome;
+        const tel = resultado.dados.Telefone;
 
-    if (achouPessoa) {
-        const pessoa = achouPessoa.Nome
-        const tel = achouPessoa.Telefone
         console.log(`Nome: ${pessoa} - Tel: ${tel}`);
     } else {
         console.log("Pessoa não encontrada.");
