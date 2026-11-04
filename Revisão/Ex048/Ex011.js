@@ -26,10 +26,21 @@ function cadNovaPessoa(nome, telefone) {
     })
 }
 
+function listarPessoas(){
+    if (cadPessoas.length === 0) {
+        console.log('Ninguem cadastrado!')
+        return
+    }
 
+    cadPessoas.forEach((pessoas) => {
+        console.log(`Nome: ${pessoas.Nome} telefone: ${pessoas.Telefone}`)
+    }) 
+}
+
+cadNovaPessoa('Larissa', '98999-9999')
 cadNovaPessoa('Maria', '99999-9999')
+cadNovaPessoa('Jose', '98799-9999')
+cadNovaPessoa('Carlos', '98769-9999')
+cadNovaPessoa('Pedro', '98765-9999')
 
-console.log(cadPessoas)
-
-
-
+listarPessoas()
