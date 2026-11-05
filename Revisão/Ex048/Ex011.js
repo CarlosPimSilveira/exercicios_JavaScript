@@ -84,18 +84,22 @@ function excluirPessoas(nome) {
         return
     }
 
-    const acharPessoa = verificaPessoa(nome)
+    const indice = verificarPessoa(nome);
 
-    if (acharPessoa.dados) {
-        const indiceParaRemover = cadPessoas.findIndex(
-            pessoa => pessoa.Nome.toLowerCase() === nome.toLowerCase()
-        );
-        if (indiceParaRemover !== -1) {
-            cadPessoas = cadPessoas.filter((_, index) => index !== indiceParaRemover);
-        }
+    if (indice !== -1) {
+        const pessoaEncontrada = cadPessoas[indice];
+        console.log(`Removendo a pessoa: ${pessoaEncontrada.Nome}`);
+
+        cadPessoas = cadPessoas.filter((_, index) => index !== indice);
     } else {
         console.log("Pessoa não encontrada.");
     }
+}
+
+function verificarPessoa(nome) {
+    return cadPessoas.findIndex(
+        pessoa => pessoa.Nome.toLowerCase() === nome.toLowerCase()
+    );
 }
 
 cadNovaPessoa('Larissa', '98999-9999')
