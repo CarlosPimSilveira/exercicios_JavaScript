@@ -4,11 +4,13 @@ const opcoes = ['Pedra', 'Papel', 'Tesoura']
 let escolhadoJogador = 'pedra'
 let escolhaMquina = geraEscolhaComputador()
 
+veificaEscolhaJogador(escolhadoJogador)
+
 function geraEscolhaComputador() {
     return opcoes[Math.floor(Math.random() * opcoes.length)];
 }
 
-function veificaEscolhaJogador() {
+function veificaEscolhaJogador(esqJogador) {
     
 }
 
