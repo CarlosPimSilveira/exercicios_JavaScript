@@ -1,7 +1,7 @@
 // Ex Crie um jogo de pedra, papel e tesoura.
 const opcoes = ['Pedra', 'Papel', 'Tesoura']
 
-let escolhadoJogador = 'pedraaa'
+let escolhadoJogador = 'pedra'
 let escolhaMquina = geraEscolhaComputador()
 
 veificaEscolhaJogador(escolhadoJogador)
@@ -11,7 +11,7 @@ function geraEscolhaComputador() {
 }
 
 function veificaEscolhaJogador(esqJogador) {
-    if (escolhadoJogador.length === 0) {
+    if (typeof esqJogador !== 'string' || esqJogador.trim().length === 0) {
         return console.log('Erro nenhuma escolha feita!')
     }
 
