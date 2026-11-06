@@ -11,7 +11,11 @@ function geraEscolhaComputador() {
 }
 
 function veificaEscolhaJogador(esqJogador) {
-    
+    const escolhaErrada = false
+
+    opcoes.forEach((op) => {
+        
+    })
 }
 
 
