@@ -1,7 +1,7 @@
 // Ex Crie um jogo de pedra, papel e tesoura.
 const opcoes = ['Pedra', 'Papel', 'Tesoura']
 
-let escolhadoJogador = 'pedra'
+let escolhadoJogador = 'pedraaa'
 let escolhaMquina = geraEscolhaComputador()
 
 veificaEscolhaJogador(escolhadoJogador)
@@ -15,7 +15,7 @@ function veificaEscolhaJogador(esqJogador) {
         return console.log('Erro nenhuma escolha feita!')
     }
 
-    const escolhaErrada = false
+    let escolhaErrada = false
 
     opcoes.forEach((op) => {
         if (op.toLowerCase() === esqJogador.toLowerCase()) {
@@ -24,7 +24,7 @@ function veificaEscolhaJogador(esqJogador) {
     })
 
     if (!escolhaErrada) {
-        return console.log('Escolha errada! opções do jogo ')
+        return console.log(`Escolha errada! opções do jogo 1:${opcoes[0]}, 2:${opcoes[1]} e 3:${opcoes[1]}`)
     }
 }
 
