@@ -11,11 +11,21 @@ function geraEscolhaComputador() {
 }
 
 function veificaEscolhaJogador(esqJogador) {
+    if (escolhadoJogador.length === 0) {
+        return console.log('Erro nenhuma escolha feita!')
+    }
+
     const escolhaErrada = false
 
     opcoes.forEach((op) => {
-        
+        if (op.toLowerCase() === esqJogador.toLowerCase()) {
+            escolhaErrada = true
+        }
     })
+
+    if (!escolhaErrada) {
+        return console.log('Escolha errada! opções do jogo ')
+    }
 }
 
 
