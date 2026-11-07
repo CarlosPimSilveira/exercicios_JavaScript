@@ -15,7 +15,7 @@ function veificaEscolhaJogador(esqJogador) {
         return console.log('Erro nenhuma escolha feita!')
     } 
 
-    opcoes.includes(esqJogador, 0) 
+    opcoes.includes(esqJogador.toLowerCase(), 0)
 
     let escolhaErrada = false
 
