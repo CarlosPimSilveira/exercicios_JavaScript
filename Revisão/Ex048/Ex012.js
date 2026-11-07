@@ -15,15 +15,11 @@ function veificaEscolhaJogador(esqJogador) {
         return console.log('Erro nenhuma escolha feita!')
     } 
 
-    opcoes.includes(esqJogador.toLowerCase(), 0)
-
-    let escolhaErrada = false
-
-    opcoes.forEach((op) => {
-        if (op.toLowerCase() === esqJogador.toLowerCase()) {
-            escolhaErrada = true
-        }
+    const op = opcoes.map((opcao) => { 
+        return opcao.toLocaleLowerCase()
     })
+
+    let escolhaErrada = op.includes(esqJogador.toLowerCase(), 0)
 
     if (!escolhaErrada) {
         return console.log(`Escolha errada! opções do jogo 1:${opcoes[0]}, 2:${opcoes[1]} e 3:${opcoes[1]}`)
