@@ -13,7 +13,9 @@ function geraEscolhaComputador() {
 function veificaEscolhaJogador(esqJogador) {
     if (typeof esqJogador !== 'string' || esqJogador.trim().length === 0) {
         return console.log('Erro nenhuma escolha feita!')
-    }
+    } 
+
+    opcoes.includes(esqJogador, 0) 
 
     let escolhaErrada = false
 
