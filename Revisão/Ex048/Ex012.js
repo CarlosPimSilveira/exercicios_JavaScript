@@ -10,7 +10,9 @@ if (escolhasVerificadas) {
 }
 
 function realizaJogada(esqMaquina, esqJogador) {
-    
+    if (esqJogador.toLowerCase() === esqMaquina.toLowerCase()) {
+        
+    }
 }
 
 function geraEscolhaComputador() {
