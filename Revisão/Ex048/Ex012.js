@@ -11,7 +11,11 @@ if (escolhasVerificadas) {
 
 function realizaJogada(esqMaquina, esqJogador) {
     if (esqJogador.toLowerCase() === esqMaquina.toLowerCase()) {
-        
+        return console.log('Houve empate!')
+    } else if (esqJogador.toLowerCase() === 'Pedra' && esqMaquina.toLowerCase() === 'Tesoura' ) {
+        return console.log('Jogador venceu!')
+    } else if (esqJogador.toLowerCase() === 'Papel' && esqMaquina.toLowerCase() === 'Pedra') {
+        return console.log('Jogador venceu!')
     }
 }
 
