@@ -12,10 +12,12 @@ if (escolhasVerificadas) {
 function realizaJogada(esqMaquina, esqJogador) {
     if (esqJogador.toLowerCase() === esqMaquina.toLowerCase()) {
         return console.log('Houve empate!')
-    } else if (esqJogador.toLowerCase() === 'Pedra' && esqMaquina.toLowerCase() === 'Tesoura' ) {
-        return console.log('Jogador venceu!')
-    } else if (esqJogador.toLowerCase() === 'Papel' && esqMaquina.toLowerCase() === 'Pedra') {
-        return console.log('Jogador venceu!')
+    } else if (esqJogador.toLowerCase() === 'pedra' && esqMaquina.toLowerCase() === 'tesoura' ) {
+        return console.log(`Jogador venceu! usando ${esqJogador}`)
+    } else if (esqJogador.toLowerCase() === 'papel' && esqMaquina.toLowerCase() === 'pedra') {
+        return console.log(`Jogador venceu! usando ${esqJogador}`)
+    } else if (esqJogador.toLowerCase() === 'tesoura' && esqMaquina.toLowerCase() === 'papel') {
+        return console.log(`Jogador venceu! usando ${esqJogador}`)
     }
 }
 
