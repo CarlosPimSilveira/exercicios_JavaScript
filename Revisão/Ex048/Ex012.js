@@ -18,6 +18,8 @@ function realizaJogada(esqMaquina, esqJogador) {
         return console.log(`Jogador venceu! usando ${esqJogador}`)
     } else if (esqJogador.toLowerCase() === 'tesoura' && esqMaquina.toLowerCase() === 'papel') {
         return console.log(`Jogador venceu! usando ${esqJogador}`)
+    } else {
+        return console.log(`A maquina venceu! usando ${esqMaquina}`)
     }
 }
 
