@@ -8,7 +8,7 @@ function validarDescricao(desc) {
 }
 
 function validarValor(valor) {
-    return  (valor <= 0 || !Number.isInteger(valor))
+    return typeof valor !== 'number' || Number.isNaN(valor) || valor <= 0
 }
 
 //
