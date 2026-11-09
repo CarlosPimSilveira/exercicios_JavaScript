@@ -39,7 +39,7 @@ function veificaEscolhaJogador(esqJogador) {
     let escolhaErrada = op.includes(esqJogador.toLowerCase(), 0)
 
     if (!escolhaErrada) {
-        return console.log(`Escolha errada! opções do jogo 1:${opcoes[0]}, 2:${opcoes[1]} e 3:${opcoes[1]}`)
+        return console.log(`Escolha errada! opções do jogo 1:${opcoes[0]}, 2:${opcoes[1]} e 3:${opcoes[2]}`)
     } else {
         return true
     }
