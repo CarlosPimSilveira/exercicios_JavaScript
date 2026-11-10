@@ -1,6 +1,7 @@
 // Sistema de controle de despesas (carteira financeira)
 const transacoes = []
-const tipos = ['entrada', 'saida']
+const tipos = ['Entrada', 'Saida']
+const categoria = ['Salario', 'Alimentação', 'Transporte', 'Lazer', 'Contas']
 
 // Validações!
 
@@ -31,7 +32,15 @@ function validarTipo(tipo) {
 function adicionarTransacao(descricao, valor, tipo, categoria) {
     const descValidado = validarDescricao(descricao)
     const valValidado = validarValor(valor)
-    let valTipo = validarTipo(tipo)
+    const valTipo = validarTipo(tipo)
+
+    if (!descValidado) {
+        return console.log('Descrição invalida!')
+    }
+
+    if (!valValidado) {
+        return console.log('Valor invalido!')
+    }
 
     if (!valTipo) {
         return console.log('Tipo de transação incorreto!')
