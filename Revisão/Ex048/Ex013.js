@@ -1,5 +1,6 @@
 // Sistema de controle de despesas (carteira financeira)
 const transacoes = []
+const tipos = ['entrada', 'saida']
 
 // Validações!
 
@@ -16,7 +17,7 @@ function validarValor(valor) {
 function adicionarTransacao(descricao, valor, tipo, categoria) {
     const descValidado = validarDescricao(descricao)
     const valValidado = validarValor(valor)
-
+    const valTipo = validarTipo(tipo)
     
 
 }
