@@ -13,7 +13,17 @@ function validarValor(valor) {
 }
 
 function validarTipo(tipo) {
-    return typeof tipo !== 'string' || tipo.trim() === ""
+    if (typeof tipo !== 'string' || tipo.trim() === "") {
+        return
+    }
+
+    const tp = tipos.map((tps) => { 
+        return tps.toLocaleLowerCase()
+    })
+
+    let tipoValido = tp.includes(tipo.toLowerCase(), 0)
+
+    return tipoValido
 }
 
 //
@@ -21,11 +31,13 @@ function validarTipo(tipo) {
 function adicionarTransacao(descricao, valor, tipo, categoria) {
     const descValidado = validarDescricao(descricao)
     const valValidado = validarValor(valor)
-    const valTipo = validarTipo(tipo)
+    let valTipo = validarTipo(tipo)
 
-    if (valTipo) {
+    if (!valTipo) {
         return console.log('Tipo de transação incorreto!')
     }
+
+    console.log(valTipo)
 }
 
 adicionarTransacao('teste', 10.0, 'entrada', 'teste')
