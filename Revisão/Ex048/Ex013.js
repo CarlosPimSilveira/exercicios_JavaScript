@@ -1,7 +1,7 @@
 // Sistema de controle de despesas (carteira financeira)
 const transacoes = []
 const tipos = ['Entrada', 'Saida']
-const categoria = ['Salario', 'Alimentação', 'Transporte', 'Lazer', 'Contas']
+const categorias = ['Salario', 'Alimentação', 'Transporte', 'Lazer', 'Contas']
 
 // Validações!
 
@@ -27,16 +27,16 @@ function validarTipo(tipo) {
     return tipoValido
 }
 
-function validarCategoria(categoria) {
-    if (typeof categoria !== 'string' || categoria.trim() === "") {
+function validarCategoria(cat) {
+    if (typeof cat !== 'string' || cat.trim() === "") {
         return
     }
 
-    const cg = categoria.map((cgs) => { 
+    const cg = categorias.map((cgs) => { 
         return cgs.toLocaleLowerCase()
     })
 
-    let categoriaValido = cg.includes(categoria.toLowerCase(), 0)
+    let categoriaValido = cg.includes(cat.toLowerCase(), 0)
 
     return categoriaValido
 }
@@ -68,7 +68,7 @@ function adicionarTransacao(descricao, valor, tipo, categoria) {
     console.log(valTipo, descValidado, valValidado, valCategoria)
 }
 
-adicionarTransacao('teste', 10.0, 'entrada', 'teste')
+adicionarTransacao('teste', 10.0, 'entrada', 'Lazer')
 
 
 
