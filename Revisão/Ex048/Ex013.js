@@ -27,12 +27,27 @@ function validarTipo(tipo) {
     return tipoValido
 }
 
+function validarCategoria(categoria) {
+    if (typeof categoria !== 'string' || categoria.trim() === "") {
+        return
+    }
+
+    const cg = categoria.map((cgs) => { 
+        return cgs.toLocaleLowerCase()
+    })
+
+    let categoriaValido = cg.includes(categoria.toLowerCase(), 0)
+
+    return categoriaValido
+}
+
 //
 
 function adicionarTransacao(descricao, valor, tipo, categoria) {
     const descValidado = validarDescricao(descricao)
     const valValidado = validarValor(valor)
     const valTipo = validarTipo(tipo)
+    const valCategoria = validarCategoria(categoria)
 
     if (!descValidado) {
         return console.log('Descrição invalida!')
@@ -46,7 +61,11 @@ function adicionarTransacao(descricao, valor, tipo, categoria) {
         return console.log('Tipo de transação incorreto!')
     }
 
-    console.log(valTipo, descValidado, valValidado)
+    if (!valCategoria) {
+        return console.log('Categoria invalida!')
+    }
+
+    console.log(valTipo, descValidado, valValidado, valCategoria)
 }
 
 adicionarTransacao('teste', 10.0, 'entrada', 'teste')
