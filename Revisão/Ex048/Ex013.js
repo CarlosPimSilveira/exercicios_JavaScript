@@ -13,10 +13,11 @@ function validarValor(valor) {
 
 //
 
-
 function adicionarTransacao(descricao, valor, tipo, categoria) {
     const descValidado = validarDescricao(descricao)
     const valValidado = validarValor(valor)
+
+    
 
 }
 
