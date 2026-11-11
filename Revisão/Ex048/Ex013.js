@@ -65,6 +65,14 @@ function adicionarTransacao(descricao, valor, tipo, categoria) {
         return console.log('Categoria invalida!')
     }
 
+    let id = 0
+
+    if (transacoes.length === 0) {
+        id = 1
+    } else {
+        id++
+    }
+
     transacoes.push({     
         Id: id,
         Descricao: descricao,
@@ -75,10 +83,16 @@ function adicionarTransacao(descricao, valor, tipo, categoria) {
 }
 
 adicionarTransacao('teste', 10.0, 'entrada', 'Lazer')
+adicionarTransacao('teste', 10.0, 'entrada', 'Lazer')
+adicionarTransacao('teste', 10.0, 'entrada', 'Lazer')
+adicionarTransacao('teste', 10.0, 'entrada', 'Lazer')
+adicionarTransacao('teste', 10.0, 'entrada', 'Lazer')
+adicionarTransacao('teste', 10.0, 'entrada', 'Lazer')
 
 
 
 
+console.log(transacoes)
 
 
 
