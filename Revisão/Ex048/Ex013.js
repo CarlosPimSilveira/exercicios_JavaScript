@@ -65,7 +65,13 @@ function adicionarTransacao(descricao, valor, tipo, categoria) {
         return console.log('Categoria invalida!')
     }
 
-    console.log(valTipo, descValidado, valValidado, valCategoria)
+    transacoes.push({     
+        Id: id,
+        Descricao: descricao,
+        Valor: valor,
+        Tipo: tipo,
+        Categoria: categoria
+    })
 }
 
 adicionarTransacao('teste', 10.0, 'entrada', 'Lazer')
