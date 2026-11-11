@@ -2,6 +2,7 @@
 const transacoes = []
 const tipos = ['Entrada', 'Saida']
 const categorias = ['Salario', 'Alimentação', 'Transporte', 'Lazer', 'Contas']
+let id = []
 
 // Validações!
 
@@ -64,8 +65,6 @@ function adicionarTransacao(descricao, valor, tipo, categoria) {
     if (!valCategoria) {
         return console.log('Categoria invalida!')
     }
-
-    let id = 0
 
     if (transacoes.length === 0) {
         id = 1
