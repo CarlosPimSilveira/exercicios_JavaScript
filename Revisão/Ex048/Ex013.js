@@ -77,18 +77,29 @@ function adicionarTransacao(descricao, valor, tipo, categoria) {
     })
 }
 
-adicionarTransacao('teste', 10.0, 'entrada', 'Lazer')
-adicionarTransacao('teste', 10.0, 'entrada', 'Lazer')
-adicionarTransacao('teste', 10.0, 'entrada', 'Lazer')
-adicionarTransacao('teste', 10.0, 'entrada', 'Lazer')
-adicionarTransacao('teste', 10.0, 'entrada', 'Lazer')
-adicionarTransacao('teste', 10.0, 'entrada', 'Lazer')
+function listarTransacao() {
+    if (transacoes.length <= 0) {
 
+    }
+}
 
+adicionarTransacao('Salário mensal', 3000.00, 'Entrada', 'Salario')
+adicionarTransacao('Freelance de programação', 450.00, 'Entrada', 'Salario')
+adicionarTransacao('Compra no supermercado', 280.50, 'Saida', 'Alimentação')
+adicionarTransacao('Almoço no restaurante', 35.90, 'Saida', 'Alimentação')
+adicionarTransacao('Abastecimento do carro', 150.00, 'Saida', 'Transporte')
+adicionarTransacao('Uber para o trabalho', 22.50, 'Saida', 'Transporte')
+adicionarTransacao('Cinema com a noiva', 65.00, 'Saida', 'Lazer')
+adicionarTransacao('Assinatura Netflix', 39.90, 'Saida', 'Lazer')
+adicionarTransacao('Conta de energia', 180.00, 'Saida', 'Contas')
+adicionarTransacao('Conta de internet', 99.90, 'Saida', 'Contas')
+adicionarTransacao('Venda de produto usado', 200.00, 'Entrada', 'Lazer')
+adicionarTransacao('Compra de roupas', 120.00, 'Saida', 'Lazer')
+adicionarTransacao('Conta de água', 75.00, 'Saida', 'Contas')
+adicionarTransacao('Vale alimentação', 500.00, 'Entrada', 'Salario')
+adicionarTransacao('Manutenção da bicicleta', 85.00, 'Saida', 'Transporte')
 
-
-console.log(transacoes)
-
+listarTransacao()
 
 
 
