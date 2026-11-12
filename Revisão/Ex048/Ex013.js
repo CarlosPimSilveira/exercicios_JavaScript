@@ -79,8 +79,12 @@ function adicionarTransacao(descricao, valor, tipo, categoria) {
 
 function listarTransacao() {
     if (transacoes.length <= 0) {
-
+        return console.log('Nenhuma transação realizada!')
     }
+
+    transacoes.forEach((mov) => {
+        console.log(`Descrição: ${mov.Descricao} valor: ${mov.Valor} Tipo: ${mov.Tipo} categoria: ${mov.Categoria}`)
+    }) 
 }
 
 adicionarTransacao('Salário mensal', 3000.00, 'Entrada', 'Salario')
