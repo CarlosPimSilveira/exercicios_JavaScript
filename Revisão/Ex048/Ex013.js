@@ -42,6 +42,14 @@ function validarCategoria(cat) {
     return categoriaValido
 }
 
+function verificaDados() {
+    if (transacoes.length <= 0) {
+        return true
+    } else {
+        false
+    }
+}
+
 //
 
 function adicionarTransacao(descricao, valor, tipo, categoria) {
@@ -78,13 +86,19 @@ function adicionarTransacao(descricao, valor, tipo, categoria) {
 }
 
 function listarTransacao() {
-    if (transacoes.length <= 0) {
-        return console.log('Nenhuma transação realizada!')
+    if (verificaDados()) {
+        console.log('Nenhuma transação cadastrada!')
     }
 
     transacoes.forEach((mov) => {
         console.log(`Descrição: ${mov.Descricao} valor: ${mov.Valor} Tipo: ${mov.Tipo} categoria: ${mov.Categoria}`)
     }) 
+}
+
+function filtrarPorCategoria(cate) {
+    if (verificaDados()) {
+        console.log('Nenhuma transação cadastrada!')
+    }
 }
 
 adicionarTransacao('Salário mensal', 3000.00, 'Entrada', 'Salario')
@@ -104,7 +118,7 @@ adicionarTransacao('Vale alimentação', 500.00, 'Entrada', 'Salario')
 adicionarTransacao('Manutenção da bicicleta', 85.00, 'Saida', 'Transporte')
 
 listarTransacao()
-
+filtrarPorCategoria('Contas')
 
 
 
