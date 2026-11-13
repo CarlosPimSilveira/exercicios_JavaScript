@@ -109,24 +109,30 @@ function filtrarPorCategoria(cate) {
     }) 
 }
 
+function verificarId(id) {
+    return transacoes.findIndex(
+        tra => tra.Id === id
+    );
+}
+
 function removerTransacao(id) {
     if (verificaDados()) {
-        console.log('Nenhuma transação cadastrada!')
+        return console.log('Nenhuma transação cadastrada!')
     }
 
-    let achouId = false
+    let achouId = verificarId()
 
-    transacoes.forEach((mov) => {
-        if (mov.Id === id) {
-            achouId = true
-        }
-    }) 
+    console.log(achouId)
 
     if (!achouId) {
         return console.log('Id não achado!')
     } else {
         transacoes.splice(id-1, 1)
     }
+}
+
+function ExibirResumoFinanceiro() {
+
 }
 
 adicionarTransacao('Salário mensal', 3000.00, 'Entrada', 'Salario')
@@ -149,5 +155,7 @@ listarTransacao()
 
 filtrarPorCategoria('Contas')
 removerTransacao(5)
+
+ExibirResumoFinanceiro()
 
 
