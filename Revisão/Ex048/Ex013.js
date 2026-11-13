@@ -91,7 +91,7 @@ function listarTransacao() {
     }
 
     transacoes.forEach((mov) => {
-        console.log(`Descrição: ${mov.Descricao} valor: ${mov.Valor} Tipo: ${mov.Tipo} categoria: ${mov.Categoria}`)
+        console.log(`Id: ${mov.Id} descrição: ${mov.Descricao} valor: ${mov.Valor} Tipo: ${mov.Tipo} categoria: ${mov.Categoria}`)
     }) 
 }
 
@@ -110,7 +110,9 @@ function filtrarPorCategoria(cate) {
 }
 
 function removerTransacao(id) {
-    
+    if (verificaDados()) {
+        console.log('Nenhuma transação cadastrada!')
+    }
 }
 
 adicionarTransacao('Salário mensal', 3000.00, 'Entrada', 'Salario')
