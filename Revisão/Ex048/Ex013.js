@@ -112,7 +112,7 @@ function filtrarPorCategoria(cate) {
 function verificarId(id) {
     return transacoes.findIndex(
         tra => tra.Id === id
-    );
+    )
 }
 
 function removerTransacao(id) {
@@ -122,7 +122,11 @@ function removerTransacao(id) {
 
     let achouId = verificarId(id)
 
-    transacoes.splice(achouId, 1)
+    if (achouId >= 0) {
+        transacoes.splice(achouId, 1)
+    } else {
+        return console.log('Id não achado!')
+    }       
 }
 
 function ExibirResumoFinanceiro() {
@@ -151,5 +155,5 @@ filtrarPorCategoria('Contas')
 removerTransacao(5)
 
 ExibirResumoFinanceiro()
-listarTransacao()
+
 
