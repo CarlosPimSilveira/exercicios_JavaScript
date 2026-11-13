@@ -125,7 +125,7 @@ function removerTransacao(id) {
     if (!achouId) {
         return console.log('Id não achado!')
     } else {
-        transacoes.splice(id, 1)
+        transacoes.splice(id-1, 1)
     }
 }
 
