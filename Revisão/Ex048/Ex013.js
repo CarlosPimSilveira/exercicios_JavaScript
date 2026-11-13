@@ -113,6 +113,10 @@ function removerTransacao(id) {
     if (verificaDados()) {
         console.log('Nenhuma transação cadastrada!')
     }
+
+    transacoes.forEach((mov) => {
+        console.log(`Descrição: ${mov.Descricao} valor: ${mov.Valor} Tipo: ${mov.Tipo} categoria: ${mov.Categoria}`)
+    }) 
 }
 
 adicionarTransacao('Salário mensal', 3000.00, 'Entrada', 'Salario')
