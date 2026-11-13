@@ -130,7 +130,21 @@ function removerTransacao(id) {
 }
 
 function ExibirResumoFinanceiro() {
+    if (verificaDados()) {
+        return console.log('Nenhuma transação cadastrada!')
+    }
+    let TotEnt = 0
+    let TotSai = 0
 
+    transacoes.forEach((mov) => {
+        if (mov.Tipo.toLowerCase() === 'Entrada'.toLowerCase()) {
+            TotEnt += mov.Valor
+        }
+        if (mov.Tipo.toLowerCase() === 'Saida'.toLowerCase()) {
+            TotSai += mov.Valor
+        }
+    })
+    console.log(`Total entrada: ${TotEnt.toFixed(2)} total saida: ${TotSai.toFixed(2)} saldo: ${TotEnt-TotSai.toFixed(2)}`)
 }
 
 adicionarTransacao('Salário mensal', 3000.00, 'Entrada', 'Salario')
