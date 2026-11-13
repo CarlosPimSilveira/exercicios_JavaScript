@@ -109,6 +109,10 @@ function filtrarPorCategoria(cate) {
     }) 
 }
 
+function removerTransacao(id) {
+    
+}
+
 adicionarTransacao('Salário mensal', 3000.00, 'Entrada', 'Salario')
 adicionarTransacao('Freelance de programação', 450.00, 'Entrada', 'Salario')
 adicionarTransacao('Compra no supermercado', 280.50, 'Saida', 'Alimentação')
@@ -126,6 +130,8 @@ adicionarTransacao('Vale alimentação', 500.00, 'Entrada', 'Salario')
 adicionarTransacao('Manutenção da bicicleta', 85.00, 'Saida', 'Transporte')
 
 listarTransacao()
+removerTransacao(5)
+
 filtrarPorCategoria('Contas')
 
 
