@@ -120,15 +120,9 @@ function removerTransacao(id) {
         return console.log('Nenhuma transação cadastrada!')
     }
 
-    let achouId = verificarId()
+    let achouId = verificarId(id)
 
-    console.log(achouId)
-
-    if (!achouId) {
-        return console.log('Id não achado!')
-    } else {
-        transacoes.splice(id-1, 1)
-    }
+    transacoes.splice(achouId, 1)
 }
 
 function ExibirResumoFinanceiro() {
@@ -157,5 +151,5 @@ filtrarPorCategoria('Contas')
 removerTransacao(5)
 
 ExibirResumoFinanceiro()
-
+listarTransacao()
 
