@@ -114,9 +114,19 @@ function removerTransacao(id) {
         console.log('Nenhuma transação cadastrada!')
     }
 
+    let achouId = false
+
     transacoes.forEach((mov) => {
-        console.log(`Descrição: ${mov.Descricao} valor: ${mov.Valor} Tipo: ${mov.Tipo} categoria: ${mov.Categoria}`)
+        if (mov.Id === id) {
+            achouId = true
+        }
     }) 
+
+    if (!achouId) {
+        return console.log('Id não achado!')
+    } else {
+        transacoes.splice(id, 1)
+    }
 }
 
 adicionarTransacao('Salário mensal', 3000.00, 'Entrada', 'Salario')
@@ -136,10 +146,8 @@ adicionarTransacao('Vale alimentação', 500.00, 'Entrada', 'Salario')
 adicionarTransacao('Manutenção da bicicleta', 85.00, 'Saida', 'Transporte')
 
 listarTransacao()
-removerTransacao(5)
 
 filtrarPorCategoria('Contas')
-
-
+removerTransacao(5)
 
 
