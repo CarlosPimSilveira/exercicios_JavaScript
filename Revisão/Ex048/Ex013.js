@@ -144,7 +144,7 @@ function ExibirResumoFinanceiro() {
             TotSai += mov.Valor
         }
     })
-    console.log(`Total entrada: ${TotEnt.toFixed(2)} total saida: ${TotSai.toFixed(2)} saldo: ${TotEnt-TotSai.toFixed(2)}`)
+    console.log(`Total entrada: ${TotEnt.toFixed(2)} total saida: ${TotSai.toFixed(2)} saldo: ${(TotEnt-TotSai).toFixed(2)}`)
 }
 
 adicionarTransacao('Salário mensal', 3000.00, 'Entrada', 'Salario')
