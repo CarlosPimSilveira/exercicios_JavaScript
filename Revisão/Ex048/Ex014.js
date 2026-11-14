@@ -3,7 +3,7 @@ const alunos = []
 const cursos = ['Frontend', 'Backend', 'FullStack', 'Dados']
 
 function validarNome(nome) {
-    return typeof desc === 'string' && desc.trim() !== ""
+    return typeof nome === 'string' && nome.trim() !== ""
 }
 
 function validarCurso(crs) {
@@ -17,7 +17,16 @@ function validarCurso(crs) {
     return true;
 }
 
-validarCurso('FullStack')
+function cadastrarAluno(nome, curso) {
+    const valNome = validarNome(nome) 
+    const valCurso = validarCurso(curso)
+
+    if (!valNome) {
+        return console.log('Nome invalido!')
+    }
+}
+
+cadastrarAluno('carlos', 'teste')
 
 
 
