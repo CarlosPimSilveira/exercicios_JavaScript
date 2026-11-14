@@ -133,18 +133,23 @@ function ExibirResumoFinanceiro() {
     if (verificaDados()) {
         return console.log('Nenhuma transação cadastrada!')
     }
-    let TotEnt = 0
-    let TotSai = 0
+    
+    const { TotEnt, TotSai } = transacoes.reduce((acc, mov) => {
+        const tipo = mov.Tipo.toLowerCase();
+        const valor = Number(mov.Valor) || 0;
 
-    transacoes.forEach((mov) => {
-        if (mov.Tipo.toLowerCase() === 'Entrada'.toLowerCase()) {
-            TotEnt += mov.Valor
+        if (tipo === 'entrada') {
+            acc.TotEnt += valor;
+        } else if (tipo === 'saida' || tipo === 'saída') {
+            acc.TotSai += valor;
         }
-        if (mov.Tipo.toLowerCase() === 'Saida'.toLowerCase()) {
-            TotSai += mov.Valor
-        }
-    })
-    console.log(`Total entrada: ${TotEnt.toFixed(2)} total saida: ${TotSai.toFixed(2)} saldo: ${(TotEnt-TotSai).toFixed(2)}`)
+
+        return acc;
+    }, { TotEnt: 0, TotSai: 0 });
+
+    const formatarMoeda = (valor) => valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+    console.log(`Total entrada: ${formatarMoeda(TotEnt)} | Total saída: ${formatarMoeda(TotSai)} | Saldo: ${formatarMoeda(TotEnt - TotSai)}`);
 }
 
 adicionarTransacao('Salário mensal', 3000.00, 'Entrada', 'Salario')
