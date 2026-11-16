@@ -8,7 +8,7 @@ function validarNome(nome) {
 }
 
 function validarCurso(crs) {
-    if (typeof crs === 'string' && crs.trim() !== "")
+    if (typeof crs !== 'string' || crs.trim() === "")
         return
 
     let achouCurso = Cursos.some(curso => curso.toLowerCase() === crs.toLowerCase());
