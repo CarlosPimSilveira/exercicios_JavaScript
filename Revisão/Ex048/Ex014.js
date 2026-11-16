@@ -41,9 +41,12 @@ function cadastrarAluno(nome, curso) {
     })
 }
 
+function 
+
 cadastrarAluno('carlos', 'FullStack')
+cadastrarAluno('Eduardo', 'Backend')
+cadastrarAluno('Jose', 'Backend')
 
-
-
+lançarNota(1, 5)
 
 
