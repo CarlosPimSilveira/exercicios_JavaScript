@@ -8,6 +8,9 @@ function validarNome(nome) {
 }
 
 function validarCurso(crs) {
+    if (typeof crs === 'string' && crs.trim() !== "")
+        return
+
     let achouCurso = Cursos.some(curso => curso.toLowerCase() === crs.toLowerCase());
 
     if (!achouCurso) {
@@ -34,7 +37,7 @@ function cadastrarAluno(nome, curso) {
         Id: Id,
         Nome: nome,
         Cursos: curso,
-        Notas: [0, 0, 0]
+        Notas: []
     })
 }
 
