@@ -20,7 +20,9 @@ function validarCurso(crs) {
 
 function cadastrarAluno(nome, curso) {
     const valNome = validarNome(nome) 
-    validarCurso(curso)
+    if (!validarCurso(curso)) {
+        return
+    }
 
     if (!valNome) {
         return console.log('Nome invalido!')
