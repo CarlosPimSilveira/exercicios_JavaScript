@@ -8,7 +8,7 @@ function validarNome(nome) {
 }
 
 function validarNota(Nota) {
-    return typeof Nota === 'number' && !Number.isNaN(Nota) && !Nota >= 0
+    return (typeof Nota === 'number' && !Number.isNaN(Nota)) && Nota >= 0 && Nota <= 10
 }
 
 function validarCurso(crs) {
@@ -50,16 +50,18 @@ function lançarNota(id, nota) {
         return console.log('Nota invalida!')
     }
 
-    const alunoEncontrado = Alunos.find(aluno => id === aluno.Id);
-    alunoEncontrado.Notas = nota
+    const alunoEncontrado = Alunos.find(aluno => id === aluno.Id)
+    if (!alunoEncontrado) 
+        return console.log('ID não encontrado!')
+    alunoEncontrado.Notas.push(nota)
 }
-
 
 
 cadastrarAluno('carlos', 'FullStack')
 cadastrarAluno('Eduardo', 'Backend')
 cadastrarAluno('Jose', 'Backend')
 
-lançarNota(2, 5)
+lançarNota(2, 1)
+lançarNota(2, 8)
 
-
+console.log(Alunos)
