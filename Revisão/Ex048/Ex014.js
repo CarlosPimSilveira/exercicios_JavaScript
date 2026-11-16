@@ -50,14 +50,16 @@ function lançarNota(id, nota) {
         return console.log('Nota invalida!')
     }
 
-    const alunoEncontrado = Alunos.find(aluno => id === aluno.id);
-    console.log(alunoEncontrado)
+    const alunoEncontrado = Alunos.find(aluno => id === aluno.Id);
+    alunoEncontrado.Notas = nota
 }
+
+
 
 cadastrarAluno('carlos', 'FullStack')
 cadastrarAluno('Eduardo', 'Backend')
 cadastrarAluno('Jose', 'Backend')
 
-lançarNota(1, 5)
+lançarNota(2, 5)
 
 
