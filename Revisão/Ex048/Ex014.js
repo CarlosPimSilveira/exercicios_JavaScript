@@ -34,7 +34,7 @@ function cadastrarAluno(nome, curso) {
         Id: Id,
         Nome: nome,
         Cursos: curso,
-        Notas: 0
+        Notas: [0, 0, 0]
     })
 }
 
