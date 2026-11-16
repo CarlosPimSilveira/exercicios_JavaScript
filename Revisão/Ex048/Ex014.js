@@ -7,6 +7,10 @@ function validarNome(nome) {
     return typeof nome === 'string' && nome.trim() !== ""
 }
 
+function validarNota(Nota) {
+    return typeof Nota === 'number' && !Number.isNaN(Nota) && !Nota >= 0
+}
+
 function validarCurso(crs) {
     if (typeof crs !== 'string' || crs.trim() === "")
         return
@@ -41,7 +45,13 @@ function cadastrarAluno(nome, curso) {
     })
 }
 
-function 
+function lançarNota(id, nota) {
+    if (!validarNota(nota)) {
+        return console.log('Nota invalida!')
+    }
+
+    
+}
 
 cadastrarAluno('carlos', 'FullStack')
 cadastrarAluno('Eduardo', 'Backend')
