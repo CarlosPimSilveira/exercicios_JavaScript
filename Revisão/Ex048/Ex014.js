@@ -61,6 +61,10 @@ function calcularMediaAluno(id) {
     if (!alunoEncontrado) 
         return console.log('ID não encontrado!')
 
+    if (!alunoEncontrado.Notas || alunoEncontrado.Notas.length === 0) {
+        return console.log('Aluno cadastrado está sem nota!');
+    }
+
     let media = 0
 
     alunoEncontrado.Notas.forEach((med) => {
@@ -72,7 +76,7 @@ function calcularMediaAluno(id) {
     console.log(`O aluno: ${alunoEncontrado.Nome} do curso ${alunoEncontrado.Cursos} ficou com media: ${media.toFixed(2)}`)
     if (media >= 6) {
         console.log('Aluno aprovado!')
-    } else if (media >= 4 && media <= 5) {
+    } else if (media >= 4 && media <= 5.9) {
         console.log('Aluno de recuperação!')
     } else {
         console.log('Aluno reprovado!')
@@ -88,5 +92,5 @@ lançarNota(2, 4)
 lançarNota(2, 6)
 
 calcularMediaAluno(2)
-
+calcularMediaAluno(1)
 //console.log(Alunos)
