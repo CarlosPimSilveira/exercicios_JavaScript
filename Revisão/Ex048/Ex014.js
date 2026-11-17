@@ -60,6 +60,19 @@ function calcularMediaAluno(id) {
     const alunoEncontrado = Alunos.find(aluno => id === aluno.Id)
     if (!alunoEncontrado) 
         return console.log('ID não encontrado!')
+
+    let media = 0
+
+    alunoEncontrado.Notas.forEach((med) => {
+        media += med;
+    });
+
+    media = media / alunoEncontrado.Notas.length
+
+    console.log(`O aluno: ${alunoEncontrado.Nome} do curso ${alunoEncontrado.Cursos} ficou com media: ${media}`)
+    if (media >= 6) {
+        console.log('Aluno aprovado!')
+    }
 }
 
 cadastrarAluno('carlos', 'FullStack')
@@ -72,4 +85,4 @@ lançarNota(2, 6)
 
 calcularMediaAluno(2)
 
-console.log(Alunos)
+//console.log(Alunos)
