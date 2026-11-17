@@ -69,9 +69,13 @@ function calcularMediaAluno(id) {
 
     media = media / alunoEncontrado.Notas.length
 
-    console.log(`O aluno: ${alunoEncontrado.Nome} do curso ${alunoEncontrado.Cursos} ficou com media: ${media}`)
+    console.log(`O aluno: ${alunoEncontrado.Nome} do curso ${alunoEncontrado.Cursos} ficou com media: ${media.toFixed(2)}`)
     if (media >= 6) {
         console.log('Aluno aprovado!')
+    } else if (media >= 4 && media <= 5) {
+        console.log('Aluno de recuperação!')
+    } else {
+        console.log('Aluno reprovado!')
     }
 }
 
@@ -79,8 +83,8 @@ cadastrarAluno('carlos', 'FullStack')
 cadastrarAluno('Eduardo', 'Backend')
 cadastrarAluno('Jose', 'Backend')
 
-lançarNota(2, 1)
-lançarNota(2, 8)
+lançarNota(2, 2)
+lançarNota(2, 4)
 lançarNota(2, 6)
 
 calcularMediaAluno(2)
