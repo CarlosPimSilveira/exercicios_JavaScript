@@ -56,6 +56,11 @@ function lançarNota(id, nota) {
     alunoEncontrado.Notas.push(nota)
 }
 
+function calcularMediaAluno(id) {
+    const alunoEncontrado = Alunos.find(aluno => id === aluno.Id)
+    if (!alunoEncontrado) 
+        return console.log('ID não encontrado!')
+}
 
 cadastrarAluno('carlos', 'FullStack')
 cadastrarAluno('Eduardo', 'Backend')
@@ -63,5 +68,8 @@ cadastrarAluno('Jose', 'Backend')
 
 lançarNota(2, 1)
 lançarNota(2, 8)
+lançarNota(2, 6)
+
+calcularMediaAluno(2)
 
 console.log(Alunos)
