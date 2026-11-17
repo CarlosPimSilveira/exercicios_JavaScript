@@ -83,14 +83,41 @@ function calcularMediaAluno(id) {
     }
 }
 
-cadastrarAluno('carlos', 'FullStack')
+// Cadastro de alunos
+cadastrarAluno('Carlos', 'FullStack')
 cadastrarAluno('Eduardo', 'Backend')
 cadastrarAluno('Jose', 'Backend')
+cadastrarAluno('Mariana', 'FullStack')
+cadastrarAluno('Ana', 'Frontend')
+cadastrarAluno('Pedro', 'Backend')
+cadastrarAluno('Lucas', 'Frontend')
+cadastrarAluno('Fernanda', 'FullStack')
 
-lançarNota(2, 2)
-lançarNota(2, 4)
+// Lançamento de notas
+lançarNota(1, 8)
+lançarNota(1, 7)
 lançarNota(2, 6)
+lançarNota(2, 9)
+lançarNota(3, 5)
+lançarNota(3, 8)
+lançarNota(4, 10)
+lançarNota(4, 9)
+lançarNota(5, 7)
+lançarNota(5, 8)
+lançarNota(6, 4)
+lançarNota(6, 6)
+lançarNota(7, 9)
+lançarNota(7, 10)
+lançarNota(8, 6)
+lançarNota(8, 8)
 
-calcularMediaAluno(2)
+// Cálculo das médias
 calcularMediaAluno(1)
+calcularMediaAluno(2)
+calcularMediaAluno(3)
+calcularMediaAluno(4)
+calcularMediaAluno(5)
+calcularMediaAluno(6)
+calcularMediaAluno(7)
+calcularMediaAluno(8)
 //console.log(Alunos)
