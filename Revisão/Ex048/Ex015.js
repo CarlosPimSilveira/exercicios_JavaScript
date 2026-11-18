@@ -5,7 +5,7 @@ let meio = Math.floor((numeros[0] + numeros.length-1) / 2)
 
 while(contador <= numeros.length) {
     if (meio === numeros[contador]) {
-        return console.log(`O meio é: ${numeros[contador]}`)
+        return console.log(`O meio é: ${numeros[meio]}`)
     }
     contador++
 } 
