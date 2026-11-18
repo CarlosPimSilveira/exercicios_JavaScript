@@ -77,15 +77,17 @@ function calcularMediaAluno(id) {
     adcMedia.Media = Number(media.toFixed(2))
 }
 
-function gerarBoletimTurma(nome, curso, media) {
-console.log(`O aluno: ${alunoEncontrado.Nome} do curso ${alunoEncontrado.Cursos} ficou com media: ${media.toFixed(2)}`)
-    if (media.toFixed(2) >= 6) {
-        console.log('Aluno aprovado!')
-    } else if (media.toFixed(2) >= 4 && media.toFixed(2) <= 5.9) {
-        console.log('Aluno de recuperação!')
-    } else {
-        console.log('Aluno reprovado!')
-    }
+function gerarBoletimTurma() {
+    Alunos.forEach((aluno) => {
+        console.log(`O aluno: ${aluno.Nome} do curso ${aluno.Cursos} ficou com media: ${aluno.Media}`)
+        if (aluno.Media >= 6) {
+            console.log('Aluno aprovado!')
+        } else if (aluno.Media >= 4 && aluno.Media <= 5.9) {
+            console.log('Aluno de recuperação!')
+        } else {
+            console.log('Aluno reprovado!')
+        }
+    })
 }
 
 // Cadastro de alunos
@@ -134,6 +136,6 @@ calcularMediaAluno(6)
 calcularMediaAluno(7)
 calcularMediaAluno(8)
 
+gerarBoletimTurma()
 
-
-console.log(Alunos)
+//console.log(Alunos)
