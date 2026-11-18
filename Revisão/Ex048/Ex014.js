@@ -104,7 +104,6 @@ function exibirEstatisticasTurma() {
             ultimaMedia = aluno.Media
         } else if (aluno.Media === ultimaMedia){
             melhorAluno += ', ' + aluno.Nome
-            ultimaMedia += aluno.Media
         }
         mediaTurma += aluno.Media
     })
