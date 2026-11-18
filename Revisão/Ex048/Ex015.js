@@ -1,15 +1,21 @@
 const numeros = [2, 5, 8, 12, 16, 23, 38, 56, 72, 90]
-// quero achar o 23 com lista binaria!
-let contador = 0
-let meio = Math.floor((numeros[0] + numeros.length-1) / 2)
+const alvo = 23
 
-while(contador <= numeros.length) {
-    if (meio === numeros[contador]) {
-        return console.log(`O meio é: ${numeros[meio]}`)
+let inicio = 0
+let fim = numeros.length - 1
+
+while (inicio <= fim) {
+
+    let meio = Math.floor((inicio + fim) / 2)
+
+    if (numeros[meio] === alvo) {
+        return console.log(`A metade foi encontrada: ${alvo}`)
+    } else if (numeros[meio] < alvo) {
+        inicio = meio+1
+    } else {
+        fim = meio-1
     }
-    contador++
-} 
-
+}
 
 
 
