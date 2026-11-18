@@ -89,6 +89,12 @@ function gerarBoletimTurma() {
     })
 }
 
+function exibirEstatisticasTurma() {
+    Alunos.forEach((aluno) => {
+        
+    })
+}
+
 // Cadastro de alunos
 cadastrarAluno('Carlos', 'FullStack')
 cadastrarAluno('Eduardo', 'Backend')
@@ -127,4 +133,4 @@ lançarNota(8, 10)
 
 gerarBoletimTurma()
 
-//console.log(Alunos)
+exibirEstatisticasTurma()
