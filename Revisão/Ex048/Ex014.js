@@ -70,10 +70,15 @@ function calcularMediaAluno(id) {
     alunoEncontrado.Notas.forEach((med) => {
         media += med;
     });
-
     media = media / alunoEncontrado.Notas.length
 
-    console.log(`O aluno: ${alunoEncontrado.Nome} do curso ${alunoEncontrado.Cursos} ficou com media: ${media.toFixed(2)}`)
+    const adcMedia = Alunos.find(u => u.Id === id)
+
+    adcMedia.Media = Number(media.toFixed(2))
+}
+
+function gerarBoletimTurma(nome, curso, media) {
+console.log(`O aluno: ${alunoEncontrado.Nome} do curso ${alunoEncontrado.Cursos} ficou com media: ${media.toFixed(2)}`)
     if (media.toFixed(2) >= 6) {
         console.log('Aluno aprovado!')
     } else if (media.toFixed(2) >= 4 && media.toFixed(2) <= 5.9) {
@@ -96,20 +101,28 @@ cadastrarAluno('Fernanda', 'FullStack')
 // Lançamento de notas
 lançarNota(1, 8)
 lançarNota(1, 7)
+lançarNota(1, 6)
 lançarNota(2, 6)
 lançarNota(2, 9)
+lançarNota(2, 10)
 lançarNota(3, 5)
 lançarNota(3, 8)
+lançarNota(3, 4)
 lançarNota(4, 10)
 lançarNota(4, 9)
+lançarNota(4, 7)
 lançarNota(5, 7)
+lançarNota(5, 8)
 lançarNota(5, 8)
 lançarNota(6, 4)
 lançarNota(6, 6)
+lançarNota(6, 7)
 lançarNota(7, 9)
 lançarNota(7, 10)
+lançarNota(7, 7)
 lançarNota(8, 6)
 lançarNota(8, 8)
+lançarNota(8, 10)
 
 // Cálculo das médias
 calcularMediaAluno(1)
@@ -120,4 +133,7 @@ calcularMediaAluno(5)
 calcularMediaAluno(6)
 calcularMediaAluno(7)
 calcularMediaAluno(8)
-//console.log(Alunos)
+
+
+
+console.log(Alunos)
