@@ -90,25 +90,28 @@ function gerarBoletimTurma() {
 }
 
 function exibirEstatisticasTurma() {
-    let alunosAprovados = ''
+    let alunosAprovados = []
     let melhorAluno = ''
     let ultimaMedia = 0
     let mediaTurma = 0
 
     Alunos.forEach((aluno) => {
         if (aluno.Media >= 6){
-            alunosAprovados += aluno.Nome + ', '
+            alunosAprovados.push(aluno.Nome)
         }
-        if (aluno.Media >= ultimaMedia) {
+        if (aluno.Media > ultimaMedia) {
             melhorAluno = aluno.Nome
             ultimaMedia = aluno.Media
+        } else if (aluno.Media === ultimaMedia){
+            melhorAluno += ', ' + aluno.Nome
+            ultimaMedia += aluno.Media
         }
         mediaTurma += aluno.Media
     })
 
     mediaTurma = mediaTurma / Alunos.length
 
-    console.log(`Os alunos aprovados foram: ${alunosAprovados}`)
+    console.log(`Os alunos aprovados foram: ${alunosAprovados.join(", ")}`)
     console.log(`O melhor aluno da a turma foi: ${melhorAluno}`)
     console.log(`A media da turma foi: ${mediaTurma.toFixed(2)}`)
 }
