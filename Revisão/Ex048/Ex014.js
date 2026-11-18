@@ -72,13 +72,12 @@ function calcularMediaAluno(id) {
     });
     media = media / alunoEncontrado.Notas.length
 
-    const adcMedia = Alunos.find(u => u.Id === id)
-
-    adcMedia.Media = Number(media.toFixed(2))
+    alunoEncontrado.Media = Number(media.toFixed(2))
 }
 
 function gerarBoletimTurma() {
     Alunos.forEach((aluno) => {
+    calcularMediaAluno(aluno.Id)
         console.log(`O aluno: ${aluno.Nome} do curso ${aluno.Cursos} ficou com media: ${aluno.Media}`)
         if (aluno.Media >= 6) {
             console.log('Aluno aprovado!')
@@ -125,16 +124,6 @@ lançarNota(7, 7)
 lançarNota(8, 6)
 lançarNota(8, 8)
 lançarNota(8, 10)
-
-// Cálculo das médias
-calcularMediaAluno(1)
-calcularMediaAluno(2)
-calcularMediaAluno(3)
-calcularMediaAluno(4)
-calcularMediaAluno(5)
-calcularMediaAluno(6)
-calcularMediaAluno(7)
-calcularMediaAluno(8)
 
 gerarBoletimTurma()
 
