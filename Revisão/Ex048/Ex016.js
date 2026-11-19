@@ -5,21 +5,14 @@ const Tecnicos = ['João', 'Maria', 'Pedro', 'Carlos']
 let Id = 0
 
 // Verificações
-function verificaCliente(cliente){
-    return typeof cliente === 'string' && cliente.trim() !== ""
+function validarTexto(txt){
+    return typeof txt === 'string' && txt.trim() !== ""
 }
 
-function verificarProblema(problema) {
-    return typeof problema === 'string' && problema.trim() !== ""
-}
-
-function verificaTecnico(tecnico) {
-    return typeof tecnico === 'string' && tecnico.trim() !== ""
-}
-
-function abrirChamado(cliente, problema, prioridades) {
-    const clienteVerificado = verificaCliente(cliente)
-    const problemaVerificado = verificarProblema(problema)
+function abrirChamado(cliente, problema, prioridade) {
+    const clienteVerificado = validarTexto(cliente)
+    const problemaVerificado = validarTexto(problema)
+    const prioridadeVerificada = validarTexto(prioridade)
 
     if (!clienteVerificado){
         return console.log('Nome do cliente invalido!')
@@ -29,7 +22,11 @@ function abrirChamado(cliente, problema, prioridades) {
         return console.log('Problema invalido!')
     }
 
-    let achaPrioridade = Prioridades.some(pri => pri.toLowerCase() === prioridades.toLowerCase());
+    if (!prioridadeVerificada) {
+        return console.log('Prioridade invalida!')
+    }
+
+    let achaPrioridade = Prioridades.some(pri => pri.toLowerCase() === prioridade.toLowerCase());
 
     if (!achaPrioridade) {
         return console.log('Prioridade não encontrada!'); 
@@ -41,18 +38,30 @@ function abrirChamado(cliente, problema, prioridades) {
         Id: Id,
         Cliente: cliente,
         Problema: problema,
-        Prioridades: prioridades,
+        Prioridades: prioridade,
         Status: 'Aberto',
         Tecnico: ''
     })
 }
 
 function assumirChamados(idChamado, nomTecnico) {
-    const tecnicoVerificado = verificaCliente(nomTecnico)
+    const idachado = Chamados.find(ids => idChamado === ids.Id)
+    if (!idachado) 
+        return console.log('ID não encontrado!')
+
+    const tecnicoVerificado = validarTexto(nomTecnico)
 
     if (!tecnicoVerificado){
-        return console.log('Nome do cliente invalido!')
+        return console.log('Nome do tecnico invalido!')
     }
+
+    let achaTecnico = Tecnicos.some(tec => tec.toLowerCase() === nomTecnico.toLowerCase());
+
+    if (!achaTecnico) {
+        return console.log('Tecnico não encontrado!'); 
+    }
+
+    
 
     Chamados.forEach((chama) => {
         if (chama.Id === idChamado) {
