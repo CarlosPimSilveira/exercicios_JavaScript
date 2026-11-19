@@ -13,6 +13,10 @@ function verificarProblema(problema) {
     return typeof problema === 'string' && problema.trim() !== ""
 }
 
+function verificaTecnico(tecnico) {
+    return typeof tecnico === 'string' && tecnico.trim() !== ""
+}
+
 function abrirChamado(cliente, problema, prioridades) {
     const clienteVerificado = verificaCliente(cliente)
     const problemaVerificado = verificarProblema(problema)
@@ -44,7 +48,18 @@ function abrirChamado(cliente, problema, prioridades) {
 }
 
 function assumirChamados(idChamado, nomTecnico) {
-    
+    const tecnicoVerificado = verificaCliente(nomTecnico)
+
+    if (!tecnicoVerificado){
+        return console.log('Nome do cliente invalido!')
+    }
+
+    Chamados.forEach((chama) => {
+        if (chama.Id === idChamado) {
+            chama.Tecnico = nomTecnico
+            chama.Status = 'Em andamento'
+        }
+    })
 }
 
 abrirChamado('Jose', 'Erro em relatorio', 'Alta')
