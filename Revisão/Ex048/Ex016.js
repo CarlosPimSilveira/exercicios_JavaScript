@@ -1,6 +1,7 @@
 const Chamados = []
 const Prioridades = ['Baixa', 'Media', 'Alta']
 const StatusValidos = ['Aberto', 'Em Andamento', 'Resolvido']
+const Tecnicos = ['João', 'Maria', 'Pedro', 'Carlos']
 let Id = 0
 
 // Verificações
@@ -42,8 +43,17 @@ function abrirChamado(cliente, problema, prioridades) {
     })
 }
 
+function assumirChamados(idChamado, nomTecnico) {
+    
+}
 
+abrirChamado('Jose', 'Erro em relatorio', 'Alta')
+abrirChamado('Carlos', 'Sistema nao abre tela de cadastro', 'Urgente')
+abrirChamado('Mariana', 'Lentidao ao consultar clientes', 'Media')
+abrirChamado('Eduardo', 'Falha ao salvar pedido', 'Alta')
+abrirChamado('Ana', 'Erro ao gerar boleto', 'Baixa')
 
-abrirChamado('Carlos', 'Erro em relatorio', 'Alta')
+assumirChamados(2, 'Pedro')
+
 
 console.log(Chamados)
