@@ -1,5 +1,5 @@
-const chamados = []
-const prioridades = ['Baixa', 'Media', 'Alta']
+const Chamados = []
+const Prioridades = ['Baixa', 'Media', 'Alta']
 const StatusValidos = ['Aberto', 'Em Andamento', 'Resolvido']
 let id = 0
 
@@ -22,6 +22,12 @@ function abrirChamado(cliente, problema, prioridades) {
 
     if (!problemaVerificado) {
         return console.log('Problema invalido!')
+    }
+
+    let achaPrioridade = Prioridades.some(pri => pri.toLowerCase() === prioridades.toLowerCase());
+
+    if (!achaPrioridade) {
+        return console.log('Prioridade não encontrada!'); 
     }
 
 }
