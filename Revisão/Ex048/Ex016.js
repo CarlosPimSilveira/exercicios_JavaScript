@@ -1,7 +1,7 @@
 const Chamados = []
 const Prioridades = ['Baixa', 'Media', 'Alta']
 const StatusValidos = ['Aberto', 'Em Andamento', 'Resolvido']
-let id = 0
+let Id = 0
 
 // Verificações
 function verificaCliente(cliente){
@@ -30,7 +30,20 @@ function abrirChamado(cliente, problema, prioridades) {
         return console.log('Prioridade não encontrada!'); 
     }
 
+    Id++
+
+    Chamados.push({
+        Id: Id,
+        Cliente: cliente,
+        Problema: problema,
+        Prioridades: prioridades,
+        Status: 'Aberto',
+        Tecnico: ''
+    })
 }
 
 
+
 abrirChamado('Carlos', 'Erro em relatorio', 'Alta')
+
+console.log(Chamados)
