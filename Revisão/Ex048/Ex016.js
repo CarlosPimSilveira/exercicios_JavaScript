@@ -61,14 +61,16 @@ function assumirChamados(idChamado, nomTecnico) {
         return console.log('Tecnico não encontrado!'); 
     }
 
-    
+    if(idachado.Status.toLowerCase() === 'resolvido') {
+        return console.log('Chamado ja resolvido!')
+    }
 
-    Chamados.forEach((chama) => {
-        if (chama.Id === idChamado) {
-            chama.Tecnico = nomTecnico
-            chama.Status = 'Em andamento'
-        }
-    })
+    idachado.Tecnico = nomTecnico
+    idachado.Status = 'Em andamento'
+}
+
+function resolverChamado(idChamado) {
+    
 }
 
 abrirChamado('Jose', 'Erro em relatorio', 'Alta')
@@ -79,5 +81,6 @@ abrirChamado('Ana', 'Erro ao gerar boleto', 'Baixa')
 
 assumirChamados(2, 'Pedro')
 
+resolverChamado(2)
 
 console.log(Chamados)
