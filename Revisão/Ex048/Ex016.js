@@ -72,12 +72,16 @@ function assumirChamados(idChamado, nomTecnico) {
 function resolverChamado(idChamado) {
     const idachado = Chamados.find(ids => idChamado === ids.Id)
     if (!idachado) 
-        return console.log('ID não encontrado!')
+        return console.log('Chamado não encontrado!')
 
-    if(idachado.Status.toLowerCase() === 'resolvido')
-        return console.log('Chamado ja resolvido!')
+    if (idachado.Status.toLowerCase() === 'resolvido')
+        return console.log(`Chamado ja resolvido pelo tecnico: ${idachado.Tecnico}`)
+
+    if (idachado.Tecnico === '') 
+        return console.log(`Chamado sem tecnico responsavel!`)
 
     idachado.Status = 'Resolvido'
+    console.log(`Chamado Id: ${idachado.Id} resolvido pelo tecnico: ${idachado.Tecnico} status atual: ${idachado.Status}`)
 }
 
 abrirChamado('Jose', 'Erro em relatorio', 'Alta')
@@ -88,6 +92,7 @@ abrirChamado('Ana', 'Erro ao gerar boleto', 'Baixa')
 
 assumirChamados(2, 'Pedro')
 
+resolverChamado(2)
 resolverChamado(2)
 
 
