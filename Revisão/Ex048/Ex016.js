@@ -74,6 +74,9 @@ function resolverChamado(idChamado) {
     if (!idachado) 
         return console.log('ID não encontrado!')
 
+    if(idachado.Status = 'Resolvido')
+        return console.log('Chamado ja resolvido!')
+
     idachado.Status = 'Resolvido'
 }
 
@@ -86,5 +89,6 @@ abrirChamado('Ana', 'Erro ao gerar boleto', 'Baixa')
 assumirChamados(2, 'Pedro')
 
 resolverChamado(2)
+resolverChamado(2)
 
-console.log(Chamados)
+//console.log(Chamados)
