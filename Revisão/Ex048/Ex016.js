@@ -70,7 +70,11 @@ function assumirChamados(idChamado, nomTecnico) {
 }
 
 function resolverChamado(idChamado) {
-    
+    const idachado = Chamados.find(ids => idChamado === ids.Id)
+    if (!idachado) 
+        return console.log('ID não encontrado!')
+
+    idachado.Status = 'Resolvido'
 }
 
 abrirChamado('Jose', 'Erro em relatorio', 'Alta')
