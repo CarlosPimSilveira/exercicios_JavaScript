@@ -109,6 +109,10 @@ function listarPorPrioridade(prioridade) {
     console.log(listaChamados)
 }
 
+function exibirPainelGeral() {
+    
+}
+
 abrirChamado('Jose', 'Erro em relatorio', 'Alta')
 abrirChamado('Carlos', 'Sistema nao abre tela de cadastro', 'Urgente')
 abrirChamado('Mariana', 'Lentidao ao consultar clientes', 'Media')
@@ -121,5 +125,7 @@ resolverChamado(2)
 resolverChamado(2)
 
 listarPorPrioridade('Alta')
+
+exibirPainelGeral()
 
 //console.log(Chamados)
