@@ -1,6 +1,6 @@
 const Chamados = []
 const Prioridades = ['baixa', 'media', 'alta']
-const StatusValidos = ['Aberto', 'Em Andamento', 'Resolvido']
+const StatusValidos = ['aberto', 'em andamento', 'resolvido']
 const Tecnicos = ['João', 'Maria', 'Pedro', 'Carlos']
 let Id = 0
 
@@ -118,11 +118,11 @@ function exibirPainelGeral() {
     let priAlta = 0
 
     Chamados.forEach((chama) => {
-        if (chama.Status === 'Aberto') {
+        if (chama.Status.toLowerCase() === 'aberto') {
             chamAberto += 1
-        } else if (chama.Status === 'Em Andamento') {
+        } else if (chama.Status.toLowerCase() === 'em andamento') {
             chamAndamento += 1
-        } else if (chama.Status === 'Resolvido') {
+        } else if (chama.Status.toLowerCase()- === 'resolvido') {
             chamResolvido += 1
         } else {
             return console.log('Status invalido!')
