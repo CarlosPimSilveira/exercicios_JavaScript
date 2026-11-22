@@ -90,7 +90,7 @@ function listarPorPrioridade(prioridade) {
     if (!prioridadeVerificado) {
         return console.log('Prioridade invalida!')
     }
-    const achaPrioridade = Prioridades.find(pri => prioridade === pri.Prioridades)
+    const achaPrioridade = Prioridades.find(pri => prioridade.toLowerCase() === pri.Prioridades.toLowerCase())
 
     console.log(achaPrioridade)
 }
