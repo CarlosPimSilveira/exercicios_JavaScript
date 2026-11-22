@@ -90,8 +90,8 @@ function listarPorPrioridade(prioridade) {
     if (!prioridadeVerificado) {
         return console.log('Prioridade invalida!')
     }
+    prioridadeVerificado = Prioridades.find(ids => idChamado === ids.Id)
 
-    
 }
 
 abrirChamado('Jose', 'Erro em relatorio', 'Alta')
