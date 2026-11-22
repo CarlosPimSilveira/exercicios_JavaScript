@@ -94,6 +94,19 @@ function listarPorPrioridade(prioridade) {
 
     if (!achaPrioridade) 
         return console.log(`Prioridade não encontrada!`)
+
+    let listaChamados = ''
+
+    Chamados.forEach((chama) => {
+        if (chama.Prioridades === prioridade) {
+            listaChamados += `Id: ${chama.Id} Cliente: ${chama.Cliente} - Problema: ${chama.Problema} - Status: ${chama.Status} - Tecnico: ${chama.Tecnico} \n`
+        }
+    })
+
+    if (listaChamados.length <= 0) 
+        return console.log('Nenhum chamado com essa prioridade!')
+
+    console.log(listaChamados)
 }
 
 abrirChamado('Jose', 'Erro em relatorio', 'Alta')
