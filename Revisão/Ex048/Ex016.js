@@ -1,5 +1,5 @@
 const Chamados = []
-const Prioridades = ['Baixa', 'Media', 'Alta']
+const Prioridades = ['baixa', 'media', 'alta']
 const StatusValidos = ['Aberto', 'Em Andamento', 'Resolvido']
 const Tecnicos = ['João', 'Maria', 'Pedro', 'Carlos']
 let Id = 0
@@ -90,7 +90,7 @@ function listarPorPrioridade(prioridade) {
     if (!prioridadeVerificado) {
         return console.log('Prioridade invalida!')
     }
-    const achaPrioridade = Prioridades.includes(prioridade)
+    const achaPrioridade = Prioridades.includes(prioridade.toLowerCase())
 
     if (!achaPrioridade) 
         return console.log(`Prioridade não encontrada!`)
@@ -98,7 +98,7 @@ function listarPorPrioridade(prioridade) {
     let listaChamados = ''
 
     Chamados.forEach((chama) => {
-        if (chama.Prioridades === prioridade) {
+        if (chama.Prioridades.toLowerCase() === prioridade.toLowerCase()) {
             listaChamados += `Id: ${chama.Id} Cliente: ${chama.Cliente} - Problema: ${chama.Problema} - Status: ${chama.Status} - Tecnico: ${chama.Tecnico.length === 0 ? 'Aguardando técnico' : chama.Tecnico} \n`;
         }
     })
