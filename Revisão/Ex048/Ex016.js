@@ -84,6 +84,10 @@ function resolverChamado(idChamado) {
     console.log(`Chamado Id: ${idachado.Id} resolvido pelo tecnico: ${idachado.Tecnico} status atual: ${idachado.Status}`)
 }
 
+function listarPorPrioridade(prioridade) {
+    
+}
+
 abrirChamado('Jose', 'Erro em relatorio', 'Alta')
 abrirChamado('Carlos', 'Sistema nao abre tela de cadastro', 'Urgente')
 abrirChamado('Mariana', 'Lentidao ao consultar clientes', 'Media')
@@ -95,5 +99,6 @@ assumirChamados(2, 'Pedro')
 resolverChamado(2)
 resolverChamado(2)
 
+listarPorPrioridade('Alta')
 
 //console.log(Chamados)
