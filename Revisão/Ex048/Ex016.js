@@ -85,6 +85,12 @@ function resolverChamado(idChamado) {
 }
 
 function listarPorPrioridade(prioridade) {
+    const prioridadeVerificado = validarTexto(prioridade)
+
+    if (!prioridadeVerificado) {
+        return console.log('Prioridade invalida!')
+    }
+
     
 }
 
