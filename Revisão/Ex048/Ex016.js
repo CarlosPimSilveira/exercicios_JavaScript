@@ -99,7 +99,7 @@ function listarPorPrioridade(prioridade) {
 
     Chamados.forEach((chama) => {
         if (chama.Prioridades === prioridade) {
-            listaChamados += `Id: ${chama.Id} Cliente: ${chama.Cliente} - Problema: ${chama.Problema} - Status: ${chama.Status} - Tecnico: ${chama.Tecnico} \n`
+            listaChamados += `Id: ${chama.Id} Cliente: ${chama.Cliente} - Problema: ${chama.Problema} - Status: ${chama.Status} - Tecnico: ${chama.Tecnico.length === 0 ? 'Aguardando técnico' : chama.Tecnico} \n`;
         }
     })
 
