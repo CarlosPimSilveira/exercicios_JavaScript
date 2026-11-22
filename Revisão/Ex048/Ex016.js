@@ -90,9 +90,10 @@ function listarPorPrioridade(prioridade) {
     if (!prioridadeVerificado) {
         return console.log('Prioridade invalida!')
     }
-    const achaPrioridade = Prioridades.find(pri => prioridade.toLowerCase() === pri.Prioridades.toLowerCase())
+    const achaPrioridade = Prioridades.includes(prioridade)
 
-    console.log(achaPrioridade)
+    if (!achaPrioridade) 
+        return console.log(`Prioridade não encontrada!`)
 }
 
 abrirChamado('Jose', 'Erro em relatorio', 'Alta')
