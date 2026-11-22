@@ -110,6 +110,22 @@ function listarPorPrioridade(prioridade) {
 }
 
 function exibirPainelGeral() {
+    let chamAberto = 0
+    let chamAndamento = 0
+    let chamResolvido = 0
+
+    Chamados.forEach((chama) => {
+        if (chama.Status === 'Aberto') {
+            chamAberto += 1
+        } else if (chama.Status === 'Em Andamento') {
+            chamAndamento += 1
+        } else if (chama.Status === 'Resolvido') {
+            chamResolvido += 1
+        } else {
+            return console.log('Status invalido!')
+        }
+    })
+
     
 }
 
