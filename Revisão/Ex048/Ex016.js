@@ -148,9 +148,17 @@ function exibirPainelGeral() {
             })
         }
     })
+
     console.log(`Chamados 'aberto' total: ${chamAberto} chamados 'em andamento' total: ${chamAndamento} chamados 'resolvidos' total: ${chamResolvido}`)
     console.log(`Chamados com prioridade 'baixa' total: ${priBaixa} chamados com prioridade 'media' total: ${priMedia} chamados com prioridade 'alta' total: ${priAlta}`)
-    console.log(``)
+    console.log('\n--- Chamados de Alta Prioridade Pendentes ---');
+    if (exibir.length === 0) {
+        console.log('Nenhum chamado crítico pendente.');
+    } else {
+        exibir.forEach((item) => {
+            console.log(`ID: ${item.Id} | Cliente: ${item.Cliente} | Problema: ${item.Problema} | Status: ${item.Status}`);
+        });
+    }
 }
 
 abrirChamado('Jose', 'Erro em relatorio', 'Alta')
