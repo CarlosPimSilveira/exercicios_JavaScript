@@ -116,13 +116,14 @@ function exibirPainelGeral() {
     let priBaixa = 0
     let priMedia = 0
     let priAlta = 0
+    let exibir = []
 
     Chamados.forEach((chama) => {
         if (chama.Status.toLowerCase() === 'aberto') {
             chamAberto += 1
         } else if (chama.Status.toLowerCase() === 'em andamento') {
             chamAndamento += 1
-        } else if (chama.Status.toLowerCase()- === 'resolvido') {
+        } else if (chama.Status.toLowerCase() === 'resolvido') {
             chamResolvido += 1
         } else {
             return console.log('Status invalido!')
@@ -136,9 +137,20 @@ function exibirPainelGeral() {
         } else {
             return console.log('Prioridade invalida!')
         }
+
+        if (chama.Prioridades.toLowerCase() === 'alta' && chama.Status.toLowerCase() !== 'resolvido') {
+            exibir.push({
+                Id: chama.Id,
+                Cliente: chama.Cliente,
+                Problema: chama.Problema,
+                Prioridades: chama.Prioridades,
+                Status: chama.Status
+            })
+        }
     })
     console.log(`Chamados 'aberto' total: ${chamAberto} chamados 'em andamento' total: ${chamAndamento} chamados 'resolvidos' total: ${chamResolvido}`)
     console.log(`Chamados com prioridade 'baixa' total: ${priBaixa} chamados com prioridade 'media' total: ${priMedia} chamados com prioridade 'alta' total: ${priAlta}`)
+    console.log(``)
 }
 
 abrirChamado('Jose', 'Erro em relatorio', 'Alta')
