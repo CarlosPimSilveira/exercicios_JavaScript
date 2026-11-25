@@ -54,12 +54,23 @@ class ContaBancaria {
 
         this.saldo -= valor
         contaDestino.saldo += valor
-        this.extrato.push({ tipo: `Transferencia enviar para ${contaDestino.numeroConta}`, valor: valor });
+        this.extrato.push({ tipo: `Transferencia enviada para ${contaDestino.numeroConta}`, valor: valor });
         contaDestino.extrato.push({ tipo: `Transferencia recebida de ${this.numeroConta}`, valor: valor });
     }
 
     exibirExtrato() {
-        
+        console.log('----- Exibir Extrato! -----')
+        console.log(`=== Extrato de ${this.titular} (Conta: ${this.numeroConta}) ===`);
+        if (this.extrato.length === 0) {
+            console.log('Sem movimentações!')
+            return
+        }
+        this.extrato.forEach((movimentacao, index) => {
+            console.log(`${index + 1}. ${movimentacao.tipo}: R$ ${movimentacao.valor.toFixed(2)}`);
+        });
+
+        console.log(`Saldo atual: R$ ${this.saldo.toFixed(2)}`);
+        console.log('----- Fim da exibição -----')
     }
 }
 
