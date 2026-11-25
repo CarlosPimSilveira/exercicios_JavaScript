@@ -10,13 +10,18 @@ function confereTexto(txt) {
     return typeof txt === 'string' && txt.trim() !== ""
 }
 
-function buscarPrato(BusPrato) {
-    const pratoVerificado = validarTexto(BusPrato)
+async function buscarPrato(BusPrato) {
+    const pratoVerificado = confereTexto(BusPrato)
 
     if (!pratoVerificado){
         return console.log('Prato invalido!')
     }
 
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Dados carregados!')
+        }, 2000)
+    })
 }
 
 
