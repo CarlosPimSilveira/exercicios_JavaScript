@@ -41,8 +41,14 @@ class ContaBancaria {
         }
 
         if (!(contaDestino instanceof ContaBancaria)) {
-            return console.log('Conta bancaria invalida!')
+            return console.log('Conta bancaria invalida!');
         }
+
+        if (contaDestino.numeroConta === this.numeroConta) {
+            return console.log('Não é possivel transferir para sua propria conta!');
+        }
+
+        
     }
 }
 
@@ -52,6 +58,8 @@ const conta2 = new ContaBancaria('Pim', 1111)
 conta1.depositar(500);
 conta1.depositar(250);
 conta1.sacar(750)
+
+conta1.transferir(200, conta2)
 
 conta2.depositar(250);
 
