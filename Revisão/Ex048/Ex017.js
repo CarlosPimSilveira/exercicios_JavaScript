@@ -27,7 +27,7 @@ class ContaBancaria {
         }
 
         if(valor > this.saldo) {
-            console.log('Saldo insuficiente!')
+            return console.log('Saldo insuficiente!')
         }
 
         this.saldo -= valor;
