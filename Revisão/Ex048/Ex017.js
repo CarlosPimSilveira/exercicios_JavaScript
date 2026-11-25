@@ -48,7 +48,9 @@ class ContaBancaria {
             return console.log('Não é possivel transferir para sua propria conta!');
         }
 
-        
+        if (valor > this.saldo) {
+            return console.log('Saldo insuficiente!')
+        }
     }
 }
 
@@ -57,7 +59,7 @@ const conta2 = new ContaBancaria('Pim', 1111)
 
 conta1.depositar(500);
 conta1.depositar(250);
-conta1.sacar(750)
+conta1.sacar(250)
 
 conta1.transferir(200, conta2)
 
