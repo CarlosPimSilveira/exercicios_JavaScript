@@ -33,13 +33,20 @@ class ContaBancaria {
         this.saldo -= valor;
         this.extrato.push({ tipo: 'Sacar', valor: valor });
     }
+
+    transferir(valor, contaDestino) {
+
+    }
 }
 
-const conta1 = new ContaBancaria('Carlos', 1001);
+const conta1 = new ContaBancaria('Carlos', 1001)
+const conta2 = new ContaBancaria('Pim', 1111)
 
 conta1.depositar(500);
 conta1.depositar(250);
 conta1.sacar(750)
+
+conta2.depositar(250);
 
 console.log('Saldo atual:', conta1.saldo);
 console.log('Extrato:', conta1.extrato);
