@@ -6,4 +6,18 @@ const pratos = [
     { nome: 'Macarrão', preco: 25.00, disponivel: false }
 ]
 
+function confereTexto(txt) {
+    return typeof txt === 'string' && txt.trim() !== ""
+}
 
+function buscarPrato(BusPrato) {
+    const pratoVerificado = validarTexto(BusPrato)
+
+    if (!pratoVerificado){
+        return console.log('Prato invalido!')
+    }
+
+}
+
+
+buscarPrato('Lasanha')
