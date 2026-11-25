@@ -51,6 +51,10 @@ class ContaBancaria {
         if (valor > this.saldo) {
             return console.log('Saldo insuficiente!')
         }
+
+        this.saldo -= valor
+        contaDestino.saldo += valor
+        this.extrato.push({ tipo: `Transferencia enviar para ${contaDestino.numeroConta}`, valor: valor });
     }
 }
 
