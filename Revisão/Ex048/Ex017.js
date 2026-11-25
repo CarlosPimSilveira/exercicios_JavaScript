@@ -35,7 +35,10 @@ class ContaBancaria {
     }
 
     transferir(valor, contaDestino) {
-
+        if (typeof valor !== 'number' || Number.isNaN(valor) || valor <= 0) {
+            console.log('Valor inválido para sacar.');
+            return;
+        }
     }
 }
 
