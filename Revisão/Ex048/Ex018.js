@@ -13,16 +13,27 @@ function confereTexto(txt) {
 async function buscarPrato(BusPrato) {
     const pratoVerificado = confereTexto(BusPrato)
 
-    if (!pratoVerificado){
-        return console.log('Prato invalido!')
+    if (!pratoVerificado) {
+        throw new Error('Prato inválido!')
     }
 
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve('Dados carregados!')
+            const pratoEncontrado = pratos.find(
+                prato => prato.nome.toLowerCase() === BusPrato.trim().toLowerCase()
+            )
+
+            if (!pratoEncontrado) {
+                reject('Prato não encontrado!')
+            } else if (!pratoEncontrado.disponivel) {
+                reject('Prato indisponível em estoque!')
+            } else {
+                resolve(pratoEncontrado)
+            }
         }, 2000)
     })
 }
 
-
 buscarPrato('Lasanha')
+    .then(res => console.log(res))
+    .catch(erro => console.log(erro))
