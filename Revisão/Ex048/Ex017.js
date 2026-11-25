@@ -36,8 +36,12 @@ class ContaBancaria {
 
     transferir(valor, contaDestino) {
         if (typeof valor !== 'number' || Number.isNaN(valor) || valor <= 0) {
-            console.log('Valor inválido para sacar.');
+            console.log('Valor inválido.');
             return;
+        }
+
+        if (!(contaDestino instanceof ContaBancaria)) {
+            return console.log('Conta bancaria invalida!')
         }
     }
 }
