@@ -55,6 +55,11 @@ class ContaBancaria {
         this.saldo -= valor
         contaDestino.saldo += valor
         this.extrato.push({ tipo: `Transferencia enviar para ${contaDestino.numeroConta}`, valor: valor });
+        contaDestino.extrato.push({ tipo: `Transferencia recebida de ${this.numeroConta}`, valor: valor });
+    }
+
+    exibirExtrato() {
+        
     }
 }
 
@@ -69,8 +74,11 @@ conta1.transferir(200, conta2)
 
 conta2.depositar(250);
 
-console.log('Saldo atual:', conta1.saldo);
-console.log('Extrato:', conta1.extrato);
+conta1.exibirExtrato()
+conta2.exibirExtrato()
+
+//console.log('Saldo atual:', conta1.saldo);
+//console.log('Extrato:', conta1.extrato);
 
 
 
