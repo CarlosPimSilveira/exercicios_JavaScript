@@ -37,3 +37,5 @@ async function buscarPrato(BusPrato) {
 buscarPrato('Lasanha')
     .then(res => console.log(res))
     .catch(erro => console.log(erro))
+
+processarPagamento(100, )
