@@ -34,8 +34,27 @@ async function buscarPrato(BusPrato) {
     })
 }
 
+function processarPagamento(valorPedido, saldoCliente) {
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+
+            if (saldoCliente < valorPedido.preco) {
+                reject('Pagamento recusado!');
+            } else {
+                resolve({
+                    mensagem: 'Pagamento aprovado!',
+                    prato: valorPedido.nome,
+                    valor: valorPedido.preco
+                });
+            }
+
+        }, 2000);
+
+    });
+}
+
 buscarPrato('Lasanha')
+    .then(prato => processarPagamento(prato, 100))
     .then(res => console.log(res))
     .catch(erro => console.log(erro))
-
-processarPagamento(100, )
