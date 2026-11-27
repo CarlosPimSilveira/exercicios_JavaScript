@@ -60,7 +60,7 @@ function processarPagamento(prato, saldoCliente) {
                     mensagem: 'Pagamento aprovado!',
                     prato: prato.nome,
                     valor: prato.preco,
-                    saldoRestante: saldoRestante
+                    saldoRestante: saldoRestante.toFixed(2)
                 });
             }
 
