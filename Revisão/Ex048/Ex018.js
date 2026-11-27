@@ -82,13 +82,15 @@ function PrepararEEntregar(pedido) {
     });
 }
 
-async function fazerPedido() { 
+async function fazerPedido(nomePrato, saldoCliente) { 
     
 }
 
+fazerPedido('Pizza', PrepararEEntregar(resultado))
 
+/*
 buscarPrato('Pizza')
     .then(prato => processarPagamento(prato, 100))
     .then(resultado => PrepararEEntregar(resultado))
     .then(res => console.log(res))
-    .catch(erro => console.log(erro));
+    .catch(erro => console.log(erro));*/
