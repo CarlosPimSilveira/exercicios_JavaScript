@@ -10,6 +10,10 @@ function confereTexto(txt) {
     return typeof txt === 'string' && txt.trim() !== ""
 }
 
+function validarValor(valor) {
+    return typeof valor === 'number' && !Number.isNaN(valor) && !valor >= 0
+}
+
 async function buscarPrato(BusPrato) {
     const pratoVerificado = confereTexto(BusPrato)
 
@@ -35,6 +39,10 @@ async function buscarPrato(BusPrato) {
 }
 
 function processarPagamento(valorPedido, saldoCliente) {
+    const salValidado = validarValor(saldoCliente)
+    if(!salValidado) {
+        return console.log('Saldo invalido!')
+    }
     return new Promise((resolve, reject) => {
 
         setTimeout(() => {
