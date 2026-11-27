@@ -40,7 +40,7 @@ async function buscarPrato(BusPrato) {
     })
 }
 
-function processarPagamento(valorPedido, saldoCliente) {
+function processarPagamento(prato, saldoCliente) {
     const salValidado = validarValor(saldoCliente);
 
     if (!salValidado) {
@@ -51,15 +51,15 @@ function processarPagamento(valorPedido, saldoCliente) {
 
         setTimeout(() => {
 
-            if (saldoCliente < valorPedido.preco) {
+            if (saldoCliente < prato.preco) {
                 reject('Saldo insuficiente para realizar o pagamento!');
             } else {
-                const saldoRestante = saldoCliente - valorPedido.preco;
+                const saldoRestante = saldoCliente - prato.preco;
 
                 resolve({
                     mensagem: 'Pagamento aprovado!',
-                    prato: valorPedido.nome,
-                    valor: valorPedido.preco,
+                    prato: prato.nome,
+                    valor: prato.preco,
                     saldoRestante: saldoRestante
                 });
             }
@@ -69,12 +69,12 @@ function processarPagamento(valorPedido, saldoCliente) {
     });
 }
 
-function PrepararEEntregar(prato) {
+function PrepararEEntregar(pedido) {
     return new Promise((resolve) => {
 
         setTimeout(() => {
             resolve({
-                mensagem: `${prato.prato} ficou pronto e foi entregue!`
+                mensagem: `${pedido.prato} ficou pronto e foi entregue!`
             });
 
         }, 2000);
