@@ -84,13 +84,16 @@ function PrepararEEntregar(pedido) {
 
 async function fazerPedido(nomePrato, saldoCliente) { 
     try {
-        await
+        const bsPrato = await buscarPrato(nomePrato)
+        const proPagamento = await processarPagamento(bsPrato.nome, bsPrato.preco)
+        const PreEntrega = await PrepararEEntregar(bsPrato)
+        console.log(bsPrato, proPagamento, PreEntrega)
     } catch (error) {
-        
+        console.log(error)
     }
 }
 
-fazerPedido('Pizza', PrepararEEntregar(resultado))
+fazerPedido('Pizza', 100)
 
 /*
 buscarPrato('Pizza')
