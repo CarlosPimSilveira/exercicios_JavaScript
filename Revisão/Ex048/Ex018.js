@@ -69,7 +69,21 @@ function processarPagamento(valorPedido, saldoCliente) {
     });
 }
 
+function PrepararEEntregar(prato) {
+    return new Promise((resolve) => {
+
+        setTimeout(() => {
+            resolve({
+                mensagem: `${prato.prato} ficou pronto e foi entregue!`
+            });
+
+        }, 2000);
+
+    });
+}
+
 buscarPrato('Pizza')
     .then(prato => processarPagamento(prato, 100))
+    .then(resultado => PrepararEEntregar(resultado))
     .then(res => console.log(res))
     .catch(erro => console.log(erro));
