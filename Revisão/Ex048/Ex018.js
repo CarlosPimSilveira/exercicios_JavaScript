@@ -95,9 +95,3 @@ async function fazerPedido(nomePrato, saldoCliente) {
 
 fazerPedido('Pizza', 100)
 
-/*
-buscarPrato('Pizza')
-    .then(prato => processarPagamento(prato, 100))
-    .then(resultado => PrepararEEntregar(resultado))
-    .then(res => console.log(res))
-    .catch(erro => console.log(erro));*/
