@@ -67,7 +67,7 @@ function processarPagamento(valorPedido, saldoCliente) {
     });
 }
 
-buscarPrato('Lasanha')
+buscarPrato('Pizza')
     .then(prato => processarPagamento(prato, 100))
     .then(res => console.log(res))
     .catch(erro => console.log(erro));
