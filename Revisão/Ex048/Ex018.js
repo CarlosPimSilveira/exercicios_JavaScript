@@ -85,8 +85,8 @@ function PrepararEEntregar(pedido) {
 async function fazerPedido(nomePrato, saldoCliente) { 
     try {
         const bsPrato = await buscarPrato(nomePrato)
-        const proPagamento = await processarPagamento(bsPrato.nome, bsPrato.preco)
-        const PreEntrega = await PrepararEEntregar(bsPrato)
+        const proPagamento = await processarPagamento(bsPrato, saldoCliente)
+        const PreEntrega = await PrepararEEntregar(proPagamento)
         console.log(bsPrato, proPagamento, PreEntrega)
     } catch (error) {
         console.log(error)
