@@ -83,7 +83,11 @@ function PrepararEEntregar(pedido) {
 }
 
 async function fazerPedido(nomePrato, saldoCliente) { 
-    
+    try {
+        await
+    } catch (error) {
+        
+    }
 }
 
 fazerPedido('Pizza', PrepararEEntregar(resultado))
