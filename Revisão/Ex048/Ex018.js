@@ -11,7 +11,9 @@ function confereTexto(txt) {
 }
 
 function validarValor(valor) {
-    return typeof valor === 'number' && !Number.isNaN(valor) && !valor >= 0
+        return typeof valor === 'number' &&
+        Number.isFinite(valor) &&
+        valor >= 0;
 }
 
 async function buscarPrato(BusPrato) {
