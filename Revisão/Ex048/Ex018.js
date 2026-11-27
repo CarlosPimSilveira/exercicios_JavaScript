@@ -82,6 +82,11 @@ function PrepararEEntregar(pedido) {
     });
 }
 
+async function fazerPedido() { 
+    
+}
+
+
 buscarPrato('Pizza')
     .then(prato => processarPagamento(prato, 100))
     .then(resultado => PrepararEEntregar(resultado))
