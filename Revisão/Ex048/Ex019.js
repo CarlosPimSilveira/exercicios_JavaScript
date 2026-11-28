@@ -26,10 +26,28 @@ const passageiros = [
     }
 ];
 
-const voos = [codigo,]
-
-
-
+const voos = [
+    {
+        codigo: 'LA1234',
+        destino: 'Rio de Janeiro',
+        status: 'Confirmado'
+    },
+    {
+        codigo: 'LA5678',
+        destino: 'Salvador',
+        status: 'Cancelado'
+    },
+    {
+        codigo: 'AD9012',
+        destino: 'Recife',
+        status: 'Confirmado'
+    },
+    {
+        codigo: 'G31234',
+        destino: 'Brasilia',
+        status: 'Confirmado'
+    }
+];
 
 
 
