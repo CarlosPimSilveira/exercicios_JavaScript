@@ -49,5 +49,27 @@ const voos = [
     }
 ];
 
+function validarCPF(cpf) {
+    if (typeof cpf !== 'string') {
+        return false;
+    }
+
+    const cpfLimpo = cpf.replace(/\D/g, '');
+
+    if (cpfLimpo.length !== 11) {
+        return false;
+    }
+
+    return true;
+}
+
+async function buscarPassageiros(cpf) { 
+    if (!validarCPF(cpf)) {
+        return console.log('CPF invalido!')
+    }
+
+    
+}
+
 
 
