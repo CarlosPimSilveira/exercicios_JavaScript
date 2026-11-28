@@ -68,7 +68,14 @@ async function buscarPassageiros(cpf) {
         return console.log('CPF invalido!')
     }
 
-    
+    passageiros.forEach((pass) => {
+        try {
+            if (pass.cpf === cpf)
+                
+        } catch (error) {
+            
+        }
+    })
 }
 
 
